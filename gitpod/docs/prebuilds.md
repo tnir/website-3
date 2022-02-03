@@ -54,6 +54,13 @@ To create a new project:
 - To share projects with other users, create the project in a team, otherwise use your own account.
 - A sample `.gitpod.yml` with an init task will be included in your next workspace (unless the file already exists.)
 
+#### Project environment variables
+
+Environment variables which are defined in project settings will be visible in prebuilds. This is useful for prebuilds to access restricted services.
+
+**WARNING**  
+Care should be taken with secrets in prebuilds. Do not save secrets in a way which could leak into workspaces. This especially true for public repositories.
+
 ## Configuring prebuilds manually.
 
 #### GitHub
@@ -116,7 +123,9 @@ Note the absence of the `command` task. Since this task may potentially run inde
 
 Prebuilds have a timeout of 1 hour. If your `before` and `init` tasks combined exceed 1 hour, your prebuild will fail. Subscribe to [this issue](https://github.com/gitpod-io/gitpod/issues/6283) for updates when this limit will be lifted.
 
-Each prebuild starts with a clean environment. In other words, Gitpod does not cache artifacts between prebuilds. We do have _incremental prebuilds_ available in Beta though and if you have a use case where this would be benefitial, please let us know.
+Each prebuild starts with a clean environment. In other words, Gitpod does not cache artifacts between prebuilds.
+
+Incremental Prebuilds use an earlier, successful Prebuild as the base. This can reduce the duration of your Prebuilds significantly, especially if they normally take more than ten minutes to complete. Incremental Prebuilds can be found under the project settings in your Gitpod dashboard.
 
 ## GitHub-specific configuration
 
@@ -152,6 +161,16 @@ Once the GitHub app is installed, Gitpod can add helpful annotations to your pul
 #### Checks
 
 By default, Gitpod registers itself as a check to pull requests - much like a continuous integration system would do.
+
+The default behavior, however, would not make the checks fail when the prebuild failed.
+This can be enabled with the following snippet:
+
+```yaml
+github:
+  prebuilds:
+    addCheck: prevent-merge-on-error
+```
+
 You can disable this behaviour in the `.gitpod.yml` file in your default branch:
 
 ```yaml
@@ -187,3 +206,19 @@ github:
 
 The `addComment` and `addBadge` behaviours are not mutually exclusive (i.e. enabling one does not disable the other).
 If you don't want the comments to be added, disable them using `addComment: false`.
+
+## User specific environment variables in prebuilds
+
+It is not necessarily best practice to have user specific environment variables in a prebuild `before` or `init` block, but sometimes there are build time requirements that mean certain tokens need setting or files need creating. Environment variables defined within your Gitpod Variables preferences are not imported by default, but they can be accessed with the following command within a `before` or `init` block:
+
+```yaml
+tasks:
+  - before: |
+      eval $(command gp env -e)
+      echo "Hello ${MY_VAR}"
+  - init: |
+      eval $(command gp env -e)
+      echo "Hello ${MY_VAR}"
+```
+
+After that, the available environment variables will be installed into the rest of you shell script and can be accessed normally.

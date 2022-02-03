@@ -9,6 +9,43 @@
   import Section from "$lib/components/section.svelte";
 </script>
 
+<style lang="postcss">
+  :is(ol.toc, ul) > li::marker {
+    @apply text-h3 font-bold;
+  }
+
+  ::marker {
+    @apply text-orange-800;
+  }
+
+  ul li {
+    @apply relative mb-0;
+  }
+
+  ul li::before {
+    @apply absolute text-orange-800;
+    content: "—";
+    left: calc(var(--xx-small) * -1);
+  }
+
+  @media (min-width: 768px) {
+    ul li::before {
+      left: calc(var(--x-small) * -1);
+    }
+  }
+  article :global() {
+    --h1: 3.375rem;
+    --h2: 3rem;
+    --h3: 2rem;
+    --h4: 1.75rem;
+    --h5: 1.25rem;
+    line-height: 1.75;
+  }
+  a {
+    @apply underline;
+  }
+</style>
+
 <OpenGraph
   data={{
     description: "Gitpod GmbH Security Vulnerability Disclosure Policy",
@@ -16,11 +53,11 @@
   }}
 />
 
-<article class="text-blob">
+<article class="max-w-[94vw] mt-20 mx-auto mb-8 leading-7 lg:w-[50rem]">
   <h1 class="h2 text-center">Security Vulnerability Disclosure Policy</h1>
 
-  <h2 class="h3">Introduction</h2>
-  <p>
+  <h2 class="mx-0 my-8 h3">Introduction</h2>
+  <p class="mb-4">
     Gitpod GmbH welcomes feedback from security researchers and the general
     public to help improve our security. If you believe you have discovered a
     vulnerability, privacy issue, exposed data, or other security issues in any
@@ -28,30 +65,32 @@
     reporting vulnerabilities to us, what we expect, what you can expect from
     us.
   </p>
-  <h2 class="h3">Systems in Scope</h2>
-  <p>
+  <h2 class="mx-0 my-8 h3">Systems in Scope</h2>
+  <p class="mb-4">
     This policy applies to any digital assets owned, operated, or maintained by
     Gitpod GmbH:
   </p>
-  <ul>
+  <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
     <li><code>io.gitpod.*</code></li>
     <li><code>com.gitpod-staging.*</code></li>
     <li><code>com.gitpod-dev.com.*</code></li>
   </ul>
-  <h2 class="h3">Out of Scope</h2>
-  <ul>
+  <h2 class="mx-0 my-8 h3">Out of Scope</h2>
+  <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
     <li>
       Assets or other equipment not owned by parties participating in this
       policy.
     </li>
   </ul>
-  <p>
+  <p class="mb-4">
     Vulnerabilities discovered or suspected in out-of-scope systems should be
     reported to the appropriate vendor or applicable authority.
   </p>
-  <h2 class="h3">Our Commitments</h2>
-  <p>When working with us, according to this policy, you can expect us to:</p>
-  <ul>
+  <h2 class="mx-0 my-8 h3">Our Commitments</h2>
+  <p class="mb-4">
+    When working with us, according to this policy, you can expect us to:
+  </p>
+  <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
     <li>
       Respond to your report promptly, and work with you to understand and
       validate your report;
@@ -73,12 +112,12 @@
       if responsibily disclosed.
     </li>
   </ul>
-  <h2 class="h3">Our Expectations</h2>
-  <p>
+  <h2 class="mx-0 my-8 h3">Our Expectations</h2>
+  <p class="mb-4">
     In participating in our vulnerability disclosure program in good faith, we
     ask that you:
   </p>
-  <ul>
+  <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
     <li>
       Perform the majority of your security research against <a
         href="https://www.gitpod.io/docs/self-hosted/latest"
@@ -121,8 +160,8 @@
     </li>
     <li>Do not engage in extortion.</li>
   </ul>
-  <h2 class="h3">Official Channels</h2>
-  <p>
+  <h2 class="mx-0 my-8 h3">Official Channels</h2>
+  <p class="mb-4">
     Please report security issues via <a href="mailto://security@gitpod.io"
       >security@gitpod.io</a
     >
@@ -130,12 +169,12 @@
     providing all relevant information. The more details you provide, the easier
     it will be for us to triage and fix the issue.
   </p>
-  <h2 class="h3">Safe Harbor</h2>
-  <p>
+  <h2 class="h3 mx-0 my-8">Safe Harbor</h2>
+  <p class="mb-4">
     When conducting vulnerability research, according to this policy, we
     consider this research conducted under this policy to be:
   </p>
-  <ul>
+  <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
     <li>
       Authorized concerning any applicable anti-hacking laws, and we will not
       initiate or support legal action against you for accidental, good-faith
@@ -155,13 +194,13 @@
       good faith.
     </li>
   </ul>
-  <p>
+  <p class="m-4">
     You are expected, as always, to comply with all applicable laws. If legal
     action is initiated by a third party against you and you have complied with
     this policy, we will take steps to make it known that your actions were
     conducted in compliance with this policy.
   </p>
-  <p>
+  <p class="mb-4">
     If at any time you have concerns or are uncertain whether your security
     research is consistent with this policy, please submit a report through one
     of our Official Channels before going any further.

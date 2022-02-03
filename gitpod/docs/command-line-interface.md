@@ -25,9 +25,12 @@ Available Commands:
   init                Create a Gitpod configuration for this project.
   open                Opens a file in Gitpod
   preview             Opens a URL in the IDE's preview
+  snapshot            Take a snapshot of the current workspace
+  stop                Stop current workspace
   sync-await          Awaits an event triggered using gp sync-done
   sync-done           Notifies the corresponding gp sync-await calls that this event has happened
   url                 Prints the URL of this workspace
+  version             Prints the version of the CLI
 
 Flags:
   -h, --help   help for gp
@@ -108,3 +111,11 @@ A common use case is the following where we have three terminals:
 - Terminal 3: You use `gp sync-await build && npm run dev` to wait for the build to complete before you start the dev server.
 
 See [Start Tasks](/docs/config-start-tasks#wait-for-commands-to-complete) for a real-world example.
+
+## snapshot
+
+For sharing a complete clone of a workspace with others, `gp snapshot` is basically the CLI method for getting a snapshot URL. To learn more about snapshots, see [Collaboration & Sharing of Workspaces](https://www.gitpod.io/docs/sharing-and-collaboration#sharing-snapshots)
+
+## stop
+
+`gp stop` is the CLI method of stopping a workspace.

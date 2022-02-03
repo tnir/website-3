@@ -1,5 +1,6 @@
 <script lang="ts">
   export let id: string = "";
+  export let style: string = "";
   let clazz = "";
   export { clazz as class };
 </script>
@@ -28,6 +29,6 @@
   }
 </style>
 
-<section {id} class={clazz}>
+<section {id} class={clazz} {style}>
   <slot />
 </section>

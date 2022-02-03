@@ -48,3 +48,9 @@ This generates example content you can adjust to meet your needs.
 Alternatively, you can use the interactive mode with `gp init -i`. It will ask you about the different configuration options, generate the `.gitpod.yml` file and open it in an editor tab so you can review and extend as neccesary.
 
 Gitpod provides auto-complete, hover info and validation for the `.gitpod.yml` file so you get instant feedback and can rest assure your configuration is valid.
+
+## See it in action
+
+To test your `.gitpod.yml` file, you need to commit and push the file to your repository and open a new workspace either by using the [Gitpod extension](/docs/browser-extension#browser-extension) or prefixing your repo URL with `https://gitpod.io/#`.
+
+If you don't want to have multiple commits as you're testing and making changes to your `.gitpod.yml`, you can make changes from a new branch.

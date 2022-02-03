@@ -27,7 +27,7 @@
         type,
         emotion: selectedEmotion,
         note,
-        url: `https://${$page.host + $page.path}`,
+        url: $page.url.toString(),
       }),
     });
 
@@ -98,7 +98,6 @@
             <div>
               <span
                 ><button
-                  role="button"
                   type="submit"
                   disabled={isSubmittedOnce}
                   class="btn-primary mt-micro"><span>Send</span></button

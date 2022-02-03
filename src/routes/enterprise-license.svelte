@@ -9,6 +9,7 @@
 
   import { countryList } from "$lib/contents/license-key";
   import type { Email } from "../functions/submit-form";
+  import Header from "$lib/components/header.svelte";
 
   const formData: Form = {
     firstName: {
@@ -96,10 +97,6 @@
 </script>
 
 <style lang="scss">
-  header {
-    @apply mb-small;
-  }
-
   .title:not(:first-child) {
     margin-top: var(--medium);
   }
@@ -121,12 +118,16 @@
   }}
 />
 
-<header>
-  <h2>Fill this out and get 10 additional users.</h2>
-  <p>Tell us how we can help and your license will be emailed shortly.</p>
-</header>
+<Header tight={true}>
+  <div slot="content">
+    <h1 class="h2">Fill this out and get 10 additional users.</h1>
+    <p>Tell us how we can help and your license will be emailed shortly.</p>
+  </div>
+</Header>
 
-<section class="card shadow-xl mb-32 sm:mx-8">
+<section
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl mb-32 sm:mx-8"
+>
   <form on:submit|preventDefault={handleSubmit} novalidate>
     <h2 class="h4 title">Customer Information</h2>
 
@@ -205,6 +206,7 @@
           class="option"
           autocomplete="country"
         >
+          <option class="option" value="" disabled selected>Select...</option>
           {#each countryList as c}
             <option class="option" value={c}>
               {c}
@@ -219,6 +221,7 @@
       >
         Total Number of Developers*
         <select
+          class="option"
           name="noOfDevelopers"
           bind:value={formData.noOfDevelopers.value}
           bind:this={formData.noOfDevelopers.el}
@@ -228,6 +231,7 @@
               formData.noOfDevelopers.el.checkValidity();
           }}
         >
+          <option class="option" value="" disabled selected>Select...</option>
           {#each ["1 - 100", "101 - 250", "251 - 500", "500 - 1000", "+1000"] as n}
             <option class="option" value={n}>
               {n}
@@ -237,7 +241,7 @@
       </label>
     </div>
 
-    <label class="half mt-micro">
+    <label class="mt-macro half">
       <p>
         Optionally, tell us more about your interest in Gitpod. What challenges
         are you looking to solve? How can we help?

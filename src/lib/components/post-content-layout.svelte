@@ -2,8 +2,8 @@
   import Avatars from "./avatars.svelte";
   import OpenGraph from "./open-graph.svelte";
   import { authors, authorSocialMediaLinks } from "$lib/contents/authors";
-  import OnThisPageNav from "./on-this-page-nav.svelte";
   import "$lib/assets/markdown-commons.scss";
+  import Share from "$lib/components/share.svelte";
 
   export let baseUrl: string;
   export let imagesDirectoryName: string;
@@ -43,7 +43,7 @@
     return result;
   };
 
-  const socialLinks = [
+  const shareLinks = [
     {
       href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
         `${title} by ${renderTwitterHandles()} ${baseUrl}${slug}`
@@ -71,6 +71,12 @@
   ];
 </script>
 
+<style>
+  .prose :global(nav.toc) {
+    @apply hidden;
+  }
+</style>
+
 <svelte:head>
   <link rel="stylesheet" href="/prism-solarized-light.min.css" />
 </svelte:head>
@@ -85,48 +91,35 @@
     norobots: norobots,
   }}
 />
-<div class="post mt-small mb-8">
-  <img
-    src="/images/{imagesDirectoryName}/{slug}/{teaserImage || image}"
-    alt={`${title}`}
-    class="headerImage"
-  />
-  <p class="date">{dateDisplay}</p>
-  <h1>{title}</h1>
-  <p>
-    <span
-      ><Avatars
-        usernames={author}
-        displayNames={authorDisplayNames}
-        socialMediaLinks={authorSocialMediaLinks}
-        socialMediaLinkClasses="inline-flex mr-4 px-2 bg-white rounded-xl text-dark-grey focus:bg-off-white focus:text-black hover:bg-off-white hover:text-black"
-        socialMediaImgClasses="mr-2 h-6 w-6 place-self-center"
-      /></span
+<div class="flex justify-center mt-small mb-8">
+  <div class="w-full lg:w-[50rem] leading-[177.7%]">
+    <img
+      src="/images/{imagesDirectoryName}/{slug}/{teaserImage || image}"
+      alt={`${title}`}
+      class="max-h-[540px] rounded-tl-2xl rounded-tr-[1.3rem]"
+    />
+    <p class="mt-[1.875rem] mb-6 text-dark-grey">{dateDisplay}</p>
+    <h1 class="mb-6 text-h3">{title}</h1>
+    <p>
+      <span
+        ><Avatars
+          usernames={author}
+          displayNames={authorDisplayNames}
+          socialMediaLinks={authorSocialMediaLinks}
+          socialMediaLinkClasses="inline-flex mr-2 px-2 bg-white rounded-xl text-dark-grey focus:bg-off-white focus:text-black hover:bg-off-white hover:text-black"
+          socialMediaImgClasses="mr-2 h-6 w-6 place-self-center"
+        /></span
+      >
+    </p>
+    <div
+      class="content-blog prose prose-img:rounded-tl-2xl prose-img:rounded-tr-[1.3rem] max-w-none mt-10"
     >
-  </p>
-  <div class="flex">
-    <div class="content-blog flex-auto min-w-0">
       <slot />
     </div>
-    <OnThisPageNav />
+    <Share
+      text="Share this post"
+      {shareLinks}
+      class="border-t border-solid border-divider pt-xx-small md:pt-micro mt-small"
+    />
   </div>
-  <section class="share">
-    <h2 class="h4">Share this post:</h2>
-    <ul>
-      {#each socialLinks as link}
-        <li>
-          <a
-            href={link.href}
-            rel="noreferrer"
-            target="_blank"
-            data-analytics={`{"variant":"social_media","context":"` +
-              link.alt.toLowerCase() +
-              `_share"}`}
-          >
-            <img src={link.icon} alt={link.alt} height="24" width="24" />
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </section>
 </div>

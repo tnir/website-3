@@ -5,6 +5,10 @@
 </script>
 
 <style lang="postcss">
+  .quotes {
+    max-width: 1000px !important;
+  }
+
   .quote {
     height: 330px;
 
@@ -34,7 +38,7 @@
 </style>
 
 <div
-  class="quotes bg-off-white shadow-normal rounded-2xl sm:rounded-5xl pt-micro px-0 sm:px-xx-small sm:pt-x-small sm:pb-micro lg:p-small"
+  class="quotes bg-off-white shadow-normal rounded-2xl sm:rounded-5xl pt-micro px-0 sm:px-xx-small sm:pt-x-small sm:pb-micro lg:p-small mx-auto"
 >
   <div class="flex justify-around flex-wrap max-w-xl mx-auto">
     {#each quotes as quote}

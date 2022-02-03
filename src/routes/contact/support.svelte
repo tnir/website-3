@@ -10,6 +10,7 @@
   import { onMount } from "svelte";
   import Section from "$lib/components/section.svelte";
   import { trackEvent, trackIdentity } from "$lib/components/segment.svelte";
+  import Header from "$lib/components/header.svelte";
 
   const studentUnlimitedSubject = "Educational Discount Verification";
 
@@ -146,15 +147,19 @@
   }}
 />
 
-<header class="tight">
-  <h1>Contact Support</h1>
-  <p class="max-w-2xl mx-auto">
-    Need help with any question or issue? Please get in contact and we’ll get
-    onto it right away.
-  </p>
-</header>
+<Header
+  title="Contact Support"
+  text="Need help with any question or issue? Please get in contact and we’ll get
+  onto it right away."
+  tight={true}
+  class="max-w-2xl"
+/>
 
-<Section class="card shadow-xl sm:mx-8" id="form">
+<Section
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl sm:mx-8"
+  id="form"
+  style="margin-top: 0"
+>
   <div bind:this={sectionStart} data-analytics={`{"dnt":true}`}>
     {#if isEmailSent}
       <SubmissionSuccess

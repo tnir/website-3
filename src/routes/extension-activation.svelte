@@ -7,6 +7,7 @@
   import { feature } from "$lib/contents/extension-activation";
   import Config from "$lib/components/extension-activation/config.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
+  import Header from "$lib/components/header.svelte";
 
   const currentBrowser = ["Opera", "Chrome", "Firefox", "IE"].find(
     (browser) =>
@@ -44,10 +45,10 @@
   }}
 />
 
-<header>
-  <h1>Gitpod for {currentBrowser} is Now Active</h1>
-  <p>The browser extension has been installed</p>
-</header>
+<Header
+  title="Gitpod for {currentBrowser} is Now Active"
+  text="The browser extension has been installed."
+/>
 
 <Feature {feature} />
 

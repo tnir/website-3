@@ -1,6 +1,14 @@
+<script>
+  import Section from "../section.svelte";
+</script>
+
 <style lang="postcss">
-  header {
-    @apply max-w-none lg:text-left lg:pb-xx-large !important;
+  :global(section.hero) {
+    @apply lg:mb-52 !important;
+  }
+
+  .h1 {
+    @apply mb-micro md:mb-xx-small;
   }
 
   .text-box {
@@ -12,15 +20,15 @@
   }
 
   img {
-    transform: translateX(25%) translateY(-50%);
+    transform: translateX(25%) translateY(-40%);
     width: 40vw;
   }
 </style>
 
-<header class="relative">
+<Section class="hero relative text-center lg:text-left pb-x-large lg:pb-0">
   <div class="text-box lg:pt-x-large mx-auto lg:mx-0">
-    <h1>Gitpod vs JetBrains Space</h1>
-    <p class="mx-auto lg:mx-0">
+    <h1 class="h1">Gitpod vs JetBrains Space</h1>
+    <p class="mx-auto max-w-lg lg:mx-0 text-large">
       Gitpod is the vendor neutral, open-source platform that integrates with
       your individual stack including all JetBrains IDEs.
     </p>
@@ -39,4 +47,4 @@
     src="/images/jetbrains-space/git-providers.png"
     alt="Git Providers"
   />
-</header>
+</Section>

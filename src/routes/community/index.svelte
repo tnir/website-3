@@ -5,12 +5,14 @@
 <script>
   import CommunityLove from "$lib/components/community/community-love.svelte";
   import Contribute from "$lib/components/community/contribute.svelte";
-  import Header from "$lib/components/community/header.svelte";
+
   import OpenGraph from "$lib/components/open-graph.svelte";
   import FeatureBox from "$lib/components/feature-box.svelte";
   import SectionCommon from "$lib/components/section-common.svelte";
   import Resources from "$lib/components/resources.svelte";
   import { letsCollaborateActions as resources } from "$lib/contents/community";
+  import Header from "$lib/components/header.svelte";
+  import { primaryCtas as cards } from "$lib/contents/community/index";
 </script>
 
 <OpenGraph
@@ -21,7 +23,15 @@
   }}
 />
 
-<Header />
+<Header
+  title="Community"
+  text="Welcome! Our community is at the centre of everything at Gitpod. We're
+  excited to have you join us 🧡"
+  fullWidth={true}
+  textClassNames="max-w-3xl text-large mx-auto md:px-x-small"
+>
+  <Resources slot="content" {cards} />
+</Header>
 
 <Contribute />
 

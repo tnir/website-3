@@ -9,14 +9,22 @@
     programBenefits as cards,
   } from "$lib/contents/startups";
   import ProgramBenefits from "$lib/components/program-benefits.svelte";
-  import Header from "$lib/components/startups/header.svelte";
   import Eligibility from "$lib/components/eligibility.svelte";
-  import GitpodVsLocalDevPost from "$lib/components/gitpod-vs-local-development-post.svelte";
   import Faqs from "$lib/components/startups/faqs.svelte";
   import Explore from "$lib/components/explore.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import SectionFeatures from "$lib/components/section-features.svelte";
+  import SectionCommon from "$lib/components/section-common.svelte";
+  import FeatureBox from "$lib/components/feature-box.svelte";
+  import Header from "$lib/components/header.svelte";
+  import Quote from "$lib/components/startups/quote.svelte";
 </script>
+
+<style lang="postcss">
+  :global(.feature-box) :global(.preview) {
+    @apply col-start-2 !important;
+  }
+</style>
 
 <OpenGraph
   data={{
@@ -26,7 +34,26 @@
   }}
 />
 
-<Header />
+<Header
+  title="Gitpod for Startups"
+  text="Spend less time worrying about brittle, local dev environments and more time
+  on building great things."
+  data-analytics={`{"position":"hero"}`}
+>
+  <div slot="content">
+    <p
+      class="h5 text-gray-900 font-semibold max-w-2xl mx-auto mt-micro mb-x-small"
+    >
+      Use all our services for free, up to 2 years.
+    </p>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSc-Vaelz0yG-XkuN2CYyUtZz0khhwMaju4oSLdMNIzoMkpHug/viewform"
+      target="_blank"
+      class="btn-conversion">Apply now</a
+    >
+    <Quote />
+  </div>
+</Header>
 
 <SectionFeatures title="Accelerate your workflow" {features} />
 
@@ -46,11 +73,29 @@
   ulMaxWidth="365px"
 />
 
-<GitpodVsLocalDevPost
+<SectionCommon
   title="Helpful resources"
   text="If you are still uncertain about moving your local dev environment to the
-  cloud, this blog post will clear your thoughts."
-/>
+    cloud, this blog post will clear your thoughts."
+  textClassNames="max-w-3xl mx-auto mb-small"
+>
+  <FeatureBox
+    feature={{
+      title: "Gitpod vs Local Development",
+      paragraph:
+        "Why should you move dev environment to the cloud? Here is the answer.",
+      moreButton: {
+        text: "View Gitpod vs Local Dev",
+        href: "/vs/local-development",
+      },
+      image: {
+        src: "/images/startups/bob-alice.png",
+        alt: "Bob and Alice",
+      },
+    }}
+    slot="content"
+  />
+</SectionCommon>
 
 <Faqs />
 

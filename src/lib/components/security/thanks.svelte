@@ -1,3 +1,7 @@
+<script>
+  import Header from "../header.svelte";
+</script>
+
 <style lang="postcss">
   .year {
     border-bottom: 3px;
@@ -9,21 +13,19 @@
   }
 </style>
 
-<header>
-  <div class="max-w-lg mx-auto relative">
-    <img
-      src="/svg/heart.svg"
-      alt="Heart"
-      class="absolute -top-16 left-1/2 -translate-x-1/2 h-10"
-    />
-    <h1>Thanks</h1>
-    <p class="text-large">
-      Big thanks the following people who responsibly disclosed their security
-      findings.
-    </p>
-  </div>
-
-  <div class="mt-x-large">
+<Header
+  title="Thanks"
+  text="Big thanks the following people who responsibly disclosed their security
+  findings."
+  class="max-w-lg"
+>
+  <img
+    src="/svg/heart.svg"
+    alt="Heart"
+    class="absolute -top-16 left-1/2 -translate-x-1/2 h-10"
+    slot="top"
+  />
+  <div class="mt-x-large" slot="content">
     <h2 class="h4 year">2021</h2>
     <ol class="text-left mx-auto my-x-small">
       <li>
@@ -44,4 +46,4 @@
       </li>
     </ol>
   </div>
-</header>
+</Header>

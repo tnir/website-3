@@ -9,6 +9,7 @@
   import SubmissionSuccess from "$lib/components/submission-success.svelte";
   import Section from "$lib/components/section.svelte";
   import { trackEvent, trackIdentity } from "$lib/components/segment.svelte";
+  import Header from "$lib/components/header.svelte";
 
   const selfHostingSubject = "Self-hosting";
   const subjects = [
@@ -173,14 +174,17 @@
   }}
 />
 
-<header class="tight">
-  <h1>Contact Sales</h1>
-  <p class="max-w-2xl mx-auto">
-    We’d love to talk about how we can work together.
-  </p>
-</header>
+<Header
+  title="Contact Sales"
+  text=" We’d love to talk about how we can work together."
+  tight={true}
+/>
 
-<Section class="card shadow-xl mb-32 sm:mx-8" id="form">
+<Section
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl mb-32 sm:mx-8"
+  id="form"
+  style="margin-top: 0"
+>
   <div bind:this={sectionStart} data-analytics={`{"dnt":true}`}>
     {#if isEmailSent}
       <SubmissionSuccess

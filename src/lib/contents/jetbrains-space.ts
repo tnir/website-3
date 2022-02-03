@@ -1,5 +1,25 @@
 import type { TableData } from "$lib/types/table-data.type";
 import type { Feature } from "$lib/types/feature.type";
+import type {
+  FeatureTable,
+  FeatureTableColumn,
+  FeatureTableToc,
+} from "$lib/components/ui-library/feature-table/feature-table.types";
+
+export const openSourceFeature = {
+  title: "Open-source",
+  paragraph:
+    "Gitpod puts developers' interest first and seemlessly integrates with your existing tools & workflows.",
+  featureList: [
+    "Host Gitpod yourself on GCP, AWS, Azure or self-managed Kubernetes",
+    "Contribute to Gitpod and build your own customizations",
+    "Works just as smoothly with GitHub, GitLab and Bitbucket",
+  ],
+  image: {
+    src: "/images/github-codespaces/spaces-3.svg",
+    alt: "Gitpod integrations",
+  },
+};
 
 export const features: Feature[] = [
   {
@@ -22,20 +42,7 @@ export const features: Feature[] = [
       alt: "Multiple IDEs supported by Gitpod",
     },
   },
-  {
-    title: "Open-source",
-    paragraph:
-      "Gitpod puts developers' interest first and seemlessly integrates with your existing tools & workflows.",
-    featureList: [
-      "Host Gitpod yourself on GCP, AWS, Azure or self-managed Kubernetes",
-      "Contribute to Gitpod and build your own customizations",
-      "Works just as smoothly with GitHub, GitLab and Bitbucket",
-    ],
-    image: {
-      src: "/images/codespace/spaces-3.svg",
-      alt: "Gitpod integrations",
-    },
-  },
+  openSourceFeature,
   {
     title: "Ephemeral workspaces",
     paragraph:
@@ -47,12 +54,16 @@ export const features: Feature[] = [
   },
 ];
 
-export const gitpodTableData: TableData = {
-  image: {
-    src: "/svg/media-kit/logo-mark.svg",
+export const gitpodTableData: FeatureTableColumn = {
+  isHighlighted: true,
+  header: {
+    headline: "Gitpod",
+    image: {
+      alt: "Gitpod",
+      path: "/svg/media-kit/logo-mark.svg",
+    },
   },
-  title: "Gitpod",
-  details: [
+  items: [
     {
       term: "Pricing (SAAS)",
       text: "Free for 50h/month",
@@ -63,65 +74,68 @@ export const gitpodTableData: TableData = {
     },
     {
       term: "GitHub Integration",
-      availibility: true,
+      availability: true,
     },
     {
       term: "GitLab Integration",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Bitbucket Integration",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Self-Host on GCP",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Self-Host on AWS",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Self-Host on Kubernetes",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Prebuilds",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Snapshots",
-      availibility: true,
+      availability: true,
     },
     {
       term: "VS Code Extensions",
-      availibility: true,
+      availability: true,
     },
     {
       term: "iPad Support",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Virtual Desktop (VNC)",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Jetbrains Ide Support",
-      availibility: true,
+      availability: true,
     },
     {
       term: "VS Code Support",
-      availibility: true,
+      availability: true,
     },
   ],
 };
 
-export const jetbrainsTableData: TableData = {
-  image: {
-    src: "/svg/jetbrains-space/space.svg",
+export const jetbrainsTableData: FeatureTableColumn = {
+  header: {
+    headline: "JetBrains Space",
+    image: {
+      alt: "JetBrains Space",
+      path: "/svg/jetbrains-space/space.svg",
+    },
   },
-  title: "JetBrains Space",
-  details: [
+  items: [
     {
       term: "Pricing (SAAS)",
       text: "$$$",
@@ -132,55 +146,177 @@ export const jetbrainsTableData: TableData = {
     },
     {
       term: "GitHub Integration",
-      availibility: false,
+      availability: false,
     },
     {
       term: "GitLab Integration",
-      availibility: false,
+      availability: false,
     },
     {
       term: "Bitbucket Integration",
-      availibility: false,
+      availability: false,
     },
     {
       term: "Self-Host on GCP",
-      availibility: false,
+      availability: false,
     },
     {
       term: "Self-Host on AWS",
-      availibility: false,
+      availability: false,
     },
     {
       term: "Self-Host on Kubernetes",
-      availibility: false,
+      availability: false,
     },
     {
       term: "Prebuilds",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Snapshots",
-      availibility: true,
+      availability: true,
     },
     {
       term: "VS Code Extensions",
-      availibility: true,
+      availability: true,
     },
     {
       term: "iPad Support",
-      availibility: true,
+      availability: true,
     },
     {
       term: "Virtual Desktop (VNC)",
-      availibility: false,
+      availability: false,
     },
     {
       term: "Jetbrains Ide Support",
-      availibility: true,
+      availability: true,
     },
     {
       term: "VS Code Support",
-      availibility: false,
+      availability: false,
     },
   ],
+};
+
+export const JetbraisSpaceToc: FeatureTableToc[] = [
+  {
+    type: "text",
+    data: {
+      text: "Pricing (SAAS)",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "License",
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "GitHub Integration",
+      image: {
+        alt: "GitHub",
+        path: "/svg/github.svg",
+      },
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "GitLab Integration",
+      image: {
+        alt: "GitLab",
+        path: "/svg/gitlab.svg",
+      },
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "Bitbucket Integration",
+      image: {
+        alt: "Bitbucket",
+        path: "/svg/bitbucket.svg",
+      },
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "Self-Host on GCP",
+      image: {
+        alt: "GCP",
+        path: "/svg/brands/gcp.svg",
+      },
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "Self-Host on AWS",
+      image: {
+        alt: "AWS",
+        path: "/svg/brands/aws.svg",
+      },
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "Self-Host on Kubernetes",
+      image: {
+        alt: "Kubernetes",
+        path: "/svg/brands/kubernetes.svg",
+      },
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "Prebuilds",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "Snapshots",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "VS Code Extensions",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "iPad Support",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "Virtual Desktop (VNC)",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "Jetbrains Ide Support",
+    },
+  },
+  {
+    type: "text",
+    data: {
+      text: "VS Code Support",
+    },
+  },
+];
+
+export const JetBrainsComparison: FeatureTable = {
+  toc: JetbraisSpaceToc,
+  columns: [gitpodTableData, jetbrainsTableData],
 };

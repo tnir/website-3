@@ -5,6 +5,7 @@
 <script lang="ts">
   import type { Form } from "$lib/types/form.type";
   import OpenGraph from "$lib/components/open-graph.svelte";
+  import Header from "$lib/components/header.svelte";
 
   const extensionUrls = {
     chrome:
@@ -78,10 +79,6 @@
 </script>
 
 <style lang="postcss">
-  header {
-    @apply mb-0 !important;
-  }
-
   form li {
     @apply mb-0;
   }
@@ -95,15 +92,18 @@
   }}
 />
 
-<header>
-  {#if extensionUrl}
-    <a href={extensionUrl} rel="noopener" target="_blank">Reinstall Extension</a
-    >
-  {/if}
-  <h1>How Can We Improve?</h1>
-</header>
+<Header title="How Can We Improve?" tight={true}>
+  <div slot="top">
+    {#if extensionUrl}
+      <a href={extensionUrl} rel="noopener" target="_blank"
+        >Reinstall Extension</a
+      >
+    {/if}
+  </div>
+</Header>
+
 <section
-  class="card card shadow-xl mb-32 sm:mx-8 lg:flex lg:items-center lg:justify-around"
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl mb-32 sm:mx-8 lg:flex lg:items-center lg:justify-around"
 >
   <div class="letter lg:w-2/5 lgpr-xx-small mb-small">
     <p class="text-large">

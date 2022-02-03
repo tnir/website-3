@@ -42,7 +42,7 @@
           >
         </li> -->
         <li>
-          <FooterLink href="/gitpod-vs-github-codespaces"
+          <FooterLink href="/vs/github-codespaces"
             >Gitpod vs GitHub <br />Codespaces
           </FooterLink>
         </li>
@@ -66,7 +66,11 @@
       </Section>
       <Section title="Developer">
         <li><FooterLink href="/#get-started">Getting started</FooterLink></li>
-        <li><FooterLink href="/screencasts">Screencasts</FooterLink></li>
+        <li>
+          <FooterLink href="/screencasts/getting-started-with-gitpod"
+            >Screencasts</FooterLink
+          >
+        </li>
         <li><FooterLink href="/blog">Blog</FooterLink></li>
         <li><FooterLink href="/docs">Documentation</FooterLink></li>
         <li><FooterLink href="/support">Support</FooterLink></li>
@@ -86,7 +90,7 @@
           <FooterLink
             href="https://www.gitpod.io/careers"
             target="_blank"
-            class="highlighted">Careers</FooterLink
+            highlight>Careers</FooterLink
           >
         </li>
         <li><FooterLink href="/contact">Contact</FooterLink></li>

@@ -5,12 +5,12 @@
 <script>
   import OpenGraph from "$lib/components/open-graph.svelte";
   import HeartOfGitpod from "$lib/components/heroes/heart-of-gitpod.svelte";
-  import Header from "$lib/components/heroes/header.svelte";
   import Benefits from "$lib/components/heroes/benefits.svelte";
   import Eligibility from "$lib/components/eligibility.svelte";
   import MeetTheHeros from "$lib/components/heroes/meet-the-heros.svelte";
   import Explore from "$lib/components/explore.svelte";
   import { exploreContents } from "$lib/contents/community/hereos";
+  import Header from "$lib/components/header.svelte";
 </script>
 
 <OpenGraph
@@ -21,7 +21,19 @@
   }}
 />
 
-<Header />
+<Header
+  title="Gitpod Community Heroes"
+  text="Our program recognises developers that go above and beyond to contribute to
+  Gitpod."
+  textClassNames="max-w-xl text-large mx-auto"
+>
+  <a
+    slot="content"
+    href="https://forms.gle/hPSZ2Bws9rpqE7M4A"
+    target="_blank"
+    class="btn-conversion mt-x-small">Join the mission</a
+  >
+</Header>
 
 <HeartOfGitpod />
 

@@ -72,6 +72,8 @@
         curr instanceof HTMLButtonElement ||
         curr instanceof HTMLAnchorElement ||
         (curr instanceof HTMLDivElement && curr.onclick) ||
+        (curr instanceof HTMLInputElement &&
+          curr.classList.contains("toggle")) ||
         (curr instanceof HTMLDetailsElement && !curr.open)
       ) {
         trackButtonOrAnchor(curr);
@@ -153,7 +155,6 @@
     if (trackingMsg.dnt) {
       return;
     }
-
     trackEvent("website_clicked", trackingMsg);
   };
 
@@ -286,8 +287,8 @@
     }
   });
 
-  $: if ($page.path) {
-    // We need to depend on $page.path to trigger
+  $: if ($page.url.pathname) {
+    // We need to depend on $page.url.pathname to trigger
     // a recompute on each new page.
     if (typeof window !== "undefined" && window.prevPages) {
       // Track subsequent pages

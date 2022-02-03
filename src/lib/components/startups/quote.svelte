@@ -21,7 +21,7 @@
 </style>
 
 <div
-  class="relative card shadow-xl bg-white mt-small md:mt-x-large py-small md:mx-auto"
+  class="relative card shadow-xl bg-white mt-small md:mt-x-large py-small md:mx-auto rounded-5xl"
 >
   <img
     src="/images/startups/kumquat-left.png"

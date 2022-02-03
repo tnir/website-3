@@ -5,49 +5,76 @@
   export let labelLeft: string;
   export let labelRight: string;
   export let isInversed: boolean = false;
+  export let checked: boolean;
+  export let id: string;
 </script>
 
 <style lang="postcss">
-  .toggle-container {
-    height: 28px;
-    width: 55px;
-    background: linear-gradient(137.41deg, #ffad33 14.37%, #ff8a00 91.32%);
-    border-radius: 20px;
-  }
-
   label {
-    @apply mb-0 cursor-pointer;
+    @apply mb-0 cursor-pointer text-h6 font-bold py-macro px-xx-small rounded-5xl transition-all duration-300 hover:text-gray-900;
   }
 
-  span {
-    height: 22px;
-    width: 22px;
-    border-radius: 50%;
-    left: 3px;
-    transition: 0.4s left cubic-bezier(0.16, 1, 0.3, 1);
+  .switch-container {
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
   }
 
-  span.inversed {
-    left: calc(100% - 25px);
+  label:first-of-type {
+    @apply bg-orange-700;
   }
 
-  input:checked + span {
-    left: calc(100% - 25px);
+  .checked label {
+    &:first-of-type {
+      @apply bg-white;
+    }
+
+    &:last-of-type {
+      @apply bg-orange-700 text-gray-900;
+    }
   }
 
-  input:checked + span.inversed {
-    left: 3px;
+  .inversed label {
+    &:first-of-type {
+      @apply bg-white;
+    }
+
+    &:last-of-type {
+      @apply bg-orange-700 text-gray-900;
+    }
+  }
+
+  .inversed.checked label {
+    &:first-of-type {
+      @apply bg-orange-700 text-gray-900;
+    }
+
+    &:last-of-type {
+      @apply bg-white;
+    }
   }
 </style>
 
-<div class="flex justify-center items-center space-x-micro {clazz}">
-  <label for="toggle">{labelLeft}</label>
-  <div class="toggle-container relative flex items-center cursor-pointer">
-    <input id="toggle" type="checkbox" on:change class="h-full w-full" />
-    <span
-      class="absolute block bg-white pointer-events-none"
-      class:inversed={isInversed}
-    />
+<div class="text-center">
+  <div
+    class="switch-container inline-flex justify-center items-center space-x-0.5 {clazz} h-14 mx-auto bg-white p-1.5 rounded-5xl"
+    class:checked
+    class:inversed={isInversed}
+  >
+    <label for={id} class:text-gray-900={!checked && !isInversed}
+      >{labelLeft}</label
+    >
+    <div class="relative flex items-center cursor-pointer">
+      <input
+        {id}
+        type="checkbox"
+        on:change
+        class="h-full w-full toggle"
+        data-analytics={`{"label":"` +
+          labelLeft +
+          ` <> ` +
+          labelRight +
+          ` Toggle"}`}
+      />
+    </div>
+    <label for={id}>{labelRight}</label>
   </div>
-  <label for="toggle">{labelRight}</label>
 </div>

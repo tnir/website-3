@@ -24,100 +24,53 @@
   $: isActive = $activeFaq === title;
 </script>
 
-<style lang="scss">
-  .faq {
-    border-radius: 16px;
-    background: var(--sand-dark);
-    border: 1px solid transparent;
+<style lang="postcss">
+  details:global(a) {
+    @apply font-semibold;
+  }
 
-    &:hover,
-    &:focus {
-      border: 1px solid var(--white);
+  @media (max-width: 860px) {
+    .faq__top {
+      @apply p-xx-small items-start;
     }
 
-    &:not(:last-child) {
-      margin-bottom: var(--xx-small);
-    }
-
-    &__top {
-      padding: var(--medium);
-      align-items: center;
-
-      @media (max-width: 860px) {
-        padding: var(--xx-small);
-        align-items: flex-start;
-      }
-
-      @media (max-width: 375px) {
-        padding: var(--micro);
-      }
-    }
-
-    &__title {
-      display: inline-block;
-      width: 86%;
-    }
-
-    &__arrow {
-      height: 1.5rem;
-      width: 1.5rem;
-      outline: none;
-      transition: all 0.2s;
-
-      @media (max-width: 768px) {
-        margin-top: 0.188rem;
-      }
-    }
-
-    &__text {
-      margin: var(--medium);
-      margin-top: -2.5rem;
-
-      @media (max-width: 860px) {
-        margin: var(--xx-small);
-        margin-top: -1rem;
-      }
-
-      @media (max-width: 375px) {
-        margin: var(--micro);
-        margin-top: -0.5rem;
-      }
-    }
-
-    & :global(a) {
-      font-weight: 600;
+    .faq__text {
+      @apply m-xx-small -mt-4;
     }
   }
 
-  .h4 {
-    margin-bottom: 0;
+  @media (max-width: 375px) {
+    .faq__top {
+      @apply p-micro;
+    }
+    .faq__text {
+      @apply m-micro -mt-2;
+    }
   }
 
-  details[open] .faq__arrow {
-    transform: rotate(180deg);
-  }
-
-  summary {
-    list-style: none;
+  @media (max-width: 768px) {
+    .faq__arrow {
+      @apply mt-1;
+    }
   }
 
   summary::-webkit-details-marker {
-    display: none;
+    @apply hidden;
   }
 </style>
 
 <details
-  class="faq"
+  class="faq group bg-sand-dark border border-solid border-transparent focus:border-white hover:border-white rounded-2xl"
   open={isActive}
   on:toggle={setActive}
   id={fragment}
   data-analytics={`{"context":"faq"}`}
 >
-  <summary class="outline-none">
-    <div class="faq__top flex">
-      <h3 class="h4 faq__title flex-1">{title}</h3>
+  <summary class="outline-none list-none">
+    <div class="faq__top flex items-center p-medium">
+      <h3 class="h4 faq__title flex-1 inline-block w-5/6 mb-0">{title}</h3>
       <img
-        class="faq__arrow ml-macro"
+        class="faq__arrow group-open:rotate-180 ml-macro h-6 w-6 outline-none transition-all duration-200"
         width="24"
         height="24"
         src="/arrow.svg"
@@ -125,7 +78,7 @@
       />
     </div>
   </summary>
-  <div class="faq__text text-large">
+  <div class="faq__text text-large m-medium -mt-10">
     <slot />
   </div>
 </details>

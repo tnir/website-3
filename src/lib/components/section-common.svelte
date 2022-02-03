@@ -5,7 +5,7 @@
   export let textClassNames: string = "";
 </script>
 
-<Section>
+<Section {...$$restProps}>
   <div class="text-center">
     <h2>{title}</h2>
     {#if text}

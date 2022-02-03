@@ -7,7 +7,7 @@
   export let title: string;
 </script>
 
-<Section class="text-center {clazz}">
+<Section class="text-center {clazz}" {...$$restProps}>
   <h2 class="h3">{title}</h2>
   <Brands />
 </Section>

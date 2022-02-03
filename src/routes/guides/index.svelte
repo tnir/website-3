@@ -11,15 +11,10 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
   import PostPreview from "$lib/components/blog/post-preview.svelte";
   import Write from "$lib/components/guides/write.svelte";
+  import Header from "$lib/components/header.svelte";
 
   export let guides = [];
 </script>
-
-<style lang="postcss">
-  header {
-    @apply mb-huge !important;
-  }
-</style>
 
 <OpenGraph
   data={{
@@ -29,10 +24,11 @@
   }}
 />
 
-<header>
-  <h1>Guides</h1>
-  <p>Follow these guides to use Gitpod with any project</p>
-</header>
+<Header
+  title="Guides"
+  text="Follow these guides to use Gitpod with any project"
+  tight={true}
+/>
 
 <div
   class="grid justify-items-center grid-cols-1 md:grid-cols-2 max-w-4xl m-auto lg:max-w-full lg:grid-cols-1 gap-xx-small"

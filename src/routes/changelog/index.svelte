@@ -17,6 +17,7 @@
   import ChangelogDate from "$lib/components/changelog/changelog-date.svelte";
   import ChangelogLink from "$lib/components/changelog/changelog-link.svelte";
   import Wrapper from "$lib/components/changelog/wrapper.svelte";
+  import Header from "$lib/components/header.svelte";
 
   export let changelogEntries: ChangelogEntryType[];
 
@@ -47,10 +48,13 @@
 
 <div class="flex">
   <div class="hidden w-4/12 md:block" />
-  <header class="w-full mb-x-large md:w-8/12 md:mb-xx-large">
-    <h1 class="mb-macro mt-small md:mt-xx-large">Changelog</h1>
-    <p class="text-large mb-x-small">Gitpod product improvements and updates</p>
-    <p class="buttons-wrapper">
+  <Header
+    title="Changelog"
+    text="Gitpod product improvements and updates"
+    class="w-full"
+    textAlign="left"
+  >
+    <div slot="content" class="buttons-wrapper pt-x-small">
       <TwitterFollowButton class="btn-primary" />
       <a
         href="https://gitpod.io/notifications"
@@ -59,8 +63,8 @@
         data-analytics={`{"context":"dashboard"}`}
         >Signup for the Newsletter
       </a>
-    </p>
-  </header>
+    </div>
+  </Header>
 </div>
 
 <div

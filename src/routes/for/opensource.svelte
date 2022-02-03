@@ -3,7 +3,6 @@
 </script>
 
 <script>
-  import Header from "$lib/components/opensource/header.svelte";
   import {
     programBenefits,
     cards,
@@ -20,6 +19,9 @@
   import Explore from "$lib/components/explore.svelte";
   import ActionsSpeakLouderThanWords from "$lib/components/opensource/actions-speak-louder-than-words.svelte";
   import CardSmall from "$lib/components/card/card-small.svelte";
+  import Header from "$lib/components/header.svelte";
+  import Quotes from "$lib/components/quotes.svelte";
+  import { quotes } from "$lib/contents/opensource";
 </script>
 
 <OpenGraph
@@ -31,7 +33,20 @@
   }}
 />
 
-<Header />
+<Header
+  title="Gitpod for Open Source"
+  text="Spend less time reviewing pull-requests, on-boarding contributors and more
+  time on building great things. <strong>Get a free Open-Source Plan.</strong>"
+  textClassNames="text-large max-w-4xl mx-auto"
+  fullWidth={true}
+>
+  <div slot="content">
+    <a href="/contact/support" class="btn-conversion mt-x-small mb-medium"
+      >Apply now</a
+    >
+    <Quotes {quotes} />
+  </div>
+</Header>
 
 <SectionFeatures
   title="Be always ready-to-code"
