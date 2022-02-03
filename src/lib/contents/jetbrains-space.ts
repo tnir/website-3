@@ -38,7 +38,7 @@ export const features: Feature[] = [
     paragraph:
       "We adapt, so you don't need to. That's why we natively integrated JetBrains IDEs into Gitpod next to VS Code. Don't limit yourself or your team to a single vendor and choose from the best options available.",
     image: {
-      src: "/images/jetbrains-space/ides.png",
+      src: "/svg/jetbrains-space/ides.svg",
       alt: "Multiple IDEs supported by Gitpod",
     },
   },
