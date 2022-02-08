@@ -27,7 +27,7 @@
 <div class="text-center">
   <Section>
     <img
-      src="/images/illustration-large.jpg"
+      src="/images/illustration-large.png"
       alt="The Gitpod cube set up as a remote workspace"
       class="mx-auto mb-8 w-96 grayscale-[60%]"
     />

@@ -11,15 +11,22 @@
   });
 </script>
 
-<style lang="scss">
+<style lang="postcss">
+  :global(body.banner-is-shown) {
+    .hero {
+      @apply pt-xx-small;
+    }
+  }
+
   .hero {
     display: flex;
     align-items: center;
     justify-content: center;
+    @apply md:mt-16 lg:mt-20 xl:mt-24;
 
     @media (max-width: 647px) {
       flex-direction: column;
-      margin: var(--small) auto 0;
+      margin: var(--small) auto;
       max-width: 450px;
     }
 
@@ -117,8 +124,16 @@
     &__illustration {
       max-width: 700px;
       padding-left: 70px;
-      padding-top: 20px;
       flex: 1;
+
+      img {
+        transform: scale(1.3);
+
+        @media (max-width: 647px) {
+          transform: scale(1.3) translateY(32px);
+          @apply mb-24;
+        }
+      }
 
       @media (max-width: 972px) {
         margin-top: var(--micro);
@@ -131,7 +146,7 @@
 <div class="hero mt-x-small" data-analytics={`{"position":"hero"}`}>
   <div class="hero__text">
     <h1 class="homeh1">
-      Always<br /> Ready to Code.
+      Always<br /> <span class="sm:whitespace-nowrap">Ready to Code.</span>
     </h1>
     <p id="choose-project-observer-target" class="hero__intro-text text-large">
       Spin up fresh, automated dev environments<br />
@@ -175,7 +190,7 @@
   </div>
   <div class="hero__illustration">
     <img
-      src="/images/illustration-large.jpg"
+      src="/images/illustration-large.png"
       alt="Gitpod in a Nutshell"
       width="700"
       height="724"
