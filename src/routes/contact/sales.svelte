@@ -81,21 +81,21 @@
     delete formData.cloudInfrastructure;
   }
 
-  $: if (formData.cloudInfrastructure) {
-    formData.cloudInfrastructure.valid = true;
-  }
-
-  $: if (!formData.selectedSubject.value) {
-    formData.selectedSubject.value = otherSubject;
-    formData.selectedSubject.valid = true;
-  }
-
   let isFormDirty = false;
   let isEmailSent = false;
 
   $: isFormValid = Object.values(formData).every((field) => field.valid);
 
   const handleSubmit = async () => {
+    if (formData.cloudInfrastructure) {
+      formData.cloudInfrastructure.valid = true;
+    }
+
+    if (!formData.selectedSubject.value) {
+      formData.selectedSubject.value = otherSubject;
+      formData.selectedSubject.valid = true;
+    }
+
     isFormDirty = true;
     if (!isFormValid) {
       return;

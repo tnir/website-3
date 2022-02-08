@@ -33,11 +33,6 @@
     isStudentEmailNoteShown = false;
   }
 
-  $: if (!formData.selectedSubject.value) {
-    formData.selectedSubject.value = otherSubject;
-    formData.selectedSubject.valid = true;
-  }
-
   const formData: Form = {
     consent: {
       el: null,
@@ -71,6 +66,11 @@
   $: isFormValid = Object.values(formData).every((field) => field.valid);
 
   const handleSubmit = async () => {
+    if (!formData.selectedSubject.value) {
+      formData.selectedSubject.value = otherSubject;
+      formData.selectedSubject.valid = true;
+    }
+
     isFormDirty = true;
     if (!isFormValid) {
       return;
