@@ -8,5 +8,6 @@ export type ExploreSection = {
   description?: string;
   note?: string;
   link?: Link;
+  secondaryLink?: Link;
   useKumquatIllustration?: boolean;
 };

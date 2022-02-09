@@ -93,6 +93,7 @@
             highlight>Careers</FooterLink
           >
         </li>
+        <li><FooterLink href="/customers">Customers</FooterLink></li>
         <li><FooterLink href="/contact">Contact</FooterLink></li>
         <li><FooterLink href="/media-kit">Media Kit</FooterLink></li>
         <li><FooterLink href="/security">Security</FooterLink></li>

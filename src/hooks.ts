@@ -5,6 +5,7 @@ export const getSession: import("@sveltejs/kit").GetSession = async (event) => {
     changelogEntries: event.locals.changelogEntries,
     posts: event.locals.posts,
     guides: event.locals.guides,
+    customers: event.locals.customers,
   };
 };
 
@@ -55,6 +56,21 @@ const handleGuides = async ({ event, resolve }) => {
   return await resolve(event);
 };
 
+const handleCustomers = async ({ event, resolve }) => {
+  const customers = await Promise.all(
+    Object.entries(import.meta.glob("/src/routes/customers/*.md")).map(
+      async ([path, page]) => {
+        const { metadata } = await page();
+        const filename = path.split("/").pop();
+        return { ...metadata, filename };
+      }
+    )
+  );
+  customers.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+  event.locals.customers = customers;
+  return await resolve(event);
+};
+
 const handleHeaders = async ({ event, resolve }) => {
   const response = await resolve(event);
   response.headers.set(
@@ -73,5 +89,6 @@ export const handle = sequence(
   handleHeaders,
   handleBlogPosts,
   handleChangelogEntries,
-  handleGuides
+  handleGuides,
+  handleCustomers
 );

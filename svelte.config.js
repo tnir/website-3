@@ -62,6 +62,8 @@ const config = {
         blog: "./src/lib/components/blog/blog-content-layout.svelte",
         docs: "./src/lib/components/docs/docs-content-layout.svelte",
         guides: "./src/lib/components/guides/guides-content-layout.svelte",
+        customers:
+          "./src/lib/components/customers/customers-content-layout.svelte",
       },
       rehypePlugins: [
         [

@@ -12,11 +12,12 @@
   import Header from "$lib/components/header.svelte";
 
   const selfHostingSubject = "Self-hosting";
+  const otherSubject = "Other";
   const subjects = [
     selfHostingSubject,
     "Educational Discount",
     "Reselling",
-    "Other",
+    otherSubject,
   ];
   const cloudPlatforms = [
     "Amazon Elastic Kubernetes Service (EKS)",
@@ -84,6 +85,17 @@
   let isEmailSent = false;
 
   $: isFormValid = Object.values(formData).every((field) => field.valid);
+
+  const handleClick = () => {
+    if (formData.cloudInfrastructure) {
+      formData.cloudInfrastructure.valid = true;
+    }
+
+    if (!formData.selectedSubject.value) {
+      formData.selectedSubject.value = otherSubject;
+      formData.selectedSubject.valid = true;
+    }
+  };
 
   const handleSubmit = async () => {
     isFormDirty = true;
@@ -198,7 +210,7 @@
         <ul>
           <li class:error={isFormDirty && !formData.selectedSubject.valid}>
             <fieldset>
-              <legend>Please choose a subject</legend>
+              <legend>Please choose a subject*</legend>
               <ul>
                 {#each subjects as subject, index}
                   <li>
@@ -354,6 +366,7 @@
             <button
               type="submit"
               class="btn"
+              on:click={handleClick}
               disabled={isFormDirty && !isFormValid}>Send message</button
             >
           </li>

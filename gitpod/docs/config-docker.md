@@ -9,7 +9,7 @@ title: Custom Docker Image
 
 # Custom Docker Image
 
-By default, Gitpod uses a standard Docker Image called [`Workspace-Full`](https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile) as the foundation for workspaces. Workspaces started based on this default image come pre-installed with Docker, Go, Java, Node.js, C/C++, Python, Ruby, Rust, PHP as well as tools such as Homebrew, Tailscale, Nginx and several more.
+By default, Gitpod uses a standard Docker Image called [`Workspace-Full`](https://github.com/gitpod-io/workspace-images/blob/481f7600b725e0ab507fbf8377641a562a475625/dazzle.yaml#L18) as the foundation for workspaces. Workspaces started based on this default image come pre-installed with Docker, Go, Java, Node.js, C/C++, Python, Ruby, Rust, PHP as well as tools such as Homebrew, Tailscale, Nginx and several more.
 
 If this image does not include the tools you need for your project, you can provide a public Docker image or your own [Dockerfile](#using-a-dockerfile). This provides you with the flexibility to install the tools & libraries required for your project.
 
@@ -45,7 +45,7 @@ image:
 Next, create a `.gitpod.Dockerfile` file at the root of your project. The syntax is the regular `Dockerfile` syntax as <a href="https://docs.docker.com/engine/reference/builder/" target="_blank">documented on docs.docker.com</a>.
 
 A good starting point for creating a custom `.gitpod.Dockerfile` is the
-<a href="https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile" target="_blank">gitpod/workspace-full</a> image as it already contains all the tools necessary to work with all languages Gitpod supports.
+<a href="https://github.com/gitpod-io/workspace-images/blob/481f7600b725e0ab507fbf8377641a562a475625/dazzle.yaml#L18" target="_blank">gitpod/workspace-full</a> image as it already contains all the tools necessary to work with all languages Gitpod supports.
 
 ```dockerfile
 FROM gitpod/workspace-full
@@ -56,7 +56,7 @@ RUN brew install fzf
 
 **Docker support**: If you use the `gitpod/workspace-full` image, you get Docker support built-in to your environment.
 
-If you want a base image without the default tooling installed then use the <a href="https://github.com/gitpod-io/workspace-images/blob/master/base/Dockerfile" target="_blank">gitpod/workspace-base</a> image.
+If you want a base image without the default tooling installed then use the <a href="https://github.com/gitpod-io/workspace-images/blob/481f7600b725e0ab507fbf8377641a562a475625/dazzle.yaml#L3" target="_blank">gitpod/workspace-base</a> image.
 
 ```dockerfile
 FROM gitpod/workspace-base

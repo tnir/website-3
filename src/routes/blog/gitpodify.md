@@ -151,7 +151,7 @@ To see all configuration options for the Gitpod app, please visit [the docs](/do
 
 ## Installing missing packages
 
-The default Docker image for all Gitpod workspaces ([gitpod/workspace-full](https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile)) already comes with many common developer tools. But sometimes you may see an error like this one:
+The default Docker image for all Gitpod workspaces ([gitpod/workspace-full](https://github.com/gitpod-io/workspace-images/blob/d43c719bb2ff7b6849c0456fe21e3ca06c20168f/dazzle.yaml#L18-L32)) already comes with many common developer tools. But sometimes you may see an error like this one:
 
 > `bash: tool: command not found`
 
@@ -191,7 +191,7 @@ Many projects need a database to work properly. Here is how to install the most 
 
 ### PostgreSQL
 
-To get PostgreSQL for your project, you can use our dedicated [PostgreSQL image](https://github.com/gitpod-io/workspace-images/blob/master/postgres/Dockerfile) built on top of `gitpod/workspace-full`.
+To get PostgreSQL for your project, you can use our dedicated [PostgreSQL image](https://github.com/gitpod-io/workspace-images/blob/d43c719bb2ff7b6849c0456fe21e3ca06c20168f/chunks/tool-postgresql/Dockerfile#L2) built on top of `gitpod/workspace-base`.
 
 Simply base your `.gitpod.dockerfile` on:
 
@@ -219,7 +219,7 @@ postgres=#
 
 ### MySQL
 
-If your project needs MySQL to work, we also have a dedicated [MySQL image](https://github.com/gitpod-io/workspace-images/blob/master/mysql/Dockerfile). Simply base your `.gitpod.dockerfile` on:
+If your project needs MySQL to work, we also have a dedicated [MySQL image](https://github.com/gitpod-io/workspace-images/blob/d43c719bb2ff7b6849c0456fe21e3ca06c20168f/chunks/tool-mysql/Dockerfile#L2). Simply base your `.gitpod.dockerfile` on:
 
 ```dockerfile
 FROM gitpod/workspace-mysql
@@ -257,7 +257,7 @@ redis-server
 
 ### MongoDB
 
-To get MongoDB for your project, you can use our dedicated [MongoDB image](https://github.com/gitpod-io/workspace-images/blob/master/mongodb/Dockerfile) built on top of `gitpod/workspace-full`.
+To get MongoDB for your project, you can use our dedicated [MongoDB image](https://github.com/gitpod-io/workspace-images/blob/d43c719bb2ff7b6849c0456fe21e3ca06c20168f/chunks/tool-mongodb/Dockerfile#L2) built on top of `gitpod/workspace-base`.
 
 Simply base your `.gitpod.dockerfile` on:
 
@@ -283,7 +283,7 @@ If your application needs to run a graphical UI, you might see an error like thi
 
 <br>
 
-That's because by default, Gitpod workspaces don't have a graphical environment at all. Luckily, we have a dedicated [noVNC image](https://github.com/gitpod-io/workspace-images/blob/master/full-vnc/Dockerfile) built on top of `gitpod/workspace-full` that comes with a Virtual Desktop.
+That's because by default, Gitpod workspaces don't have a graphical environment at all. Luckily, we have a dedicated [noVNC image](https://github.com/gitpod-io/workspace-images/blob/d43c719bb2ff7b6849c0456fe21e3ca06c20168f/chunks/tool-vnc/Dockerfile#L2) built on top of `gitpod/workspace-full` that comes with a Virtual Desktop.
 
 Simply base your `.gitpod.dockerfile` on:
 

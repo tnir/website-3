@@ -11,7 +11,7 @@ title: Install Gitpod Self-Hosted on Microsoft Azure Kubernetes Service (AKS)
 
 Installation instructions for Gitpod Self-Hosted on Microsoft AKS are currently located in the [gitpod-io/gitpod-microsoft-aks-guide](https://github.com/gitpod-io/gitpod-microsoft-aks-guide) repository on GitHub. The installation process takes around forty minutes. In the end, the following resources are created:
 
-- An Microsoft AKS cluster running Kubernetes v1.20.
+- An Microsoft AKS cluster running Kubernetes v1.21.
 - An Microsoft Azure load balancer.
 - An Microsoft Azure DNS zone.
 - An Microsoft Azure container registry.

@@ -1,11 +1,13 @@
 <script lang="ts">
   import type { Feature as FeatureType } from "$lib/types/feature.type";
+  import FeatureBoxes from "./feature-boxes.svelte";
   import Features from "./features.svelte";
 
   import Section from "./section.svelte";
   export let title: string;
   export let text: string = "";
   export let features: FeatureType[];
+  export let type: "box" = null;
 </script>
 
 <style lang="postcss">
@@ -17,11 +19,15 @@
 </style>
 
 <Section>
-  <div class="top text-center">
+  <div class="text-center" class:top={!type}>
     <h2>{title}</h2>
     {#if text}
-      <p class="text-large">{text}</p>
+      <p class="text-large" class:mb-small={type}>{text}</p>
     {/if}
   </div>
-  <Features {features} headingLevel="h3" />
+  {#if type === "box"}
+    <FeatureBoxes {features} />
+  {:else}
+    <Features {features} headingLevel="h3" />
+  {/if}
 </Section>

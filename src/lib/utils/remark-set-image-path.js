@@ -14,7 +14,8 @@ export default () => async (tree, vFile) => {
   if (
     vFile.filename.indexOf("src/routes/docs/") > 0 ||
     vFile.filename.indexOf("src/routes/blog/") > 0 ||
-    vFile.filename.indexOf("src/routes/guides/") > 0
+    vFile.filename.indexOf("src/routes/guides/") > 0 ||
+    vFile.filename.indexOf("src/routes/customers/") > 0
   ) {
     visit(tree, visitor);
   }

@@ -7,6 +7,7 @@
   export let posts: BlogPost[];
   export let title: string = "More articles";
   export let text: string = "";
+  export let type: "blog" | "guides" | "customers" = "blog";
 </script>
 
 <Section>
@@ -21,7 +22,7 @@
   >
     {#each posts as post}
       <div class="flex justify-center min-w-[20rem] max-w-sm">
-        <PostPreview {post} type="blog" isMostRecent headlineOrder="h3" />
+        <PostPreview {post} {type} isMostRecent headlineOrder="h3" />
       </div>
     {/each}
   </div>

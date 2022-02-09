@@ -37,9 +37,8 @@ Here are the minimum requirements:
 
 - Either Ubuntu 18.04 with ≥ v5.4 kernel or Ubuntu 20.04 with ≥ v5.4 kernel.
 - Calico for the networking overlay and network policy.
-- Kubernetes ≥ 1.18.
+- Kubernetes ≥ 1.21.
 - containerd ≥ 1.2.
-- helm ≥ 3.6.
 
 ## Minimum compute resources
 

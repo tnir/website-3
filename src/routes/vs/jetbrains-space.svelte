@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import Hero from "$lib/components/jetbrains-space/hero.svelte";
+  import Hero from "$lib/components/hero.svelte";
   import FeatureBoxes from "$lib/components/feature-boxes.svelte";
   import { features } from "$lib/contents/jetbrains-space";
   import CalloutSecondary from "$lib/components/callout-secondary.svelte";
@@ -19,7 +19,24 @@
   }}
 />
 
-<Hero />
+<Hero
+  title="Gitpod vs JetBrains Space"
+  text="Gitpod is the vendor neutral, open-source platform that integrates with
+  your individual stack including all JetBrains IDEs."
+  image={{
+    src: "/images/jetbrains-space/git-providers.png",
+    alt: "Git Providers",
+  }}
+  btnPrimary={{
+    href: "/#get-started",
+    text: "Try Now",
+    onClickHandler: () =>
+      window.analytics.track("product_cta_clicked", {
+        context: "hero",
+        destination: "#get-started",
+      }),
+  }}
+/>
 
 <FeatureBoxes {features} />
 

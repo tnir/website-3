@@ -13,7 +13,7 @@ It's relatively easy to set up your Ruby project in Gitpod.
 
 ## Ruby Versions
 
-As of this writing, Gitpod comes with Ruby 2.6.6 pre-installed.
+As of this writing, Gitpod comes with Ruby 2.7.5p203 pre-installed.
 
 To use a different Ruby version (for example, 2.5.1) you can create a [.gitpod.Dockerfile](/docs/config-docker) for your project, and then add something like the second paragraph to it:
 
@@ -28,7 +28,7 @@ RUN bash -lc "rvm install ruby-2.5.1 && \
 RUN echo "rvm_gems_path=/workspace/.rvm" > ~/.rvmrc
 ```
 
-> 💡 Explanation: Gitpod initially [sets up RVM](https://github.com/gitpod-io/workspace-images/blob/b4b8a2b796ce570efa3aef2fc9d12d5c9803d0d2/full/Dockerfile#L228-L243) in `/home/gitpod/.rvm`, but then later switches the RVM configuration directory to `/workspace/.rvm`, so that any user-made changes (like installing new gems) are persisted within a Gitpod workspace. However, during the Dockerfile build, the `/workspace` directory doesn't exist yet, so we temporarily reset RVM's configuration directory to `/home/gitpod/.rvm`.
+> 💡 Explanation: Gitpod initially [sets up RVM](https://github.com/gitpod-io/workspace-images/blob/481f7600b725e0ab507fbf8377641a562a475625/chunks/lang-ruby/Dockerfile#L11-L26) in `/home/gitpod/.rvm`, but then later switches the RVM configuration directory to `/workspace/.rvm`, so that any user-made changes (like installing new gems) are persisted within a Gitpod workspace. However, during the Dockerfile build, the `/workspace` directory doesn't exist yet, so we temporarily reset RVM's configuration directory to `/home/gitpod/.rvm`.
 
 ## Example Repositories
 

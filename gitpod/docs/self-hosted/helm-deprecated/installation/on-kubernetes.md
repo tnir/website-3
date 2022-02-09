@@ -1,5 +1,5 @@
 ---
-section: self-hosted/latest
+section: self-hosted/helm-deprecated
 title: Install Gitpod Self-Hosted on Kubernetes
 ---
 
@@ -7,11 +7,11 @@ title: Install Gitpod Self-Hosted on Kubernetes
   export const prerender = true;
 </script>
 
-# Install Gitpod Self-Hosted on Kubernetes using Helm
+# Install Gitpod Self-Hosted on Kubernetes
 
-> ⚠️ **Deprecated**
+> ⚠️ **Deprecated Content**
 >
-> This guide uses the Helm installation method, which is now deprecated.
+> The content of this page assumes you are using Helm, which is now deprecated.
 
 This section describes how to install Gitpod on any Kubernetes cluster using [Helm](https://helm.sh). This is the most flexible and generic way of installing Gitpod. The chart for stable releases resides in Helm repository [charts.gitpod.io](https://charts.gitpod.io), charts for branch-builds can be found [here](#install-branch-build), and the source of the charts is in our [public git repository](https://github.com/gitpod-io/gitpod/blob/main/chart/).
 

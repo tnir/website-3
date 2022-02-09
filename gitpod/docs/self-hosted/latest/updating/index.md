@@ -9,6 +9,10 @@ title: Updating Gitpod Self-Hosted
 
 # Updating Gitpod Self-Hosted
 
+> ⚠️ **Deprecated Content**
+>
+> The content of this page assumes you are using Helm, which is now deprecated.
+
 ## Upgrading Gitpod from v0.9.0 to v0.10.0
 
 ### default registry now requires password and username

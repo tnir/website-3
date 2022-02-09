@@ -15,7 +15,7 @@
 
 <style lang="postcss">
   button {
-    @media (min-width: 1050px) {
+    @media (min-width: 1090px) {
       @apply hidden;
     }
   }

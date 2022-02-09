@@ -15,6 +15,7 @@ a {
   font-size: var(--btn-small);
   line-height: 16px;
   color: var(--black);
+  white-space: nowrap;
 }
 .btn,
 .btn-cta,
@@ -27,15 +28,19 @@ a {
   }
 }
 .btn-conversion {
-  padding: 0.75rem 2rem;
-  font-size: var(--p-medium);
-  line-height: 1.25;
   background-color: var(--brand-almost-ripe);
   border-radius: 1rem;
 
   @media (min-width: 1141px) {
     min-width: 10rem;
   }
+}
+
+.btn-conversion,
+.btn-conversion + .btn-cta {
+  padding: 0.75rem 2rem;
+  font-size: var(--p-medium);
+  line-height: 1.25;
 
   @media (max-width: 868px) {
     padding: 0.75rem var(--xx-small);

@@ -1,13 +1,13 @@
 <script lang="ts">
   // Components
   import MenuItem from "./menu-item.svelte";
+  import Pill from "$lib/components/pill.svelte";
 
   // States
   import topicsState from "../states/topics-state";
   import subMenuState from "../states/sub-menu-state";
 
   import type { MenuEntry } from "$lib/types/menu-entry.type";
-  import Pill from "../pill.svelte";
   export let currentSection: MenuEntry = null;
 </script>
 
@@ -106,7 +106,7 @@
           <MenuItem href={sub.path} onClick={() => ($subMenuState = false)}>
             {sub.title}
             {#if sub.status}
-              <Pill text={sub.status} />
+              <Pill text={sub.status} class="ml-1.5" />
             {/if}
           </MenuItem>
         {/each}

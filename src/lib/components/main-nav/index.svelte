@@ -23,7 +23,6 @@
     {
       href: "/screencasts/getting-started-with-gitpod",
       label: "Screencasts",
-      highlight: true,
     },
     {
       href: "/blog",
@@ -36,6 +35,11 @@
     {
       href: "/changelog",
       label: "Changelog",
+    },
+    {
+      href: "/customers",
+      label: "Customers",
+      highlight: true,
     },
     {
       href: "/pricing",
@@ -78,7 +82,7 @@
     @apply opacity-0 pointer-events-none;
   }
 
-  @media (min-width: 1050px) {
+  @media (min-width: 1090px) {
     .wrapper {
       @apply h-20;
     }

@@ -24,14 +24,6 @@
       },
       href: "/docs/self-hosted/latest/installation/on-microsoft-aks",
     },
-    {
-      text: "Install on K3s",
-      icon: {
-        src: "/svg/index/k3s.svg",
-        alt: "Kubernetes",
-      },
-      href: "/docs/self-hosted/latest/installation/helm-on-kubernetes",
-    },
   ];
 </script>
 

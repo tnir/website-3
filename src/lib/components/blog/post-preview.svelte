@@ -4,12 +4,14 @@
 
   import type { BlogPost } from "$lib/types/blog-post.type";
   import Avatars from "../avatars.svelte";
+  import Pill from "../pill.svelte";
 
   export let post: BlogPost;
   export let isMostRecent: boolean = false;
-  export let type: "blog" | "guides";
+  export let type: "blog" | "guides" | "customers";
   export let layout: "row" | "column" = "column";
-
+  export let teaserHeightClass: string = "h-64";
+  export let availability: boolean = true;
   export let headlineOrder: "h3" | "" = "";
 
   const href = post && post.href ? post.href : `/${type}/${post.slug}`;
@@ -17,19 +19,25 @@
     post && post.href && isAnExternalLink(post.href) ? "_blank" : undefined;
 </script>
 
-<div
+<a
+  {href}
+  {target}
+  sveltekit:prefetch
+  class:pointer-events-none={!availability}
+  tabindex={!availability && -1}
   class:bg-sand-dark={!isMostRecent}
-  class="flex flex-col max-w-sm lg:max-w-none {layout === 'column'
+  class="flex flex-col max-w-sm lg:max-w-none group {layout === 'column'
     ? ''
-    : 'lg:flex-row lg:max-w-6xl mx-auto'} rounded-xl bg-off-white"
+    : 'lg:flex-row lg:max-w-6xl mx-auto'} rounded-xl bg-off-white transition-all duration-200 {availability &&
+    'hover:shadow-normal focus:shadow-normal'}"
   data-analytics={`{"context":"grid","variant":"preview"}`}
 >
   {#if isMostRecent}
-    <a {href} {target} sveltekit:prefetch>
+    <div>
       <div
         role="img"
         aria-label={`${type === "blog" ? "Blog post" : "Guide"}: ${post.title}`}
-        class="object-cover m-auto overflow-hidden rounded-t-xl bg-center bg-cover w-full h-64 {layout ===
+        class="object-cover m-auto overflow-hidden rounded-t-xl bg-center bg-cover w-full {teaserHeightClass} {layout ===
         'column'
           ? ''
           : 'lg:rounded-l-xl lg:rounded-t-none lg:w-60 lg:h-full'}"
@@ -39,37 +47,32 @@
             : `/images/${type}/${post.slug}/${post.image}`
         });`}
       />
-    </a>
+    </div>
   {/if}
   <div
     class="{layout === 'column'
       ? 'flex-col h-full flex-nowrap'
-      : 'flex-wrap'} flex lg:justify-between p-x-small pt-small"
+      : 'flex-wrap'} flex lg:justify-between p-xx-small pt-x-small"
   >
     <div>
-      {#if headlineOrder === "h3"}
-        <h3 class="text-h4">
-          <a
-            {href}
-            {target}
-            sveltekit:prefetch
-            class="no-underline text-black focus:underline hover:underline"
-          >
-            {post.title}
-          </a>
-        </h3>
-      {:else}
-        <h2 class="text-h4">
-          <a
-            {href}
-            {target}
-            sveltekit:prefetch
-            class="no-underline text-black focus:underline hover:underline"
-          >
-            {post.title}
-          </a>
-        </h2>
+      {#if !availability}
+        <Pill text="soon" />
       {/if}
+      <div class:mt-micro={!availability}>
+        {#if headlineOrder === "h3"}
+          <h3
+            class="text-h4 text-black group-focus:underline group-hover:underline"
+          >
+            {post.title}
+          </h3>
+        {:else}
+          <h2
+            class="text-h4 text-black group-focus:underline group-hover:underline"
+          >
+            {post.title}
+          </h2>
+        {/if}
+      </div>
       <p>{post.excerpt}</p>
     </div>
     <p class="mt-micro">
@@ -82,20 +85,15 @@
           />
         {/if}
         {#if post.date}
-          <a
-            {href}
-            {target}
-            class="date no-underline text-p-small ml-macro"
-            sveltekit:prefetch
-          >
+          <span class="date text-p-small ml-macro">
             {new Date(Date.parse(post.date)).toLocaleDateString(undefined, {
               year: "numeric",
               month: "short",
               day: "numeric",
             })}
-          </a>
+          </span>
         {/if}
       </span>
     </p>
   </div>
-</div>
+</a>

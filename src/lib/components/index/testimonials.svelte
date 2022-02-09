@@ -5,6 +5,11 @@
   import type { Testimonial as TestimonialType } from "$lib/types/testimonial.type";
 
   export let testimonials: TestimonialType[];
+  export let title: string = "";
+  export let text: string = "";
+
+  let clazz = "";
+  export { clazz as class };
 </script>
 
 <style lang="scss">
@@ -18,13 +23,17 @@
   }
 </style>
 
-<Section class="-mb-20">
+<Section class={clazz} {...$$restProps}>
   <div class="row">
     <div class="text-center">
-      <h2>Putting developer experience first</h2>
-      <p class="text-large mt-xx-small mb-medium">
-        Bring back joy and speed to your workflows.
-      </p>
+      {#if title}
+        <h2>{title}</h2>
+      {/if}
+      {#if text}
+        <p class="text-large mt-xx-small mb-medium">
+          {text}
+        </p>
+      {/if}
     </div>
     <Carousel>
       {#each testimonials as testimonial}

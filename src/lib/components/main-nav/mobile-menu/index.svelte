@@ -21,7 +21,7 @@
       }
     };
 
-    let query = window.matchMedia("(min-width: 1050px)");
+    let query = window.matchMedia("(min-width: 1090px)");
     query.addEventListener("change", handleTabletChange);
   });
 
@@ -38,7 +38,7 @@
 
 <style lang="postcss">
   /* Always make sure to keep the media query intact with one specified above in the matchMedia call. */
-  @media (min-width: 1050px) {
+  @media (min-width: 1090px) {
     .nav-items {
       @apply hidden;
     }
@@ -47,11 +47,17 @@
   div :global(a:not([class*="button"])) {
     @apply text-dark-grey;
   }
+
+  @media (max-height: 525px) {
+    .nav-items {
+      @apply pb-20;
+    }
+  }
 </style>
 
 {#if $menuState}
   <div
-    class="nav-items absolute flex flex-col py-x-small w-screen items-center bg-off-white space-y-xx-small z-10 shadow-md"
+    class="nav-items absolute flex flex-col py-x-small w-screen items-center bg-off-white space-y-xx-small z-10 shadow-md max-h-screen overflow-y-auto"
   >
     {#each navItems as navItem}
       <NavItem {navItem} />
@@ -61,7 +67,10 @@
       <DashboardButton class="text-lg h-8 w-28 button" />
     {:else}
       <LoginButton />
-      <SignUpButton class="text-lg h-8 w-28 button" on:click={toggle} />
+      <SignUpButton
+        class="text-lg h-8 w-28 button flex-shrink-0"
+        on:click={toggle}
+      />
     {/if}
   </div>
 {/if}

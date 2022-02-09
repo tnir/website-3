@@ -9,13 +9,9 @@ title: Install Gitpod Self-Hosted on Amazon Elastic Kubernetes Service (EKS)
 
 # Install Gitpod Self-Hosted on Amazon Elastic Kubernetes Service (EKS)
 
-> ⚠️ **Deprecated Contents**
->
-> This guide uses the Helm installation method, which is now deprecated. We will update it soon.
-
 Installation instructions for Gitpod Self-Hosted on Amazon EKS are currently located in the [gitpod-io/gitpod-eks-guide](https://github.com/gitpod-io/gitpod-eks-guide) repository on GitHub. The installation process takes around forty minutes. In the end, the following resources are created:
 
-- An Amazon EKS cluster running Kubernetes v1.20
+- An Amazon EKS cluster running Kubernetes v1.21
 - Kubernetes nodes using a custom [AMI image](https://github.com/gitpod-io/amazon-eks-custom-amis/tree/gitpod):
 
   - Ubuntu 20.04

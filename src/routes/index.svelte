@@ -45,6 +45,11 @@
 <Section>
   <Resources {cards} headingLevel="h2" />
 </Section>
-<Testimonials {testimonials} />
+<Testimonials
+  title="Putting developer experience first"
+  text=" Bring back joy and speed to your workflows."
+  class="-mb-20"
+  {testimonials}
+/>
 <GetStarted />
 <SpinUp />

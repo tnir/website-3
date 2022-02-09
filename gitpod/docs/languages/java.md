@@ -130,7 +130,7 @@ Then, simply open the Java file you want to debug, open the Debug panel (in the 
 
 To see a basic repository with Java debugging enabled, please check out [gitpod-io/Gitpod-Java-Debugging](https://github.com/gitpod-io/Gitpod-Java-Debugging):
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#tps://github.com/gitpod-io/Gitpod-Java-Debugging)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/Gitpod-Java-Debugging)
 
 For more please see [VSCode's docs](https://code.visualstudio.com/docs/java/java-debugging)
 
