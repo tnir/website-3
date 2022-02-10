@@ -4,12 +4,20 @@
 
 <script>
   import Hero from "$lib/components/hero.svelte";
-  import FeatureBoxes from "$lib/components/feature-boxes.svelte";
   import { features } from "$lib/contents/jetbrains-space";
   import CalloutSecondary from "$lib/components/callout-secondary.svelte";
   import CompareFeatures from "$lib/components/jetbrains-space/compare-features.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
+  import SectionFeatures from "$lib/components/section-features.svelte";
+  import Feature from "$lib/components/feature.svelte";
+  import Section from "$lib/components/section.svelte";
 </script>
+
+<style lang="postcss">
+  .gitpod-jetbrains :global(.preview) {
+    @apply col-start-1 row-start-1;
+  }
+</style>
 
 <OpenGraph
   data={{
@@ -38,7 +46,29 @@
   }}
 />
 
-<FeatureBoxes {features} />
+<Section>
+  <div class="gitpod-jetbrains">
+    <Feature
+      feature={{
+        title: "JetBrains’ IDEs within Gitpod",
+        paragraph:
+          "Gitpod and JetBrains joined forces to solve the 'works on my machine' problem. You can work in ephemeral developer environments provisioned by Gitpod using your favorite desktop IDE from JetBrains including IntelliJ IDEA, PyCharm, GoLand, and PhpStorm.",
+        image: {
+          src: "/images/jetbrains-space/gitpod-jetbrains.png",
+          alt: "JetBrains’ IDEs within Gitpod",
+          classNames: "w-full max-w-md md:max-w-lg",
+        },
+        moreButton: {
+          text: "More on JetBrains integration",
+          href: "/docs/editors",
+          type: "tertiary",
+        },
+      }}
+    />
+  </div>
+</Section>
+
+<SectionFeatures title="View the differences" {features} type="box" />
 
 <CompareFeatures />
 

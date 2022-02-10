@@ -31,7 +31,7 @@ export const features: Feature[] = [
       alt: "Greater cost-efficiency",
     },
     footnote:
-      'Price comparison for a developer working 5h per day, 21 per month with 8 core CPUs and 12GB RAM. Last verified 9 Dec 2021. Sources: <a href="/pricing">Gitpod</a>, <a href="https://www.jetbrains.com/space/buy/?billing=yearly#cloud" target="_blank">JetBrains Space</a>.',
+      'Price comparison for a developer working 5h per day, 21 per month with 8 core CPUs and 12GB RAM. Last verified 7 Feb 2022. Sources: <a href="/pricing">Gitpod</a>, <a href="https://www.jetbrains.com/remote-development/space-dev-environments/" target="_blank">JetBrains Space</a>.',
   },
   {
     title: "Your environment, your tools, your&nbsp;craft",
