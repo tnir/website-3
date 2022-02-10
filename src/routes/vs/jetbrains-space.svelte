@@ -10,7 +10,6 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
   import SectionFeatures from "$lib/components/section-features.svelte";
   import Feature from "$lib/components/feature.svelte";
-  import Section from "$lib/components/section.svelte";
 </script>
 
 <style lang="postcss">
@@ -25,6 +24,10 @@
 
     :global(.feature) > :global(div:first-child) {
       @apply mb-0 mt-x-small md:mt-0;
+    }
+
+    :global(Section) {
+      @apply mt-0;
     }
   }
 </style>
@@ -56,26 +59,24 @@
   }}
 />
 
-<Section>
-  <div class="gitpod-jetbrains">
-    <Feature
-      feature={{
-        title: "JetBrains’ IDEs within Gitpod",
-        paragraph:
-          "Gitpod and JetBrains joined forces to solve the 'works on my machine' problem. You can work in ephemeral developer environments provisioned by Gitpod using your favorite desktop IDE from JetBrains including IntelliJ IDEA, PyCharm, GoLand, and PhpStorm.",
-        image: {
-          src: "/images/jetbrains-space/gitpod-jetbrains.png",
-          alt: "JetBrains’ IDEs within Gitpod",
-          classNames: "w-full max-w-md md:max-w-lg",
-        },
-        moreButton: {
-          text: "More on JetBrains integration",
-          href: "/docs/editors",
-        },
-      }}
-    />
-  </div>
-</Section>
+<div class="gitpod-jetbrains">
+  <Feature
+    feature={{
+      title: "JetBrains’ IDEs within Gitpod",
+      paragraph:
+        "Gitpod and JetBrains joined forces to solve the 'works on my machine' problem. You can work in ephemeral developer environments provisioned by Gitpod using your favorite desktop IDE from JetBrains including IntelliJ IDEA, PyCharm, GoLand, and PhpStorm.",
+      image: {
+        src: "/images/jetbrains-space/gitpod-jetbrains.png",
+        alt: "JetBrains’ IDEs within Gitpod",
+        classNames: "w-full max-w-md md:max-w-lg",
+      },
+      moreButton: {
+        text: "More on JetBrains integration",
+        href: "/docs/editors",
+      },
+    }}
+  />
+</div>
 
 <SectionFeatures title="View the differences" {features} type="box" />
 
