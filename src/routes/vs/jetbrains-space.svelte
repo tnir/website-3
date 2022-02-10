@@ -14,8 +14,18 @@
 </script>
 
 <style lang="postcss">
-  .gitpod-jetbrains :global(.preview) {
-    @apply col-start-1 row-start-1;
+  .gitpod-jetbrains {
+    :global(.preview) {
+      @apply col-start-1 row-start-1;
+    }
+
+    :global(.feature) {
+      @apply flex-col-reverse;
+    }
+
+    :global(.feature) > :global(div:first-child) {
+      @apply mb-0 mt-x-small md:mt-0;
+    }
   }
 </style>
 
@@ -61,7 +71,6 @@
         moreButton: {
           text: "More on JetBrains integration",
           href: "/docs/editors",
-          type: "tertiary",
         },
       }}
     />
