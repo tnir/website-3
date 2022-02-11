@@ -46,7 +46,7 @@ export const features: Feature[] = [
   {
     title: "Ephemeral workspaces",
     paragraph:
-      "Spin up preconfigured, standardized dev environments from any git context when you need them and close them when you're done. Once you’ve experienced the freedom, you won’t go back to the friction of long-living stateful environments as JetBrains Spaces offers it.",
+      "Spin up preconfigured, standardized dev environments from any git context when you need them and close them when you're done. Once you’ve experienced the freedom, you won’t go back to the friction of long-living stateful environments.",
     image: {
       src: "/svg/features/muti-track-development.svg",
       alt: "Ephemeral Workspaces",
@@ -113,11 +113,7 @@ export const gitpodTableData: FeatureTableColumn = {
       availability: true,
     },
     {
-      term: "Virtual Desktop (VNC)",
-      availability: true,
-    },
-    {
-      term: "Jetbrains Ide Support",
+      term: "Jetbrains IDE Support",
       availability: true,
     },
     {
@@ -178,18 +174,14 @@ export const jetbrainsTableData: FeatureTableColumn = {
     },
     {
       term: "VS Code Extensions",
-      availability: true,
-    },
-    {
-      term: "iPad Support",
-      availability: true,
-    },
-    {
-      term: "Virtual Desktop (VNC)",
       availability: false,
     },
     {
-      term: "Jetbrains Ide Support",
+      term: "iPad Support",
+      availability: false,
+    },
+    {
+      term: "Jetbrains IDE Support",
       availability: true,
     },
     {
@@ -299,13 +291,7 @@ export const JetbraisSpaceToc: FeatureTableToc[] = [
   {
     type: "text",
     data: {
-      text: "Virtual Desktop (VNC)",
-    },
-  },
-  {
-    type: "text",
-    data: {
-      text: "Jetbrains Ide Support",
+      text: "Jetbrains IDE Support",
     },
   },
   {

@@ -62,17 +62,17 @@
 <div class="gitpod-jetbrains">
   <Feature
     feature={{
-      title: "JetBrains’ IDEs within Gitpod",
+      title: "Gitpod loves JetBrains",
       paragraph:
-        "Gitpod and JetBrains joined forces to solve the 'works on my machine' problem. You can work in ephemeral developer environments provisioned by Gitpod using your favorite desktop IDE from JetBrains including IntelliJ IDEA, PyCharm, GoLand, and PhpStorm.",
+        "Gitpod and JetBrains entered into a long-term partnership to solve the 'works on my machine' problem. You can work in cloud developer environments provisioned by Gitpod using your favorite desktop IDE from JetBrains.",
       image: {
         src: "/images/jetbrains-space/gitpod-jetbrains.png",
         alt: "JetBrains’ IDEs within Gitpod",
         classNames: "w-full max-w-md md:max-w-lg",
       },
       moreButton: {
-        text: "More on JetBrains integration",
-        href: "/docs/editors",
+        text: "Read announcement",
+        href: "/blog/gitpod-jetbrains",
       },
     }}
   />
@@ -84,7 +84,7 @@
 
 <CalloutSecondary
   title="Ready to launch your JetBrains IDE within Gitpod?"
-  text="If you already have a Gitpod account, simply go to <a href='https://gitpod.io/preferences'>gitpod.io/preferences</a>, select your favourite IDE and open your project. If you are new to Gitpod, hit the `try now` button."
+  text="If you already have a Gitpod account, simply go to <a href='https://gitpod.io/preferences'>/preferences</a>, select your favourite IDE/editor and open your project. If you are new to Gitpod, hit the `try now` button."
 >
   <img
     src="/images/jetbrains-space/jetbrains-ides-in-gitpod.png"
