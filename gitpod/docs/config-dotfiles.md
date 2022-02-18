@@ -26,13 +26,17 @@ Gitpod will recognize and run one of the following install scripts from your dot
 - setup
 - script/setup
 
-Note: Your installation script will be terminated if it exceeds 120 seconds.
+Important notes about dotfiles and install script:
 
-Make sure to make your installation script executable with `chmod 755 <install-script-name>.sh` before committing and pushing to your dotfiles repository.
-
-If there is no install script, your dotfiles will be symlinked into `/home/gitpod`.
-
-The dotfiles repository installation logs are saved to `~/.dotfiles.logs`
+- Dotfiles installation is done before the [`before:`](/docs/config-start-tasks#prebuild-and-new-workspaces) task spec every time you launch a workspace, the IDE will not start until your install script exits or automatic files linking is done.
+- Install script will be terminated if it exceeds 120 seconds.
+  > **Hack**: You can start a command in a subprocess to bypass this for long running commands. For example:
+  >
+  > `sudo apt-get install -y cowsay &`
+- Make sure to make your installation script executable with `chmod 755 <install-script-name>.sh` before committing and pushing to your dotfiles repository.
+- If there is no install script, your dotfiles will be symlinked into `/home/gitpod`.
+- The dotfiles repository installation logs are saved to `~/.dotfiles.logs`.
+- Your dotfiles repository is cloned to `~/.dotfiles`.
 
 ### Example
 
