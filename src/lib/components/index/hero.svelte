@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   let githubStarsEl: HTMLAnchorElement;
 
@@ -140,7 +141,9 @@
     <div class="hero__action">
       <div class="hero__try-now text-small">
         <div>
-          <a href="#get-started" class="btn-conversion">Try Now</a>
+          <LinkButton variant="primary" href="#get-started" size="large"
+            >Try Now</LinkButton
+          >
         </div>
         <p>
           Open a workspace.

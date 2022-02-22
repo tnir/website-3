@@ -7,6 +7,19 @@ title: Getting Started
   export const prerender = true;
 </script>
 
+<script lang="ts">
+  import OpenGraph from "$lib/components/open-graph.svelte";
+</script>
+
+<OpenGraph
+data={{
+    description:
+      "Learn how to start your first workspace, set up a gitpod.yml configuration file and enable Prebuilds. Get started for free.",
+    title: "Getting started with Gitpod",
+    keywords: "get started, fast, free",
+  }}
+/>
+
 # Getting Started
 
 Gitpod can provide fully initialized, perfectly set-up developer environmments for any kind of software project. This page helps you understand how to provide such a configuration for _your project_.

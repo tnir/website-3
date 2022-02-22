@@ -119,3 +119,9 @@ This starts a new workspace with your changes applied. You notice you now have t
 In the second workspace, the Docker build will start and show the output. If your Dockerfile has issues and the build fails or the resulting workspace does not look like you expected, you can force push changes to your config using your first, still running workspace and simply start a fresh workspace again to try them out.
 
 We are working on allowing Docker builds directly from within workspaces, but until then this approach has been proven to be the most productive.
+
+## Manually rebuild a workspace image
+
+Sometimes you find yourself in situations where you want to manually rebuild a workspace image, for example if packages you rely on released a security fix.
+
+You can trigger a workspace image rebuild with the following URL pattern: `https://gitpod.io/#imagebuild/<your-repo-url>`.

@@ -24,6 +24,10 @@ export interface Email {
     email: string;
     name?: string;
   };
+  replyTo: {
+    email: string;
+    name?: string;
+  };
   subject: string;
   message?: string;
   feedback?: string;
@@ -38,6 +42,7 @@ async function sendEmail(
     from: email.from || "",
     subject: email.subject,
     to: [email.to!],
+    replyTo: email.replyTo,
     content: [
       {
         type: "text/plain",
@@ -76,7 +81,12 @@ const handler: Handler = function (event, _, callback) {
   const email: Email = JSON.parse(event.body!) as Email;
   const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || "no-key";
   const SENDGRID_TO_EMAIL = determineToEmail(email.toType);
+  const SENDGRID_FROM_EMAIL = SENDGRID_TO_EMAIL;
 
+  email.from = {
+    email: SENDGRID_FROM_EMAIL,
+    name: "Gitpod",
+  };
   email.to = {
     email: SENDGRID_TO_EMAIL,
     name: "Gitpod",

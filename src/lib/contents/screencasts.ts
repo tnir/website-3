@@ -61,7 +61,10 @@ export const screencasts: Screencast[] = [
     tile: "screencast-4.jpg",
     youtubeId: "VYHsd1zI_tE",
     relatedDocs: [
-      { path: "/docs/vscode-extensions", title: "VS Code Extensions" },
+      {
+        path: "/docs/ides-and-editors/vscode-extensions",
+        title: "VS Code Extensions",
+      },
       { path: "/docs/environment-variables", title: "Environment Variables" },
     ],
     tags: ["Customisations"],
@@ -135,7 +138,10 @@ export const screencasts: Screencast[] = [
     tile: "screencast-10.jpg",
     youtubeId: "TwXYbZKEuoA",
     relatedDocs: [
-      { path: "/docs/vscode-extensions", title: "VS Code Extensions" },
+      {
+        path: "/docs/ides-and-editors/vscode-extensions",
+        title: "VS Code Extensions",
+      },
     ],
     tags: ["Customisations"],
   },
@@ -147,7 +153,9 @@ export const screencasts: Screencast[] = [
     duration: 230,
     tile: "screencast-11.jpg",
     youtubeId: "kI6firDA0Bw",
-    relatedDocs: [{ path: "/docs/editors/vscode", title: "VS Code Desktop" }],
+    relatedDocs: [
+      { path: "/docs/ides-and-editors/vscode", title: "VS Code Desktop" },
+    ],
     tags: ["Advanced"],
   },
   {
@@ -196,7 +204,7 @@ export const screencasts: Screencast[] = [
     youtubeId: "lwb0JSVJ2J4",
     relatedDocs: [
       {
-        path: "/docs/develop/local-companion",
+        path: "/docs/ides-and-editors/local-companion",
         title: "Gitpod Local Companion",
       },
     ],

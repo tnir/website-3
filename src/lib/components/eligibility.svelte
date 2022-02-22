@@ -1,5 +1,6 @@
 <script lang="ts">
   import Section from "./section.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   export let text: string;
   export let list: string[];
@@ -28,7 +29,7 @@
       <li>{li}</li>
     {/each}
   </ul>
-  <a href={link.href} target="_blank" class="btn-conversion">
-    {link.text}
-  </a>
+  <LinkButton variant="primary" size="large" target="_blank" href={link.href}
+    >{link.text}</LinkButton
+  >
 </Section>

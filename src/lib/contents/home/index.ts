@@ -37,6 +37,21 @@ export const brands: Brand[] = [
     className: "grey-logo",
   },
   {
+    alt: "Shares",
+    logo: "svg/brands/shares.svg",
+    transform: "scale(1.1)",
+  },
+  {
+    alt: "Astrato",
+    logo: "svg/brands/astrato.svg",
+    transform: "scale(1.1)",
+  },
+  {
+    alt: "Redwood",
+    logo: "svg/brands/redwood.svg",
+    transform: "scale(1.1)",
+  },
+  {
     alt: "Code Institute",
     logo: "svg/brands/code-institute.svg",
     className: "grey-logo",
@@ -461,39 +476,57 @@ export const ides: Ide[] = [
     icon: "vscode.svg",
   },
   {
-    name: "intellij",
-    availibility: "beta",
-    label: "IntelliJ IDEA",
-    icon: "intellij.svg",
-  },
-  {
     name: "goland",
     availibility: "beta",
     label: "Goland",
+    screenshots: {
+      desktop: "goland.png",
+    },
     icon: "goland.svg",
+  },
+  {
+    name: "intellij",
+    availibility: "beta",
+    label: "IntelliJ IDEA",
+    screenshots: {
+      desktop: "intellij.png",
+    },
+    icon: "intellij.svg",
   },
   {
     name: "pycharm",
     availibility: "beta",
     label: "PyCharm",
+    screenshots: {
+      desktop: "pycharm.png",
+    },
     icon: "pycharm.svg",
-  },
-  {
-    name: "webstorm",
-    availibility: "soon",
-    label: "GoLand",
-    icon: "webstorm.svg",
-  },
-  {
-    name: "rubymine",
-    availibility: "soon",
-    label: "RubyMine",
-    icon: "rubymine.svg",
   },
   {
     name: "phpstorm",
     availibility: "beta",
     label: "PhpStorm",
+    screenshots: {
+      desktop: "phpstorm.png",
+    },
     icon: "phpstorm.svg",
+  },
+  {
+    name: "rubymine",
+    availibility: "soon",
+    label: "RubyMine",
+    screenshots: {
+      desktop: "",
+    },
+    icon: "rubymine.svg",
+  },
+  {
+    name: "webstorm",
+    availibility: "soon",
+    label: "GoLand",
+    screenshots: {
+      desktop: "",
+    },
+    icon: "webstorm.svg",
   },
 ];

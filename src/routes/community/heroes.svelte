@@ -11,6 +11,7 @@
   import Explore from "$lib/components/explore.svelte";
   import { exploreContents } from "$lib/contents/community/hereos";
   import Header from "$lib/components/header.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
 <OpenGraph
@@ -27,11 +28,13 @@
   Gitpod."
   textClassNames="max-w-xl text-large mx-auto"
 >
-  <a
+  <LinkButton
+    variant="primary"
+    size="large"
     slot="content"
     href="https://forms.gle/hPSZ2Bws9rpqE7M4A"
     target="_blank"
-    class="btn-conversion mt-x-small">Join the mission</a
+    class="mt-x-small">Join the mission</LinkButton
   >
 </Header>
 

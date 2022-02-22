@@ -1,4 +1,6 @@
 <script lang="ts">
+  import LinkButton from "$lib/components/ui-library/link-button";
+  import Button from "$lib/components/ui-library/button";
   import { isAnExternalLink } from "$lib/utils/helpers";
   import type { Card } from "$lib/types/card.type";
   import Modal from "../modal.svelte";
@@ -11,7 +13,8 @@
   export let headingLevel: "h3" | "h2" = "h3";
   export let titleClassNames: "h4" | "h5" = "h4";
   export let iconClassNames: string = "h-16 w-20";
-  export let btnClassNames: string = "btn-cta mt-x-small";
+  export let btnClassNames: string = "mt-x-small";
+  export let variant: "primary" | "secondary" | "cta" = "cta";
   export let styles: string = "";
 
   let isModalOpen: boolean = false;
@@ -38,12 +41,20 @@
     <p>{@html text}</p>
   </div>
   {#if link}
-    <a href={link.href} {target} class={btnClassNames}>{link.text}</a>
+    <LinkButton
+      href={link.href}
+      {target}
+      {variant}
+      size="medium"
+      class={btnClassNames}>{link.text}</LinkButton
+    >
   {/if}
   {#if modal}
-    <button class={btnClassNames} on:click={() => (isModalOpen = true)}>
-      {modal.btnText}
-    </button>
+    <Button
+      {variant}
+      class={btnClassNames}
+      on:click={() => (isModalOpen = true)}>{modal.btnText}</Button
+    >
   {/if}
 </div>
 

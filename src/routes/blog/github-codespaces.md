@@ -12,6 +12,10 @@ title: GitHub Codespaces, Welcome to the Party!
   export const prerender = true;
 </script>
 
+<script>
+  import LinkButton from "$lib/components/ui-library/link-button/link-button.svelte"
+</script>
+
 Today, GitHub announced the private beta of [GitHub Codespaces](https://github.com/features/codespaces), which provide container-based dev environments for GitHub projects. At Gitpod, we are building a similar solution, and while GitHub’s Codespaces don’t fully implement everything we do, they truly embrace the notion of dev environments as code.
 
 This is great news, because it really helps to explain why this is going to change professional software development entirely.
@@ -84,6 +88,4 @@ CI/CD has taught us how versioned, reproducible infrastructure as code is key to
 
 Experience the future of software development now!
 
-<a class="btn-conversion mt-xx-small" href="/">
-  Try Gitpod.io
-</a>
+<LinkButton class="mt-xx-small" href="/" variant="primary" size="large">Try Gitpod.io</LinkButton>

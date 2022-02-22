@@ -1,5 +1,6 @@
 <script>
   import Section from "../section.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
 <style lang="postcss">
@@ -32,14 +33,16 @@
       Gitpod is the vendor neutral, open-source platform that integrates with
       your individual stack including all JetBrains IDEs.
     </p>
-    <a
+    <LinkButton
+      class="mt-x-small"
+      variant="primary"
+      size="large"
       href="/#get-started"
       on:click={() =>
         window.analytics.track("product_cta_clicked", {
           context: "hero",
           destination: "#get-started",
-        })}
-      class="btn-conversion mt-x-small">Try Now</a
+        })}>Try Now</LinkButton
     >
   </div>
   <img

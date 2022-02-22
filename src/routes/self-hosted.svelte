@@ -13,8 +13,11 @@
 
 <OpenGraph
   data={{
-    description: "Self-Host Gitpod on Your Own Infrastructure.",
-    title: "Self-Hosted",
+    description:
+      "Deploy and operate Gitpod yourself. Install Gitpod Self-Hosted on GKE, EKS, AKS or Kubernetes. Made for teams. Free for up to 10 users.",
+    title: "Gitpod Self-Hosted - Run Gitpod on your infrastructure",
+    keywords:
+      "self-hosted, self-managed, download, installation, infrastructure, kubernetes, deploy, teams",
   }}
 />
 <PlansAndPricing {pricingPlans} />

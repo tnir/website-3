@@ -1,5 +1,6 @@
 <script lang="ts">
   import Section from "./section.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
   import type { ExploreSection } from "$lib/types/explore-section.type";
 
   export let contents: ExploreSection = {};
@@ -56,7 +57,7 @@
 
   .explore__paragraph {
     @apply mb-x-small;
-    max-width: 465px;
+    max-width: 510px;
 
     @media (max-width: 830px) {
       @apply max-w-sm mb-xx-small;
@@ -115,17 +116,21 @@
           {note}
         </p>
       {/if}
-      <div class="buttons-wrapper pb-small sm:pb-micro md:pb-0">
-        <a
+      <div class="flex wrap pb-small sm:pb-micro md:pb-0">
+        <LinkButton
+          size="large"
+          variant="primary"
           href={link.href}
           target={link.href.startsWith("http") ? "_blank" : null}
-          class="btn-conversion">{link.text}</a
+          >{link.text}</LinkButton
         >
         {#if secondaryLink}
-          <a
+          <LinkButton
+            variant="cta"
+            size="large"
             href={secondaryLink.href}
             target={secondaryLink.href.startsWith("http") ? "_blank" : null}
-            class="btn-cta">{secondaryLink.text}</a
+            >{secondaryLink.text}</LinkButton
           >
         {/if}
       </div>

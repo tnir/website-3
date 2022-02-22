@@ -6,6 +6,7 @@
   import { goto } from "$app/navigation";
   import type { Form } from "$lib/types/form.type";
   import OpenGraph from "$lib/components/open-graph.svelte";
+  import Button from "$lib/components/ui-library/button";
 
   import { countryList } from "$lib/contents/license-key";
   import type { Email } from "../functions/submit-form";
@@ -61,7 +62,7 @@
 
     const email: Email = {
       toType: "sales",
-      from: {
+      replyTo: {
         email: formData.email.value,
         name: `${formData.firstName.value} ${formData.lastName.value}`,
       },
@@ -256,10 +257,11 @@
       />
     </label>
 
-    <button
+    <Button
+      variant="primary"
+      size="large"
       type="submit"
-      class="btn-conversion title"
-      disabled={isFormDirty && !isFormValid}>Install Now</button
+      disabled={isFormDirty && !isFormValid}>Install Now</Button
     >
   </form>
 

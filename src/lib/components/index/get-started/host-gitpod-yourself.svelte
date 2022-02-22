@@ -1,4 +1,5 @@
 <script lang="ts">
+  import LinkButton from "$lib/components/ui-library/link-button";
   const selfHostedButtons = [
     {
       text: "Install on GKE",
@@ -34,13 +35,22 @@
 
 <div class="my-x-small space-y-3">
   {#each selfHostedButtons as { href, text, icon }}
-    <a
-      {href}
-      class="flex items-center w-60 mx-auto p-2 px-xx-small rounded-2xl bg-off-white font-semibold hover:bg-orange-700 focus:bg-orange-700 transition-all duration-200 shadow-light"
-    >
-      <img src={icon.src} alt={icon.alt} class="h-6 w-8 mr-micro" />
-      {text}
-    </a>
+    <div>
+      <LinkButton
+        class="inline-flex mx-auto items-center bg-off-white hover:bg-orange-700 focus:bg-orange-700"
+        {href}
+        variant="unstyled"
+        size="large"
+      >
+        <img
+          slot="image"
+          src={icon.src}
+          alt={icon.alt}
+          class="h-6 w-8 mr-micro"
+        />
+        {text}</LinkButton
+      >
+    </div>
   {/each}
 </div>
 

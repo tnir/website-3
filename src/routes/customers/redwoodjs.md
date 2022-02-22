@@ -19,7 +19,17 @@ keywords: open-source, community, redwoodJS, OSS
 	import Section from "$lib/components/section.svelte";
 	import Story from "$lib/components/customers/story.svelte";
 	import Quote from "$lib/components/quote.svelte";
+  	import OpenGraph from "$lib/components/open-graph.svelte";
 </script>
+
+<OpenGraph
+data={{
+    description:
+      "RedwoodJS was founded by Tom Preston-Werner, the Founder and former CEO of GitHub. Gitpod removed the friction of contributing to RedwoodJS, growing the community.",
+    title: "RedwoodJS case study: Building a community by removing friction",
+    keywords: "open-source, community, redwoodJS, OSS",
+  }}
+/>
 
 <CustomerHero
 title="Increasing Redwood's development velocity by removing the friction to&nbsp;contribute"
@@ -63,8 +73,8 @@ text: "To spin up a fully functional test project",
 />
 
 <Section>
-	<Quote 
-		quote="Gitpod totally changed the development velocity for RedwoodJS—it removed any issues related to configurations of dev environments and made it incredibly easy to contribute."
+	<Quote
+		quote="Gitpod totally changed the development velocity for RedwoodJS — it removed any issues related to configurations of dev environments and made it incredibly easy to contribute."
 		author={{
 			name: "Tom Preston-Werner",
 			jobTitle: "Founder of GitHub & Redwood, former CEO of GitHub",
@@ -94,25 +104,25 @@ To solve that and enable developers to contribute to the project with a single c
 
 ## Making it easy for the community to use RedwoodJS and contribute to it
 
-As the configuration is on the repo level, it allows the community to spin up functional test projects with the click of a button that have been prebuilt ahead of time. Making it so much easier for the community to contribute and use the framework, RedwoodJS has over 1,500 users and 190+ contributors to the project, at the time of writing.
+As the configuration is on the repo level, it allows the community to spin up functional test projects with the click of a button that have been prebuilt ahead of time. Making it so much easier for the community to contribute and use the framework, RedwoodJS has over 11.000 stars and 190+ contributors to the project, at the time of writing.
 
 > “We’re obsessed with developer experience. Gitpod allowed RedwoodJS to be accessible to contributors and the core team without any friction and made everyone more productive.”
 
-At Gitpod we also created [contribute.dev](https://contribute.dev/), an initiative to discover open source projects like Redwood’s that describe their dev environment as code with Gitpod. This way users know that they can focus on core contributions rather than sacrificing time on developer environment configurations.
+At Gitpod we also created [contribute.dev](https://contribute.dev/), an initiative to discover open source projects like Redwood’s that describe their dev environment as code using Gitpod. This way users know that they can focus on core contributions rather than sacrificing time on developer environment configurations.
 
 Redwood also integrated the “Open in Gitpod” button in their <code>[contributing.md](https://github.com/redwoodjs/redwood/blob/main/CONTRIBUTING.md#browser-based-development-setup)</code> and recorded a 3min Gitpod + RedwoodJS walkthrough [video](https://www.youtube.com/watch?v=_kMuTW3x--s) to help contributors understand the alternative to a tedious setup on their local machine.
 
 <img src="/images/customers/redwoodjs/about-gitpod.png" alt="About Gitpod" class="rounded-t-2xl" />
 
-Redwood also frequently hosts workshops for anyone interested to contribute to the project. Having workshop participants start their developer environment in Gitpod makes sure the time is best used for explaining how to actually contribute rather than troubleshooting everyone’s dev environment.
+The team also frequently hosts workshops for anyone interested to contribute to the project. Having workshop participants start their developer environment in Gitpod makes sure the time is best used for explaining how to actually contribute rather than troubleshooting everyone’s setup.
 
-> “It’s just brilliant and so simple to use”
+> “It’s just brilliant and so simple to use.”
 
-With more and more contributions coming in as Pull Requests, the maintainers of Redwood benefit from efficient multitrack development every day. Being able to open a fully prebuild and context aware workspace for reviewing a PR in parallel, allows them to continue with their work instantly after approving the PR. It also helps unblocking others greatly and speeds up the developer velocity.
+With more and more contributions coming in as Pull Requests, the maintainers of Redwood benefit from efficient multitrack development every day. Being able to open a fully prebuilt and context aware workspace for reviewing a PR in parallel, allows them to continue with their work instantly after approving the PR. It also helps unblocking others greatly and speeds up developer velocity.
 
 > Reviewing pull requests is delightful because they are prebuilt and ready for review!”
 
-The team at Gitpod is proud to support the open source community and projects through our product. We’re doing everything we can to streamline the experience for contributors to develop open source projects. [Eligible](/docs/professional-open-source) open source contributors can use Gitpod without usage limits on any public repository. We’ve also launched an Open Source Sustainability Fund [[1](/blog/gitpod-open-source-sustainability-fund)] with an initial investment of USD 30.000 and give our employees the chance to donate $1.500USD to open source projects of their choice for successful referrals of new hires.
+The team at Gitpod is proud to support the open source community and projects through our product. We’re doing everything we can to streamline the experience for contributors to develop open source projects. We launched [Gitpod for Open Source](/for/opensource) to let open source contributors use Gitpod without usage limits on any public repository. We’ve also launched an Open Source Sustainability Fund [[1](/blog/gitpod-open-source-sustainability-fund)] with an initial investment of USD 30.000 and give our employees the chance to donate $1.500USD to open source projects of their choice for successful referrals of new hires.
 
 We’re thankful for the collaboration with Redwood and the interview with Tom Preston-Werner and team that led to this case study.
 

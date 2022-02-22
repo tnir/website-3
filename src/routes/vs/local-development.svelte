@@ -29,9 +29,10 @@
 
 <OpenGraph
   data={{
-    title: "Gitpod vs local development",
+    title: "Gitpod vs local development - move to the cloud",
     description:
-      "Why should you move your dev environment to the cloud? Here is the answer.",
+      "Develop like Google, Facebook and Shopify. Spend less time worrying about brittle, local dev environments and leverage the power of the cloud to improve your team’s developer experience.",
+    keywords: "local development, cloud, remote development, secure",
   }}
 />
 

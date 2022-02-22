@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { ImageBox } from "$lib/types/image-box.type";
+  import LinkButton from "$lib/components/ui-library/link-button";
   export let image: ImageBox;
   const { src, alt, text, btnText, imgClass } = image;
 </script>
@@ -9,5 +10,7 @@
 >
   <img {src} {alt} class="h-auto md:h-72 rounded m-auto w-full {imgClass}" />
   <p class="mt-small mb-micro max-w-sm mx-auto">Download {text}</p>
-  <a href={src} class="btn-cta" download>{btnText}</a>
+  <LinkButton variant="cta" size="large" href={src} download
+    >{btnText}</LinkButton
+  >
 </div>

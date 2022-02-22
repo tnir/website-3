@@ -1,5 +1,6 @@
 <script>
   import Section from "../section.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
 <Section
@@ -11,13 +12,16 @@
     <p class="mb-x-small">
       Please get in contact and we’ll get onto it right away.
     </p>
-    <div class="buttons-wrapper">
-      <a
-        href="https://www.gitpodstatus.com/"
+    <div class="flex justify-center items-center flex-wrap space-x-4">
+      <LinkButton
         target="_blank"
-        class="btn-primary">View status page</a
+        variant="primary"
+        size="medium"
+        href="https://www.gitpodstatus.com/">View status page</LinkButton
       >
-      <a href="/contact/support" class="btn-secondary">Contact support</a>
+      <LinkButton variant="secondary" size="medium" href="/contact/support"
+        >Contact support</LinkButton
+      >
     </div>
   </div>
 </Section>

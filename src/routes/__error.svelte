@@ -12,6 +12,7 @@
   import { dev } from "$app/env";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import Section from "$lib/components/section.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   export let status: number;
   export let error: Error;
@@ -46,7 +47,9 @@
       <a href="https://twitter.com/gitpod">@gitpod</a>
     </p>
     <p class="mb-8">
-      <a class="btn" href="https://www.gitpod.io">Go Home</a>
+      <LinkButton variant="cta" size="medium" href="https://www.gitpod.io"
+        >Go Home</LinkButton
+      >
     </p>
   </Section>
 </div>

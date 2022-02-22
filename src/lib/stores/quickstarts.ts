@@ -27,12 +27,7 @@ const quickstartItems = readable(
     mapQuickstart("Elixir", "quickstart/elixir", false),
     mapQuickstart("Elm", "quickstart/elm", false),
     mapQuickstart("Flutter", "quickstart/flutter", false),
-    mapQuickstart(
-      "Golang",
-      "quickstart/go",
-      true,
-      "/svg/projects/black/go-black.svg"
-    ),
+    mapQuickstart("Golang", "quickstart/go", true, "/svg/projects/go.svg"),
     mapQuickstart("Grain", "quickstart/grain", false),
     mapQuickstart("Haskell", "quickstart/haskell", false),
     mapQuickstart("IHP", "quickstart/ihp", false),
@@ -40,7 +35,7 @@ const quickstartItems = readable(
       "Java Spring",
       "quickstart/java",
       true,
-      "/svg/projects/black/java-black.svg"
+      "/svg/projects/java.svg"
     ),
     mapQuickstart("Julia", "quickstart/julia", false),
     mapQuickstart("NextJS", "quickstart/nextjs", false),
@@ -49,7 +44,7 @@ const quickstartItems = readable(
       "Node - TypeScript",
       "quickstart/typescript",
       true,
-      "/svg/projects/black/ts-black.svg"
+      "/svg/projects/ts.svg"
     ),
     mapQuickstart("OCaml", "quickstart/ocaml", false),
     mapQuickstart("Perl", "quickstart/perl", false),
@@ -60,23 +55,18 @@ const quickstartItems = readable(
       "Python Django",
       "quickstart/python",
       true,
-      "/svg/projects/black/python-black.svg"
+      "/svg/projects/python.svg"
     ),
     mapQuickstart("Python Flask", "quickstart/flask", false),
     mapQuickstart("React", "quickstart/react", false),
     mapQuickstart("Ruby on Rails", "quickstart/ruby-on-rails", false),
-    mapQuickstart(
-      "Rust",
-      "quickstart/rust",
-      true,
-      "/svg/projects/black/rust-black.svg"
-    ),
+    mapQuickstart("Rust", "quickstart/rust", true, "/svg/projects/rust.svg"),
     mapQuickstart("Scala", "quickstart/scala", false),
     mapQuickstart(
       "Svelte",
       "quickstart/svelte",
       true,
-      "/svg/projects/black/svelte-black.svg"
+      "/svg/projects/svelte.svg"
     ),
     mapQuickstart("SvelteKit", "quickstart/sveltekit", false),
     mapQuickstart("TLA+", "quickstart/tlaplus", false),

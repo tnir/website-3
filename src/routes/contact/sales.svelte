@@ -10,6 +10,7 @@
   import Section from "$lib/components/section.svelte";
   import { trackEvent, trackIdentity } from "$lib/components/segment.svelte";
   import Header from "$lib/components/header.svelte";
+  import Button from "$lib/components/ui-library/button";
 
   const selfHostingSubject = "Self-hosting";
   const otherSubject = "Other";
@@ -114,7 +115,7 @@
 
     const email: Email = {
       toType: "sales",
-      from: {
+      replyTo: {
         email: formData.workEmail.value,
         name: formData.name.value,
       },
@@ -363,11 +364,12 @@
             >
           </li>
           <li>
-            <button
-              type="submit"
-              class="btn"
+            <Button
+              variant="cta"
+              size="medium"
               on:click={handleClick}
-              disabled={isFormDirty && !isFormValid}>Send message</button
+              type="submit"
+              disabled={isFormDirty && !isFormValid}>Send message</Button
             >
           </li>
         </ul>

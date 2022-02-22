@@ -49,6 +49,20 @@
 /docs/go-in-gitpod /docs/languages/go 301
 /docs/html-in-gitpod /docs/languages/html 301
 /docs/ide /docs/editors 301
+/docs/editors /docs/ides-and-editors 301
+/docs/editors/vscode-browser /docs/ides-and-editors/vscode-browser
+/docs/editors/Goland /docs/ides-and-editors/Goland
+/docs/editors/intellij /docs/ides-and-editors/intellij
+/docs/editors/vscode /docs/ides-and-editors/vscode
+/docs/editors/clion /docs/ides-and-editors/clion
+/docs/editors/datagrip /docs/ides-and-editors/datagrip
+/docs/editors/phpstorm /docs/ides-and-editors/phpstorm
+/docs/editors/pycharm /docs/ides-and-editors/pycharm
+/docs/editors/rider /docs/ides-and-editors/rider
+/docs/editors/rubymine /docs/ides-and-editors/rubymine
+/docs/editors/webstorm /docs/ides-and-editors/webstorm
+/docs/develop/local-companion /docs/ides-and-editors/local-companion 301
+/docs/vscode-extensions /docs/ides-and-editors/vscode-extensions 301
 /docs/index.html /docs 301
 /docs/integrations/jetbrains /docs/editors 301
 /docs/java_in_gitpod /docs/java-in-gitpod 301
@@ -58,6 +72,7 @@
 /docs/languages_and_frameworks /docs/languages-and-frameworks 301
 /docs/languages/pandas /docs/languages/python#pandas 301
 /docs/php-in-gitpod /docs/languages/php 301
+/docs/professional-open-source /for/opensource 301
 /docs/python_in_gitpod /docs/python-in-gitpod 301
 /docs/python-in-gitpod /docs/languages/python 301
 /docs/r-in-gitpod /docs/languages/r 301

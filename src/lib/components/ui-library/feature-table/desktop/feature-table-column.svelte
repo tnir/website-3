@@ -1,5 +1,6 @@
 <script lang="ts">
   import FeatureTableHeader from "./feature-table-header.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
   import FeatureTableItem from "./feature-table-item.svelte";
   import type { FeatureTableColumn } from "../feature-table.types";
 
@@ -18,11 +19,10 @@
     {/each}
     {#if featureData.link}
       <div class="flex justify-center items-start">
-        <a
-          href={featureData.link.href}
-          class="btn-cta"
-          class:btn-primary={featureData.isHighlighted}
-          >{featureData.link.label}</a
+        <LinkButton
+          variant={featureData.isHighlighted ? "primary" : "cta"}
+          size="large"
+          href={featureData.link.href}>{featureData.link.label}</LinkButton
         >
       </div>
     {/if}

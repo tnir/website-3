@@ -9,6 +9,7 @@
   import Find from "$lib/components/startups/find.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import Header from "$lib/components/header.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
 <OpenGraph
@@ -25,8 +26,12 @@
   accelerator we will extend the Gitpod startup program from 1 year to 2
   years."
 >
-  <a slot="content" href="/for/startups" class="btn-conversion mt-x-small"
-    >View startup program</a
+  <LinkButton
+    slot="content"
+    href="/for/startups"
+    class="mt-x-small"
+    variant="primary"
+    size="large">View Startup program</LinkButton
   >
 </Header>
 

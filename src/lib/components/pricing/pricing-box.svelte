@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Pricing } from "$lib/types/pricing.type";
   import QaTooltip from "../qa-tooltip.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   export let pricing: Pricing;
   const {
@@ -40,10 +41,6 @@
     @media (max-width: 375px) {
       @apply h-5 w-5;
     }
-  }
-
-  .btn-cta {
-    @apply self-center;
   }
 
   .learn-more {
@@ -99,11 +96,12 @@
     {/if}
   </div>
   {#if btnHref && btnText}
-    <a
+    <LinkButton
+      variant={spiced ? "primary" : "cta"}
+      size="large"
       href={btnHref}
       data-analytics={`{"context":"` + trackingName + `","position":"hero"}`}
-      class="btn-cta"
-      class:btn-primary={spiced}>{btnText}</a
+      >{btnText}</LinkButton
     >
   {/if}
   {#if footnote}

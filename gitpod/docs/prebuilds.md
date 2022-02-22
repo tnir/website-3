@@ -58,7 +58,7 @@ To create a new project:
 
 Environment variables which are defined in project settings will be visible in prebuilds. This is useful for prebuilds to access restricted services.
 
-**WARNING**  
+**WARNING**
 Care should be taken with secrets in prebuilds. Do not save secrets in a way which could leak into workspaces. This especially true for public repositories.
 
 ## Configuring prebuilds manually.

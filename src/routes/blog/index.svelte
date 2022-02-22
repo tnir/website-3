@@ -30,8 +30,9 @@
   <OpenGraph
     data={{
       description:
-        "Visit the Gitpod blog to learn about releases, tutorials, news and more.",
-      title: "Blog",
+        "The latest news, articles, and opinions around developer experience and remote development in the cloud.",
+      title: "Gitpod Blog - News, ideas and background stories",
+      keywords: "blog, tutorial, news, articles",
     }}
   />
   <Section>

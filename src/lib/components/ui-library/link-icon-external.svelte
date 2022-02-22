@@ -3,7 +3,7 @@
   export let icon: string;
 </script>
 
-<style>
+<style lang="postcss">
   a,
   span {
     /* Move to markup once src/lib/assets/markdown-commons.scss is gone */
@@ -12,7 +12,7 @@
 </style>
 
 <a
-  class="inline-flex mr-4 py-macro px-3 bg-white no-underline items-center rounded-lg shadow-sm justify-center text-btn-small text-black font-semibold text-center transition-all hover:bg-off-white"
+  class="inline-flex text-center py-2 px-4 text-btn-small leading-4 rounded-xl shadow-light font-semibold bg-off-white text-black hover:bg-white focus:bg-white"
   {href}
   target="_blank"
   rel="noopener"

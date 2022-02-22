@@ -1,47 +1,12 @@
+<script lang="ts">
+  import LinkButton from "$lib/components/ui-library/link-button";
+</script>
+
 <style lang="scss">
   .buttons {
     display: inline-flex;
     flex-direction: column;
     margin: var(--large) 0;
-
-    .btn {
-      display: flex;
-      padding: var(--macro) var(--x-small);
-      border-radius: 0.75rem;
-      color: var(--white);
-      border: 1px solid transparent;
-      place-items: center;
-      transition: all 0.2s;
-
-      &:hover,
-      &:focus,
-      &:active {
-        opacity: 0.9;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: var(--micro);
-      }
-
-      &--github {
-        background: #000000;
-
-        &:hover,
-        &:focus,
-        &:active {
-          opacity: 1;
-          background: var(--black-hover);
-        }
-      }
-
-      &--bitbucket {
-        background: #265583;
-      }
-
-      &--gitlab {
-        background: #5e48ba;
-      }
-    }
 
     svg {
       height: 1.75rem;
@@ -69,8 +34,13 @@
 <p class="max-w-md mx-auto">
   Select a Git provider to start with an existing project from any Git context.
 </p>
-<div class="buttons" data-analytics={`{"context":"signup"}`}>
-  <a href="https://gitpod.io/new" class="btn btn--gitlab">
+<div class="buttons space-y-4" data-analytics={`{"context":"signup"}`}>
+  <LinkButton
+    href="https://gitpod.io/new"
+    variant="unstyled"
+    size="large"
+    class="bg-[#5e48ba] text-white hover:text-white focus:text-white active:text-white hover:opacity-90 focus:bg-black-hover active:bg-black-hover flex items-center"
+  >
     <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>GitLab</title>
       <path
@@ -101,8 +71,13 @@
       /></svg
     >
     Continue with GitLab
-  </a>
-  <a href="https://gitpod.io/new" class="btn btn--github">
+  </LinkButton>
+  <LinkButton
+    href="https://gitpod.io/new"
+    variant="unstyled"
+    size="large"
+    class="bg-black text-white flex items-center hover:text-white focus:text-white active:text-white hover:bg-black-hover focus:bg-black-hover active:bg-black-hover"
+  >
     <svg viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>GitHub Octocat</title>
       <path
@@ -113,8 +88,13 @@
       />
     </svg>
     Continue with GitHub
-  </a>
-  <a href="https://gitpod.io/new" class="btn btn--bitbucket">
+  </LinkButton>
+  <LinkButton
+    size="large"
+    variant="unstyled"
+    href="https://gitpod.io/new"
+    class="bg-[#265583] text-white flex items-center hover:text-white focus:text-white active:text-white hover:opacity-90 focus:bg-black-hover active:bg-black-hover"
+  >
     <svg viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>Bitbucket</title>
       <path
@@ -123,7 +103,7 @@
       />
     </svg>
     Continue with Bitbucket
-  </a>
+  </LinkButton>
   <!-- <a href="#" class="link--light-grey">Third-party providers ↗</a> -->
 </div>
 <p class="text-large">

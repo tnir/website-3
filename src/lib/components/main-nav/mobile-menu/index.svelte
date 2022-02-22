@@ -64,7 +64,7 @@
     {/each}
     <ContactLinkMobile />
     {#if isLoggedIn}
-      <DashboardButton class="text-lg h-8 w-28 button" />
+      <DashboardButton />
     {:else}
       <LoginButton />
       <SignUpButton

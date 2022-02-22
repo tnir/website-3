@@ -1,5 +1,6 @@
 <script lang="ts">
   import Section from "../section.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   const imgSrc = "/images/media-kit/founders.jpg";
 </script>
@@ -11,7 +12,9 @@
   >
     <img src={imgSrc} alt="Gitpod founders group" class="rounded-4xl mx-auto" />
     <p class="py-xx-small">Download founders group picture</p>
-    <a href={imgSrc} download class="btn-cta">PNG </a>
+    <LinkButton variant="cta" size="large" href={imgSrc} download
+      >PNG</LinkButton
+    >
   </div>
   <p class="text-large">
     Please <a href="/contact/support">contact us</a> for any intended use not covered

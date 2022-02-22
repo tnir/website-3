@@ -2,7 +2,7 @@
   export const prerender = true;
 </script>
 
-<script>
+<script lang="ts">
   import Secure from "$lib/components/security/secure.svelte";
   import Program from "$lib/components/security/program.svelte";
   import CallToAction from "$lib/components/security/call-to-action.svelte";
@@ -10,6 +10,7 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
   import UsedBy from "$lib/components/index/used-by.svelte";
   import Header from "$lib/components/header.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
 <OpenGraph
@@ -26,8 +27,8 @@
   textClassNames="text-large max-w-2xl mx-auto mb-x-small"
   tight={true}
 >
-  <a slot="content" href="/contact/support" class="btn btn-primary"
-    >Talk to an expert</a
+  <LinkButton variant="primary" size="medium" href="/contact/support"
+    >Talk to an expert</LinkButton
   >
 </Header>
 

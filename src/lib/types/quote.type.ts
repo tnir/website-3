@@ -14,5 +14,6 @@ export type Quote = {
   img?: {
     src: string;
     alt: string;
+    square?: boolean;
   };
 };

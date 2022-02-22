@@ -35,8 +35,10 @@
 <OpenGraph
   data={{
     description:
-      "Gitpod is the vendor neutral, open-source platform that integrates with your individual stack including all JetBrains IDEs.",
-    title: "Gitpod vs JetBrains Space",
+      "Gitpod is the vendor-neutral, open-source alternative that integrates with VS Code as well as all JetBrains IDEs like IntelliJ, GoLand, PhpStorm, PyCharm.",
+    title: "Gitpod vs JetBrains Space - what makes Gitpod different?",
+    keywords: "differences, jetbrains, Goland, Intellij, alternative",
+    norobots: true,
   }}
 />
 

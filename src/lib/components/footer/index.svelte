@@ -36,11 +36,11 @@
             Gitpod for Startups
           </FooterLink>
         </li>
-        <!-- <li>
+        <li>
           <FooterLink href="/for/opensource" class="flex items-center"
             >Gitpod for Open Source</FooterLink
           >
-        </li> -->
+        </li>
         <li>
           <FooterLink href="/vs/github-codespaces"
             >Gitpod vs GitHub <br />Codespaces

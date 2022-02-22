@@ -1,12 +1,13 @@
 <script lang="ts">
   import { isAnExternalLink } from "$lib/utils/helpers";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   import type { ContactAction } from "$lib/types/contact-action.type";
 
   export let width: string = "";
   let clazz = "";
   export { clazz as class };
-  export let btnClass: "btn-primary" | "btn-cta" = "btn-primary";
+  export let btnClass: "primary" | "cta" = "primary";
   export let action: ContactAction;
   export let isTextSmall: boolean = false;
   const { icon, title, text, link } = action;
@@ -24,5 +25,7 @@
     <h2 class="h4">{title}</h2>
     <p class="mt-micro mb-x-small" class:text-small={isTextSmall}>{text}</p>
   </div>
-  <a href={link.href} {target} class={btnClass}>{link.text}</a>
+  <LinkButton href={link.href} {target} variant={btnClass}
+    >{link.text}</LinkButton
+  >
 </div>

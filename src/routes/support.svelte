@@ -15,8 +15,10 @@
 
 <OpenGraph
   data={{
-    description: "Need help?",
-    title: "Support",
+    description:
+      "Browse our collection of helpful articles, videos, guides and tutorials and find answers to your questions quickly. Or contact our team for individual support requests.",
+    title: "Gitpod Support - We’re here to help",
+    keywords: "help, support, question, contact, customer service",
   }}
 />
 

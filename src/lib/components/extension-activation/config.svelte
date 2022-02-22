@@ -1,5 +1,6 @@
 <script>
   import Section from "../section.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
 <Section>
@@ -18,7 +19,9 @@
         prebuilds
       </li>
     </ol>
-    <a href="/docs/configure" class="btn-conversion">Configure your project</a>
+    <LinkButton variant="primary" size="large" href="/docs/configure"
+      >Configure your project</LinkButton
+    >
     <p class="mt-micro text-link-grey">In less than 5 min</p>
   </div>
 </Section>

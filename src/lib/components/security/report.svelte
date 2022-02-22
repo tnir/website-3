@@ -1,5 +1,6 @@
 <script>
   import Section from "../section.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
 <Section>
@@ -11,6 +12,8 @@
       We welcome close collaboration with the worldwide security research
       community.
     </p>
-    <a href="/contact/support" class="btn-secondary">Report security concern</a>
+    <LinkButton variant="secondary" size="medium" href="/contact/support"
+      >Report security concern</LinkButton
+    >
   </div>
 </Section>

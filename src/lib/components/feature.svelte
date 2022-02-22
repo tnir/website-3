@@ -1,5 +1,6 @@
 <script lang="ts">
   import { isAnExternalLink } from "$lib/utils/helpers";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   import type { Feature } from "$lib/types/feature.type";
   import Console from "./console.svelte";
@@ -44,6 +45,10 @@
     @apply block h-6 w-6 mr-micro;
     flex: 0 0 1.5rem;
   }
+
+  .buttons-wrapper {
+    @apply flex justify-center items-center flex-wrap space-x-4;
+  }
 </style>
 
 <Section class="feature-container-section">
@@ -81,20 +86,21 @@
         class:hidden={!moreButton && !secondaryButton}
       >
         {#if moreButton}
-          <a
+          <LinkButton
             href={moreButton.href}
-            class={`btn-${moreButton.type || "primary"}`}
-          >
-            {moreButton.text}
-          </a>
+            size="medium"
+            variant={moreButton.type || "primary"}
+            >{moreButton.text}
+          </LinkButton>
         {/if}
         {#if secondaryButton}
-          <a
+          <LinkButton
+            variant="secondary"
+            size="medium"
             href={secondaryButton.href}
-            class="btn-secondary"
             target={isAnExternalLink(secondaryButton.href)
               ? "_blank"
-              : undefined}>{secondaryButton.text}</a
+              : undefined}>{secondaryButton.text}</LinkButton
           >
         {/if}
       </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import Header from "../header.svelte";
   import TwitterFollowButton from "../t-button.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
 <Header
@@ -9,14 +10,18 @@
   textClassNames="text-medium mb-x-small"
   tight={true}
 >
-  <div slot="content" class="buttons-wrapper justify-center">
-    <a
-      class="btn-primary"
+  <div
+    slot="content"
+    class="flex justify-center items-center flex-wrap space-x-4"
+  >
+    <LinkButton
+      variant="primary"
+      size="medium"
       href="https://gitpod.io/notifications"
       target="_blank"
       data-analytics={`{"context":"dashboard"}`}
-      >Signup for the Newsletter
-    </a>
-    <TwitterFollowButton class="btn-secondary" />
+      >Signup for the Newsletter</LinkButton
+    >
+    <TwitterFollowButton variant="secondary" />
   </div>
 </Header>

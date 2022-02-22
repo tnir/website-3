@@ -1,3 +1,7 @@
+<script lang="ts">
+  import LinkButton from "$lib/components/ui-library/link-button";
+</script>
+
 <style lang="postcss">
   div {
     max-width: 598px;
@@ -33,5 +37,7 @@
       domain.
     </li>
   </ol>
-  <a href="https://gitpod.io/plans" class="btn-conversion">Check Plans</a>
+  <LinkButton variant="primary" size="large" href="https://gitpod.io/plans"
+    >Check Plans</LinkButton
+  >
 </div>

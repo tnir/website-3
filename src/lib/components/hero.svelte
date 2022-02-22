@@ -1,5 +1,6 @@
 <script lang="ts">
   import Section from "./section.svelte";
+  import LinkButton from "$lib/components/ui-library/button";
 
   type Link = {
     text: string;
@@ -40,24 +41,26 @@
     <p class="mx-auto lg:mx-0 max-w-lg lgx:max-w-none text-large mb-x-small">
       {text}
     </p>
-    <div class="buttons-wrapper justify-center lg:justify-start">
+    <div class="flex gap-4 justify-center lg:justify-start">
       {#if btnPrimary}
-        <a
+        <LinkButton
+          size="large"
+          variant="primary"
           href={btnPrimary.href}
-          class="btn-conversion"
           on:click={btnPrimary.onClickHandler}
         >
           {btnPrimary.text}
-        </a>
+        </LinkButton>
       {/if}
       {#if btnSecondary}
-        <a
+        <LinkButton
+          variant="cta"
+          size="large"
           href={btnSecondary.href}
-          class="btn-cta"
           on:click={btnPrimary.onClickHandler}
         >
           {btnSecondary.text}
-        </a>
+        </LinkButton>
       {/if}
     </div>
   </div>

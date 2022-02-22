@@ -1,5 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
+  import Button from "$lib/components/ui-library/button";
   import { topics } from "$lib/contents/screencasts";
   export let currentTopic: string;
 
@@ -26,12 +27,14 @@
   </p>
   <div class="flex flex-wrap justify-center max-w-3xl mx-auto sm:space-x-macro">
     {#each topics as topic}
-      <button
+      <Button
         on:click={(e) => handleTopicSetup(e, topic)}
-        class="btn-cta-small mb-macro mx-0.5 sm:mx-0"
+        class=" mb-macro mx-0.5 sm:mx-0"
+        variant="cta"
+        size="medium"
       >
         {topic}
-      </button>
+      </Button>
     {/each}
   </div>
 </div>

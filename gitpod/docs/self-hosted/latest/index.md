@@ -6,6 +6,18 @@ title: Gitpod Self-Hosted
 <script context="module">
   export const prerender = true;
 </script>
+<script lang="ts">
+  import OpenGraph from "$lib/components/open-graph.svelte";
+</script>
+
+<OpenGraph
+data={{
+    description:
+      "Install and run Gitpod with full control on public cloud providers or self-managed Kubernetes clusters. Enterprise-grade security within corporate firewalls and air-gapped networks. Requirements. Installation. Configuration. GKE. EKS. AKS. Open-source.",
+    title: "Gitpod Self-Hosted installation guide",
+    keywords: "installation",
+  }}
+/>
 
 # Gitpod Self-Hosted
 

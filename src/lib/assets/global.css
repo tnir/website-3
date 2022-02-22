@@ -34,7 +34,7 @@
   }
 
   a {
-    @apply underline text-link-grey underline-offset-[0.25em];
+    @apply underline text-link-grey underline-offset-[0.25em] transition-all duration-200 delay-[50ms];
   }
   a:hover,
   a:focus {

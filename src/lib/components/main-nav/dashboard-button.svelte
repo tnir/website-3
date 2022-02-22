@@ -1,12 +1,13 @@
 <script>
-  let clazz = "";
-  export { clazz as class };
+  import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
-<a
+<LinkButton
+  variant="tertiary"
+  size="medium"
   href="https://gitpod.io/"
+  class="flex items-center justify-center"
   data-analytics={`{"context":"dashboard"}`}
-  class="{clazz} flex items-center justify-center rounded-xl bg-black font-bold text-off-white text-sm focus:text-off-white focus:bg-black-hover hover:text-off-white hover:bg-black-hover"
 >
   Dashboard
-</a>
+</LinkButton>

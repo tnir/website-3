@@ -21,6 +21,7 @@
   import Explore from "$lib/components/explore.svelte";
   import SectionCommon from "$lib/components/section-common.svelte";
   import ScreencastsGrid from "$lib/components/screencasts/screencasts-grid.svelte";
+  import LinkButton from "$lib/components/ui-library/link-button";
   import { beforeUpdate, onMount } from "svelte";
   import { afterNavigate } from "$app/navigation";
   import Header from "$lib/components/header.svelte";
@@ -89,14 +90,13 @@
   {/if}
   {#if screencast.nextScreencast}
     <div class="text-center">
-      <a
+      <LinkButton
+        variant="primary"
+        size="large"
         href="/screencasts/{stringToBeautifiedFragment(
           screencasts[screencast.nextScreencast].title.slice(0, -3)
-        )}"
-        class="btn-conversion"
+        )}">View next screencast</LinkButton
       >
-        View next screencast
-      </a>
     </div>
   {/if}
 </div>

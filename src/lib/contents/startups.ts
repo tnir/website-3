@@ -11,6 +11,19 @@ import type { FAQ } from "../types/faq.type";
 
 export const features: Feature[] = [
   {
+    title: "Scaling from 3 to 45 engineers in 5 months",
+    paragraph:
+      "Gitpod helped engineers at Shares.io become more productive and focused. It removed any friction in the onboarding process, dev environment management and the day to day collaboration.",
+    moreButton: {
+      text: "View customer story",
+      href: "/customers/shares-io",
+    },
+    image: {
+      src: "/images/startups/stories.png",
+      alt: "Gitpod Customer Stories",
+    },
+  },
+  {
     title: "Develop like Google, Facebook or Shopify",
     paragraph:
       "What big tech companies are trying to build internally, Gitpod is bringing to the rest of the world:  container-based development in the cloud.",
@@ -483,6 +496,10 @@ export const organisationsLists = [
       {
         name: "Madrona Venture Group",
         url: "https://www.crunchbase.com/organization/madrona-venture-group",
+      },
+      {
+        name: "Main Sequence",
+        url: "https://www.crunchbase.com/organization/main-sequence-ventures",
       },
       {
         name: "MassChallenge",

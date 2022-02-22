@@ -1,3 +1,7 @@
+<script lang="ts">
+  import LinkButton from "$lib/components/ui-library/link-button";
+</script>
+
 <div
   class="bg-white shadow-normal rounded-4xl max-w-2xl py-small px-xx-small sm:px-small mx-auto mt-huge mb-xx-large text-center"
 >
@@ -6,9 +10,10 @@
     Write about how to use Gitpod with a technology of your choice and get
     featured!
   </p>
-  <a
+  <LinkButton
+    size="large"
+    variant="primary"
     href="https://github.com/gitpod-io/website/issues/new/choose"
-    class="btn-conversion"
-    target="_blank">Start Guide</a
+    target="_blank">Start Guide</LinkButton
   >
 </div>

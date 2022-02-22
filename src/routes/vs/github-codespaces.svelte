@@ -27,8 +27,9 @@
 <OpenGraph
   data={{
     description:
-      "Gitpod is the faster, more powerful, open-source platform that integrates with your individual stack.",
-    title: "Gitpod vs GitHub Codespaces",
+      "Why choose Gitpod over GitHub Codespaces? Gitpod is the faster, more resource-efficient, open-source alternative that integrates with your individual stack.",
+    title: "Gitpod vs GitHub Codespaces - what makes Gitpod different?",
+    keywords: "Codespaces, alternative, differences",
   }}
 />
 
@@ -92,7 +93,8 @@
         text: "Try Now",
       },
     }}
-    btnClassNames="btn-primary mt-x-small"
+    variant="primary"
+    btnClassNames="mt-x-small"
     class="mx-micro mb-micro"
     headingLevel="h2"
   />
@@ -106,7 +108,8 @@
         text: "More on GCP carbon neutral",
       },
     }}
-    btnClassNames="btn-green mt-x-small"
+    variant="cta"
+    btnClassNames=" mt-x-small"
     class="mx-micro mb-micro"
     headingLevel="h2"
   />

@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { GetStartedItem } from "$lib/types/get-started.type";
+  import LinkButton from "$lib/components/ui-library/link-button";
   export let getStartedItem: GetStartedItem;
 </script>
 
@@ -18,8 +19,11 @@
     <p class="mb-4">{getStartedItem.description}</p>
   </div>
   <div class="mt-auto">
-    <a class="btn-cta mb-2" href={getStartedItem.path}
-      >{getStartedItem.buttonLabel}</a
+    <LinkButton
+      variant="cta"
+      size="medium"
+      class="mb-2"
+      href={getStartedItem.path}>{getStartedItem.buttonLabel}</LinkButton
     >
   </div>
 </div>

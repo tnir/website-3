@@ -6,6 +6,7 @@
   import type { Form } from "$lib/types/form.type";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import Header from "$lib/components/header.svelte";
+  import Button from "$lib/components/ui-library/button";
 
   const extensionUrls = {
     chrome:
@@ -173,10 +174,12 @@
         />
       </li>
       <li>
-        <button
-          class="btn-cta mt-x-small"
+        <Button
+          variant="cta"
+          size="large"
+          class="mt-x-small"
           disabled={(isFormDirty && !isFormValid) || isFeedbackSent}
-          type="submit">Send</button
+          type="submit">Send</Button
         >
       </li>
     </ul>

@@ -15,9 +15,9 @@ Here are a few Dart example projects that are already automated with Gitpod:
 
 <div class="overflow-x-auto">
 
-| Repository                                                                  | Description                                     | Try it                                                                                                                                  |
-| --------------------------------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [flutter_stock_example](https://github.com/gitpod-io/flutter_stock_example) | The Flutter stock example configured for Gitpod | [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/flutter_stock_example) |
+| Repository                                                                | Description                                                 | Try it                                                                                                                             |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [Flutter Hello World Demo](https://github.com/gitpod-io/template-flutter) | The Flutter hello world demo template configured for Gitpod | [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/template-flutter) |
 
 </div>
 

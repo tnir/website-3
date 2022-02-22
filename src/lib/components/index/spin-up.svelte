@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { ExtensionButton } from "$lib/types/extension-button.type";
+  import LinkButton from "$lib/components/ui-library/link-button";
   import Section from "../section.svelte";
 
   const buttons: ExtensionButton[] = [
@@ -34,17 +35,24 @@
       Bitbucket projects to easily spin up a dev environment with a single
       click.
     </p>
-    <div class="buttons-wrapper">
+    <div class="flex justify-center items-center flex-wrap space-x-4 fl">
       {#each buttons as { href, icon, text }}
-        <a
+        <LinkButton
+          variant="white"
+          size="medium"
           {href}
           target="_blank"
           rel="noopener"
-          class="btn-otherbrand text-medium"
         >
-          <img src={`/${icon}`} alt={text} width="24" height="24" />
+          <img
+            class="inline-block h-6 w-6 mr-2"
+            src={`/${icon}`}
+            alt={text}
+            width="24"
+            height="24"
+          />
           {text}
-        </a>
+        </LinkButton>
       {/each}
     </div>
   </div>

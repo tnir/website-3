@@ -1,9 +1,9 @@
 ---
-title: 
-excerpt: 
+title:
+excerpt:
 date: {{releaseDate}}
 image: {{releaseDate}}.jpg
-alt: 
+alt:
 ---
 
 <script>

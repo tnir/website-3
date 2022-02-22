@@ -2,7 +2,7 @@
   export const prerender = true;
 </script>
 
-<script>
+<script lang="ts">
   import { testimonials } from "$lib/contents/home/index";
   import {
     features,
@@ -26,10 +26,22 @@
 <OpenGraph
   data={{
     description:
-      "Gitpod streamlines developer workflows by providing prebuilt, collaborative developer environments in your browser - powered by VS Code.",
-    title: "Gitpod - Always ready to code",
+      "Gitpod is an open-source developer platform for remote development. Accelerate your teams developer experience, remote collaboration and security - to ship new products faster and more securely.",
+    title: "Gitpod: Always ready to code.",
+    keywords:
+      "cloud dev environment, remote development, open-source, integration, coding, developer experience, automation",
   }}
 />
+
+<svelte:head>
+  <!-- Preloading the IDE screenshots so that the IDE switcher works swiftly -->
+  <link rel="preload" as="image" href="/images/index/vscode-desktop.png" />
+  <link rel="preload" as="image" href="/images/index/vscode-browser.png" />
+  <link rel="preload" as="image" href="/images/index/goland.png" />
+  <link rel="preload" as="image" href="/images/index/pycharm.png" />
+  <link rel="preload" as="image" href="/images/index/phpstorm.png" />
+  <link rel="preload" as="image" href="/images/index/Intellij.png" />
+</svelte:head>
 
 <Hero />
 <ChooseProject />

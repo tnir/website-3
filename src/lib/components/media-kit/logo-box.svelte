@@ -1,27 +1,19 @@
 <script lang="ts">
   import type { Logo } from "$lib/types/logo.type";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   export let logo: Logo;
   const { src, alt, text, srcPNG, isDark } = logo;
   const svgSrc = `/svg/media-kit/${src}`;
 </script>
 
-<style lang="scss">
+<style lang="postcss">
   .logo-box {
     width: 480px;
 
     @media (max-width: 50px) {
       width: 100%;
     }
-  }
-
-  .svg-button {
-    @apply bg-orange-900;
-  }
-
-  .svg-button:hover,
-  .svg-button:focus {
-    background: var(--brand-hover);
   }
 </style>
 
@@ -32,8 +24,20 @@
 >
   <img src={svgSrc} {alt} class="mx-auto" />
   <p class="mt-medium mb-micro">Download {text}</p>
-  <div class="buttons-wrapper justify-center">
-    <a href={svgSrc} download class="btn-cta svg-button">SVG</a>
-    <a href={`/images/media-kit/${srcPNG}`} download class="btn-cta">PNG</a>
+  <div class="flex justify-center items-center flex-wrap space-x-4">
+    <LinkButton
+      style="min-width: 0"
+      variant="primary"
+      size="large"
+      download
+      href={svgSrc}>SVG</LinkButton
+    >
+    <LinkButton
+      style="min-width: 0"
+      variant="cta"
+      size="large"
+      href={`/images/media-kit/${srcPNG}`}
+      download>PNG</LinkButton
+    >
   </div>
 </div>

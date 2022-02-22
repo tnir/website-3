@@ -5,7 +5,7 @@
 
 <h3>Launch an example workspace</h3>
 <p>Dive into one of our example workspaces</p>
-<div class="my-x-small">
+<div class="my-x-small space-y-4">
   {#each projects as project}
     <Project {project} />
   {/each}

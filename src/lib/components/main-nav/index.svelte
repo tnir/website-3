@@ -136,10 +136,10 @@
     <div class="login-wrapper items-center hidden space-x-x-small">
       <ContactLink />
       {#if isLoggedIn}
-        <DashboardButton class="h-8 w-24" />
+        <DashboardButton />
       {:else}
         <LoginButton />
-        <SignUpButton class="h-8 w-20" />
+        <SignUpButton />
       {/if}
     </div>
     <div class="flex items-center">

@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { ContactCard } from "$lib/types/contact-card.type";
+  import LinkButton from "$lib/components/ui-library/link-button";
 
   export let contactCard: ContactCard;
 </script>
@@ -22,11 +23,13 @@
   />
   <h2 class="h3">{contactCard.title}</h2>
   <p>{contactCard.description}</p>
-  <a
-    href={contactCard.btnHref}
+  <LinkButton
+    variant="primary"
+    class="m-8"
     on:click={() => {
       if (contactCard.tracking) contactCard.tracking();
     }}
-    class="btn btn-conversion m-8">{contactCard.btnText}</a
+    size="large"
+    href={contactCard.btnHref}>{contactCard.btnText}</LinkButton
   >
 </div>

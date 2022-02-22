@@ -1,4 +1,5 @@
 <script lang="ts">
+  import LinkButton from "$lib/components/ui-library/link-button";
   import type { Action } from "$lib/types/action.type";
   export let action: Action;
   const { title, description, link } = action;
@@ -12,5 +13,7 @@
   <p class="my-x-small">
     {description}
   </p>
-  <a href={link.href} class="btn-primary">{link.text}</a>
+  <LinkButton variant="primary" size="medium" href={link.href}
+    >{link.text}</LinkButton
+  >
 </div>

@@ -13,7 +13,22 @@ import type { FAQ } from "$lib/types/faq.type";
 
 export const quotes: Quote[] = [
   {
-    text: "I'm using Gitpod almost daily when trying out new technologies, working on OSS PRs/repros or when giving demos. Welcome to the promised land of cloud IDEs.",
+    text: "Gitpod totally changed the development velocity for RedwoodJS—it removed any issues related to configurations of dev environments and made it incredibly easy to contribute. Reviewing pull requests is delightful because they are prebuilt and ready for review!",
+    author: "Tom Preston-Werner",
+    jobTitle: "Co-founder of GitHub",
+    companyLogo: {
+      src: "/svg/opensource/redwood.svg",
+      alt: "RedwoodJS",
+    },
+    link: { href: "/customers/redwoodjs", text: "View Customer Story" },
+    img: {
+      src: "/images/opensource/mojombo.jpg",
+      square: true,
+      alt: "",
+    },
+  },
+  {
+    text: "I'm using Gitpod almost daily when trying out new technologies, working on OSS PRs/repros or when giving demos. Welcome to the promised land of cloud development environments.",
     author: "Johannes Schickling",
     jobTitle: "Co-founder of Prisma",
     companyLogo: {
@@ -21,7 +36,8 @@ export const quotes: Quote[] = [
       alt: "Prisma",
     },
     img: {
-      src: "/images/customers/gitlab.png",
+      src: "/images/opensource/schickling.jpg",
+      square: true,
       alt: "",
     },
   },
@@ -34,20 +50,8 @@ export const quotes: Quote[] = [
       alt: "Prometheus",
     },
     img: {
-      src: "/images/opensource/4-geeks.png",
-      alt: "",
-    },
-  },
-  {
-    text: "Gitpod totally changed the development velocity for RedwoodJS—it removed any issues related to configurations of dev environments and made it incredibly easy to contribute. Reviewing pull requests is delightful because they are prebuilt and ready for review!",
-    author: "Tom Preston-Werner",
-    jobTitle: "Co-founder RedwoodJS",
-    companyLogo: {
-      src: "/svg/opensource/redwood.svg",
-      alt: "RedwoodJS",
-    },
-    img: {
-      src: "/images/customers/gitlab.png",
+      src: "/images/opensource/juliusv.jpg",
+      square: true,
       alt: "",
     },
   },
@@ -57,23 +61,18 @@ export const features: Feature[] = [
   {
     title: "Onboard contributors in seconds",
     paragraph:
-      "Often the problem with building a community of contributors is the project setup friction. With Gitpod, people will be able to contribute to your project with a single click. Tedious environment setups, contributing guides and maintenance activities no long exist.",
+      "Often the problem with building a community of contributors is the project setup friction. With Gitpod, people can contribute to your project with a single click. Tedious environment setups, contributing guides and maintenance activities no longer exist. You'll receive more contributions and contributions are easier to review!",
     previewComponent: Workspaces,
-  },
-  {
-    ...codeAnywhereFeature,
-    paragraph:
-      "Often the problem with building a community of contributors is the project setup friction. With Gitpod, people will be able to contribute to your project with a single click. Tedious environment setups, contributing guides and maintenance activities no long exist.",
   },
   {
     ...multiTrackDevelopmentFeature,
     paragraph:
-      "You can have multiple workspaces running at the same time. Start your day by opening one workspace per pull-request needs reviewing. Thanks to pre-builds they are already compiled and ready to go.",
+      "You can have multiple workspaces running at the same time. Start your day by opening each new pull-request in seperate side by side workspaces. Thanks to <a href='https://www.youtube.com/watch?v=ZtlJ0PakUHQ'>pre-builds</a> contributions are already compiled and ready to go.",
   },
   {
     title: "Accept contributions safely",
     paragraph:
-      "With Gitpod, no packages or dependencies are downloaded to onto your devices which contains security incidents and inhibits malicious actors pivoting towards completely compromising your workstation.",
+      "With Gitpod, no packages or dependencies are downloaded to your devices which <a href='https://ghuntley.com/sudo-rm-rf/'>contains security incidents</a> and inhibits malicious actors pivoting towards completely compromising your workstation.",
     terminal: {
       source: linuxSource,
       dark: true,
@@ -81,6 +80,11 @@ export const features: Feature[] = [
       narrow: true,
       skipToEnd: true,
     },
+  },
+  {
+    ...codeAnywhereFeature,
+    paragraph:
+      "No need for over powered laptops, a chrome book and <a href='https://ghuntley.com/anywhere'>even an iPad</a> will work just fine. Everyone can contribute even if they don't have access to powerful (expensive) computers.",
   },
 ];
 
@@ -92,7 +96,7 @@ export const programBenefits: Card[] = [
       transform: "scale(.95)",
     },
     title: "Gitpod for free",
-    text: "Maintainers get free unlimited hours for pulibic repos. Contributors to your project are provided with generous free plan for up to 50h a month, including private repos.",
+    text: "Maintainers get unlimited hours for usage on public repos. Contributors to your project are provided with a generous free plan for up to 50h a month, including private repos. For projects that run their own infrastructure complementary <a href='https://www.gitpod.io/self-hosted'>Gitpod self-hosted</a> licenses are also available.",
   },
   {
     icon: {
@@ -101,7 +105,7 @@ export const programBenefits: Card[] = [
       transform: "scale(0.8)",
     },
     title: "Special treats",
-    text: "If your open-source software appears in our bill of materials then Gitpod would like to unconditionally shout you some beers, some nice food or more as our way of saying thank-you.",
+    text: "If your open-source software appears in our bill of materials then Gitpod would like to unconditionally <a href='https://github.com/moby/buildkit/issues/2525'>shout you some beers</a> <a href='https://www.gitpod.io/blog/devxconf-wrap'>or more</a> as our way of saying thank-you.",
   },
   {
     icon: {
@@ -110,7 +114,7 @@ export const programBenefits: Card[] = [
       transform: "scale(1.6) translateY(3px)",
     },
     title: "Personal onboarding",
-    text: "We help to get you started and provide support for maintaining the gitpod.yml and gitpod.Dockerfile. You are important to us and we will provide white glove service to you!",
+    text: "We are here to help you with getting started and can provide ongoing support for maintaining the <a href='https://www.gitpod.io/docs/references/gitpod-yml'>.gitpod.yml</a> if you want.",
   },
 ];
 
@@ -118,9 +122,9 @@ export const faqs: FAQ = {
   headline: "FAQs",
   items: [
     {
-      title: "I'm not sure if I qualify for the program?",
+      title: "My Gitpod account has been automatically upgraded?",
       content:
-        "If you produce software that is relied upon by everyday developers (which if we are honest, is the digital infrastructure that powers the world) then you are in. Fill in the application form and let us decide.",
+        "Over 18,000 people in the GitHub ecosystem were pre-qualified on the 16th of Feburary 2022 for complementary professional open source accounts with unlimited hours. If you are in the short-list your account will be automatically upgraded either upon account creation or when you next start a workspace with your existing account. No action is required. See the <a href='/blog/gitpod-for-opensource'>announcement blog post</a> and this <a href='https://github.com/gitpod-io/gitpod/issues/8212'>pull-request for specifics</a>.",
     },
     {
       title: "I'm not eligible but still want to use Gitpod",
@@ -192,13 +196,27 @@ export const cards: Card[] = [
       text: "View on GitHub",
     },
   },
+  {
+    icon: {
+      src: "/svg/opensource/werft.svg",
+      alt: "Werft",
+    },
+    title: "Werft",
+    text: "Werft is a Kubernetes-native CI system. It knows no pipelines, just jobs and each job is a Kubernetes pod. What you do in that pod is up to you.",
+    link: {
+      href: "https://github.com/csweichel/werft",
+      text: "View on GitHub",
+    },
+  },
 ];
 
 export const exploreContents: ExploreSection = {
   title: "Apply Now",
   description:
     "Spend less time reviewing pull-requests, onboarding contributors and more time on building great things.",
-  note: "Get a free Open-Source Plan.",
-  link: { text: "Apply Now", href: "" }, // todo
-  useKumquatIllustration: true,
+  note: "Upgrade your account to our complementary professional open source plan.",
+  link: {
+    text: "Apply Now",
+    href: "https://bit.ly/gitpod-for-opensource-application-form",
+  },
 };

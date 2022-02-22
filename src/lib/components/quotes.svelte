@@ -2,16 +2,24 @@
   import type { Quote } from "$lib/types/quote.type";
   export let quotes: Quote[];
   let selectedQuote: Quote = quotes[0];
+  import LinkButton from "$lib/components/ui-library/link-button";
+
+  let clazz = "";
+  export { clazz as class };
 </script>
 
 <style lang="postcss">
   .quotes {
     max-width: 1000px !important;
   }
+
+  .square {
+    @apply max-w-[50%] md:max-w-[65%] rounded-3xl;
+  }
 </style>
 
 <div
-  class="quotes bg-off-white shadow-normal rounded-2xl sm:rounded-5xl pt-micro px-0 sm:px-xx-small sm:pt-x-small sm:pb-micro lg:p-small mx-auto"
+  class="quotes bg-off-white shadow-normal rounded-2xl sm:rounded-5xl pt-micro px-0 sm:px-xx-small sm:pt-x-small sm:pb-micro lg:p-small mx-auto {clazz}"
 >
   <div class="flex justify-around flex-wrap max-w-3xl mx-auto">
     {#each quotes as quote}
@@ -31,17 +39,18 @@
     {/each}
   </div>
   <div
-    class="quote flex flex-col md:flex-row mt-xx-small lg:mt-small text-left pb-small md:pb-macro"
+    class="items-center justify-center mt-xx-small text-center md:text-left flex-wrap md:flex h-auto md:h-[400px]"
   >
-    <div>
+    <div class="w-full md:w-1/2">
       <img
         src={selectedQuote.img.src}
         alt={selectedQuote.img.alt}
-        class="sm:max-w-xs sm:rounded-3xl lg:max-w-sm xl:max-w-md w-full mx-auto"
+        class:square={selectedQuote.img.square}
+        class="w-full sm:rounded-3xl mx-auto"
       />
     </div>
     <div
-      class="text flex-1 max-w-lg pt-xx-small px-xx-small sm:pt-0 sm:pl-x-small lg:pl-small lg:pr-0 mx-auto"
+      class="text flex w-full md:w-1/2 justify-center flex-col flex-1 py-xx-small px-xx-small sm:pl-x-small lg:pl-small lg:pr-0"
     >
       <p class="text-large">
         &ldquo;{selectedQuote.text}&rdquo;
@@ -52,11 +61,13 @@
       </p>
 
       {#if selectedQuote.link}
-        <a
-          href={selectedQuote.link.href}
-          class="inline-flex items-center justify-center py-macro px-xx-small mt-xx-small rounded-xl bg-black font-bold text-off-white text-sm focus:text-off-white focus:bg-black-hover hover:text-off-white hover:bg-black-hover"
-          >{selectedQuote.link.text}</a
-        >
+        <div class="mt-xx-small">
+          <LinkButton
+            href={selectedQuote.link.href}
+            variant="tertiary"
+            size="medium">{selectedQuote.link.text}</LinkButton
+          >
+        </div>
       {/if}
     </div>
   </div>

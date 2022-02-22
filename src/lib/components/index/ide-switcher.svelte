@@ -2,6 +2,9 @@
   import type { Ide } from "$lib/types/ide.type";
   import { createEventDispatcher } from "svelte";
   export let ides: Ide[];
+  export let activeByDefaultName: string;
+  export let ideType: string;
+  export let activeIdeName: string = "";
 
   const dispatch = createEventDispatcher();
 
@@ -9,19 +12,21 @@
     ides.find((ide) => ide.name === name).screenshots === undefined;
 
   const handleMouseEnter = (e: MouseEvent, name: string) => {
-    // @ts-ignore
-    const [iconDiv, soonSpan]: HTMLElement[] = Array.from(
-      (e.target as HTMLElement).children
-    );
-    // the following if block is temporary and it should be removed when screenshots for the other ides are added.
-    if (!hasNoScreenshots(name)) {
-      return;
-    }
-    if (hasNoScreenshots(name)) {
-      iconDiv.classList.remove("grayed");
-      soonSpan.style.display = "flex";
-    } else {
-      iconDiv.classList.add("grayed");
+    const target = e.target as HTMLElement;
+    target.parentNode.childNodes.forEach((node: HTMLElement) => {
+      const iconBox = node.childNodes[0] as HTMLElement;
+      if (name !== iconBox.dataset.name) {
+        iconBox.classList.add("grayed");
+      }
+    });
+    const [iconDiv, statusSpan]: HTMLElement[] = Array.from(
+      target.children
+    ) as HTMLElement[];
+
+    iconDiv.classList.remove("grayed");
+
+    if (statusSpan) {
+      statusSpan.style.display = "flex";
     }
 
     if (!hasNoScreenshots(name)) {
@@ -31,16 +36,14 @@
     }
   };
 
-  const handleMouseLeave = (e: MouseEvent, name: string) => {
-    // @ts-ignore
-    const [iconDiv, soonSpan]: HTMLElement[] = Array.from(
-      (e.target as HTMLElement).children
-    );
-    if (hasNoScreenshots(name)) {
-      iconDiv.classList.add("grayed");
-      soonSpan.style.display = "none";
-    } else {
-      iconDiv.classList.remove("grayed");
+  const handleMouseLeave = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+    const [, statusSpan]: HTMLElement[] = Array.from(
+      target.children
+    ) as HTMLElement[];
+
+    if (statusSpan) {
+      statusSpan.style.display = "none";
     }
   };
 </script>
@@ -97,12 +100,15 @@
         handleMouseEnter(e, name);
       }}
       on:mouseleave={(e) => {
-        handleMouseLeave(e, name);
+        handleMouseLeave(e);
       }}
+      class:hidden={ideType === "browser" && !screenshots.browser}
     >
       <div
-        class="relative icon-box flex items-center justify-center bg-off-white rounded-lg md:rounded-xl lgx:rounded-2xl shadow-lg transition duration-200 linear"
-        class:grayed={!screenshots}
+        class="icon-box relative flex items-center justify-center bg-off-white rounded-lg md:rounded-xl lgx:rounded-2xl shadow-lg transition duration-200 linear"
+        class:grayed={!(activeByDefaultName === name) &&
+          !(activeIdeName === "vscode")}
+        data-name={name}
       >
         <img src="/svg/index/{icon}" alt={label} class="icon" />
       </div>

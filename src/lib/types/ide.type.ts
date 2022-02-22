@@ -4,7 +4,7 @@ export type Ide = {
   availibility?: "soon" | "beta";
   screenshots?: {
     desktop: string;
-    browser: string;
+    browser?: string;
   };
   icon: string;
 };
