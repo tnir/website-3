@@ -12,7 +12,7 @@
   import Button from "$lib/components/ui-library/button";
 
   import { countryList } from "$lib/contents/license-key";
-  import type { Email } from "../functions/submit-form";
+  import type { Email } from "../submit-forms";
   import Header from "$lib/components/header.svelte";
 
   const formData: Form = {
