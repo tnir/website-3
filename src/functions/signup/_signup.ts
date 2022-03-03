@@ -2,13 +2,14 @@ import type { Response } from "@netlify/functions/src/function/response";
 import saveEmailInSheet from "../feedback/_save-to-spreadsheet";
 
 interface SignupData {
-  type: "newsletter" | "ambassador program";
+  type: "newsletter" | "ambassador program" | "blog-email";
   email: string;
 }
 
 const signupTypeToSheetTitle = {
   newsletter: "Newsletter - Signups",
   "ambassador program": "Ambassador program - Signups",
+  "blog-email": "Gitpod OS - Signups",
 };
 
 export const signup = async (body: string): Promise<Response> => {

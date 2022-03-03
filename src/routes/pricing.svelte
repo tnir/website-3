@@ -26,7 +26,7 @@
 <UsedBy title="Used by 500k+ developers" />
 <SectionCommon
   title="Compare features"
-  text="Choose the plan that's fits your needs. You can always start for free."
+  text="Choose the plan that fits your needs. You can always start for free."
   textClassNames="mb-xx-small"
 >
   <FeatureTable slot="content" tableData={pricingTable} />

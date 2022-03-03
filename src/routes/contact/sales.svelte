@@ -361,14 +361,6 @@
               type="submit"
               disabled={isFormDirty && !isFormValid}>Send message</Button
             >
-            <p class="mt-4">
-              There's currently an issue with our Hosting-Provider. <span
-                class="text-error"
-                >Until this issue is resolved, please contact <b
-                  >contact@gitpod.io</b
-                > directly.</span
-              >
-            </p>
             {#if isFormDirty && !isFormValid}
               <legend class="text-xs text-error block mt-1 mb-2">
                 Please fill out all required fields above

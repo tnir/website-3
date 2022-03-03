@@ -51,7 +51,7 @@
 />
 
 <div class="flex">
-  <div class="hidden w-4/12 md:block" />
+  <div class="hidden w-4/12 flex-shrink-0 md:block" />
   <Header
     title="Changelog"
     text="Gitpod product improvements and updates"
@@ -60,7 +60,7 @@
   >
     <div
       slot="content"
-      class="flex justify-start items-center flex-wrap space-x-4 pt-x-small"
+      class="flex justify-start items-center flex-wrap gap-4  pt-x-small"
     >
       <TwitterFollowButton variant="primary" />
       <LinkButton

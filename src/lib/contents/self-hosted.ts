@@ -326,7 +326,7 @@ export const selfhostedFAQ: FAQ = {
     {
       title: "What is the difference between SaaS and Self-Hosted?",
       content:
-        "<p> If you choose <strong>Gitpod SaaS</strong>, we will manage and host Gitpod in the cloud for you. This means minimal setup efforts for you and secure data storage in the cloud. Gitpod SaaS is be the best solution for teams who want to get started immediately and don’t want to spend time on setup and operations. </p> <p> If you choose <strong>Gitpod Self-Hosted</strong>, you will manage and host Gitpod on your own instances. This means all data remains your infrastructure, as Gitpod can run behind corporate firewalls and on air-gapped networks. <strong>Gitpod Self-Hosted</strong> is the best solution for teams who want to keep full data control or use Gitpod in private networks. </p>",
+        "<p> If you choose <strong>Gitpod SaaS</strong>, we will manage and host Gitpod in the cloud for you. This means minimal setup efforts for you and secure data storage in the cloud. Gitpod SaaS is the best solution for teams who want to get started immediately and don’t want to spend time on setup and operations. </p> <p> If you choose <strong>Gitpod Self-Hosted</strong>, you will manage and host Gitpod on your own instances. This means all data remains your infrastructure, as Gitpod can run behind corporate firewalls and on air-gapped networks. <strong>Gitpod Self-Hosted</strong> is the best solution for teams who want to keep full data control or use Gitpod in private networks. </p>",
     },
     {
       title: "How can I install Self-Hosted?",
