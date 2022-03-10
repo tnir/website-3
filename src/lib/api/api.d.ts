@@ -30,3 +30,16 @@ export declare interface SignupData {
   type: "newsletter" | "ambassador program" | "blog-email";
   email: string;
 }
+
+export declare interface Feedback {
+  emotion: number;
+  note?: string;
+  url: string;
+  type: "docs" | "guides";
+}
+
+export declare interface ExtensionFeedback {
+  browser: string;
+  feedback: string;
+  note?: string;
+}

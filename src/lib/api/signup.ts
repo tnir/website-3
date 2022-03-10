@@ -1,4 +1,4 @@
-import saveEmailInSheet from "$lib/api/_save-to-spreadsheet";
+import saveEmailInSheet from "$lib/api/save-to-spreadsheet";
 import type { SignupData } from "./api";
 
 const signupTypeToSheetTitle = {
