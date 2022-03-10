@@ -1,4 +1,4 @@
-image: gitpod/workspace-node:latest
+image: .gitpod.dockerfile
 
 ports:
   - port: 3000
@@ -32,3 +32,5 @@ vscode:
   extensions:
     - svelte.svelte-vscode
     - bradlc.vscode-tailwindcss
+
+
