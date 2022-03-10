@@ -1,6 +1,6 @@
 import type { RequestHandler } from "@sveltejs/kit";
 import * as client from "@sendgrid/mail";
-import type { Email, EmailToType } from "./submit-forms";
+import type { Email, EmailToType } from "$lib/api/api";
 
 const determineToEmail = (toType: EmailToType = "contact") => {
   switch (toType) {

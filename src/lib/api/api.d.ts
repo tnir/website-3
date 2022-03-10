@@ -19,3 +19,14 @@ export declare interface Email {
   feedback?: string;
   otherFeedback?: string;
 }
+
+export declare interface SheetInfo {
+  sheetTitle: string;
+  data: any[];
+  type?: "signup";
+}
+
+export declare interface SignupData {
+  type: "newsletter" | "ambassador program" | "blog-email";
+  email: string;
+}
