@@ -2,6 +2,3 @@
   command = "npm run deploy"
   publish = "build/"
 
-[functions]
-  directory = "src/functions"
-  node_bundler = "esbuild"
