@@ -1,4 +1,4 @@
-import adapterNetlify from "@sveltejs/adapter-netlify";
+import adapter from "@sveltejs/adapter-auto";
 import { mdsvex } from "mdsvex";
 import headings from "remark-autolink-headings";
 import remarkExternalLinks from "remark-external-links";
@@ -17,9 +17,7 @@ const config = {
   extensions: [".svelte", ".md"],
 
   kit: {
-    adapter: adapterNetlify({
-      split: true,
-    }),
+    adapter: adapter(),
     amp: false,
     appDir: "_app",
     files: {
