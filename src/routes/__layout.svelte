@@ -66,6 +66,13 @@
   }
 </style>
 
+<svelte:head
+  ><link
+    rel="canonical"
+    href={"https://www.gitpod.io" + $page.url.pathname}
+  /></svelte:head
+>
+
 <LayoutRoot>
   <Nav />
   <LayoutMain>
