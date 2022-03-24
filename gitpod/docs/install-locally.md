@@ -9,10 +9,18 @@ title: Install Gitpod Locally
 
 # Install Gitpod Locally
 
-> **HACKATHON FEATURE**
+A single-node instance of Gitpod can be installed locally on macOS, Windows or Linux.
+
+```sh
+curl https://raw.githubusercontent.com/MrSimonEmms/gitpod-single-instance/develop/run.sh | bash
+```
 
 ## Prerequisites
 
-## Install Docker
+- **Linux** Ubuntu 20.x on amd64  
+  **MacOS** amd64 or arm64  
+  **Windows** v10 professional
 
-## Configure DNS and Certificates
+- 2 vCPU, 8GB RAM (Recommended 4 vCPU and 16GB)
+
+- **Docker**

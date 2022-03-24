@@ -4,6 +4,16 @@
   import LinkButton from "$lib/components/ui-library/link-button";
 </script>
 
+<style>
+  code {
+    padding: 1em;
+    background: #999;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+  }
+</style>
+
 <Card size="medium">
   <Section
     id="install-locally"
@@ -21,10 +31,11 @@
         Install Gitpod on a single macOS, Windows, or Linux machine running
         docker.
       </p>
-      <pre>
-curl foo-bar foo-bar foo-bar foo-bar foo-bar foo-bar
-foo-bar foo-bar foo-bar foo-bar foo-bar
-</pre>
+      <code>
+        curl
+        https://raw.githubusercontent.com/MrSimonEmms/gitpod-single-instance/develop/run.sh
+        | bash
+      </code>
       <LinkButton
         href="/docs/install-locally"
         size="medium"
