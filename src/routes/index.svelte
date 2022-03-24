@@ -19,6 +19,7 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
   import UsedBy from "$lib/components/index/used-by.svelte";
   import SpinUp from "$lib/components/index/spin-up.svelte";
+  import InstallLocally from "$lib/components/index/install-locally.svelte";
   import Section from "$lib/components/section.svelte";
   import Resources from "$lib/components/resources.svelte";
 </script>
@@ -60,5 +61,6 @@
   class="-mb-20"
   {testimonials}
 />
+<InstallLocally />
 <GetStarted />
 <SpinUp />
