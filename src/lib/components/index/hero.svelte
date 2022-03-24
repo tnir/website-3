@@ -145,11 +145,11 @@
             >Try Now</LinkButton
           >
         </div>
-        <p>
-          Open a workspace.
-          <br />
-          Start from any Git context.
-        </p>
+        <div>
+          <LinkButton variant="secondary" href="#install-locally" size="large"
+            >Install Locally</LinkButton
+          >
+        </div>
       </div>
       <div>
         <div class="hero__icons">
