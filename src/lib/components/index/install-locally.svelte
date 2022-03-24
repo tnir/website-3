@@ -26,7 +26,7 @@ curl foo-bar foo-bar foo-bar foo-bar foo-bar foo-bar
 foo-bar foo-bar foo-bar foo-bar foo-bar
 </pre>
       <LinkButton
-        href="/docs/local-installs"
+        href="/docs/install-locally"
         size="medium"
         variant="primary"
         class="mt-x-small"
