@@ -32,11 +32,6 @@
   btnPrimary={{
     href: "https://gitpod.io/workspaces/",
     text: "Try Now",
-    onClickHandler: () =>
-      window.analytics.track("product_cta_clicked", {
-        context: "hero",
-        destination: "https://gitpod.io/workspaces/",
-      }),
   }}
 />
 
