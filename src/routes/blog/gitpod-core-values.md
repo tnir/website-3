@@ -18,6 +18,17 @@ title: Our Core Values at Gitpod
   import FigHeader from "$lib/components/fig-header.svelte";
 </script>
 
+<style>
+  blockquote {
+    @apply bg-transparent border-l-4 border-orange-900 pl-xx-small py-0 sm:m-small rounded-none !important;
+  }
+
+  blockquote p {
+    @apply text-black text-xl font-semibold !important;
+    line-height: 35px;
+  }
+</style>
+
 We've sharpened our four core values that are an authentic representation of where we are coming from and a guiding compass on where we are going:
 
 > "Remove all friction from the developer experience to be always ready-to-code and making software engineering more collaborative, joyful, and secure."
