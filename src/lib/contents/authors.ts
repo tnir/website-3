@@ -269,6 +269,14 @@ export const authors: { [idx: string]: Author } = {
     },
     description: "",
   },
+  axonasif: {
+    name: "Aminur Rahman",
+    socialProfiles: {
+      github: "axonasif",
+      twitter: "axonasif",
+    },
+    description: "Learning to step everyday",
+  },
 };
 
 export const authorSocialMediaLinks: SocialMediaLinks = Object.entries(
