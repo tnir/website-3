@@ -11,6 +11,7 @@ module.exports = {
   ],
   // we have to safelist these because there are dynamically added to the dom via JS and for prod tailwind ships the classes via analyzing the markup without doing so these won't make there way to prod unless used somewhere on the markup.
   safelist: ["overflow-y-hidden", "mr-4"],
+  darkMode: "media",
   theme: {
     extend: {
       listStyleType: {
@@ -43,6 +44,11 @@ module.exports = {
         "black-hover": "var(--black-hover)",
         error: "var(--error)",
         "salmon-hover": "var(--salmon-hover)",
+
+        "dark-bg": "var(--dark-bg)",
+        "dark-white": "var(--dark-white)",
+        "dark-off-white": "var(--dark-off-white)",
+        "dark-light-grey": "var(--dark-light-grey)",
 
         gray: {
           900: "var(--black)",

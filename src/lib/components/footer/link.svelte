@@ -28,9 +28,14 @@
   class:highlight
   class="
     text-dark-grey
+    dark:text-divider
     no-underline
     focus:text-black
     hover:text-black
+    active:text-black
+    dark:focus:text-dark-white
+    dark:hover:text-dark-white
+    dark:active:text-dark-white
     {clazz}
   "
 >

@@ -38,7 +38,7 @@
   on:click
   on:focus
   sveltekit:prefetch={isPrefecthable}
-  class="text-black text-p-large sm:text-dark-grey sm:hover:text-black sm:focus:text-black"
+  class="text-black sm:text-dark-grey dark:text-divider sm:dark:text-divider text-p-large hover:text-black dark:hover:text-dark-white focus:text-black dark:focus:text-dark-white active:text-black dark:active:text-dark-white"
 >
   {label}
 </a>
