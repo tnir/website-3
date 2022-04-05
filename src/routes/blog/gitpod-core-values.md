@@ -2,7 +2,7 @@
 author: JohannesLandgraf, svenefftinge
 date: Mon, 4 April 2022 16:00:00 UTC
 excerpt: We've sharpened our four core values that are an authentic representation of where we are coming from and a guiding compass on where we are going.
-image: teaser.png
+image: teaser-mobile.jpg
 slug: gitpod-core-values
 subtitle:
 teaserImage: teaser.png
