@@ -6,6 +6,7 @@
   import Console from "./console.svelte";
   import Section from "./section.svelte";
   import ButtonsWrapper from "./buttons-wrapper.svelte";
+  import Image from "./image/index.svelte";
 
   export let feature: Feature;
   const {
@@ -116,7 +117,7 @@
         />
       {/if}
       {#if image}
-        <img
+        <Image
           src={image.src}
           alt={image.alt}
           class="{image.classNames} mx-auto"
