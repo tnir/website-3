@@ -62,3 +62,10 @@ This marks your workspace as shared. When you open it, you can copy & share its 
 > **A running Gitpod workspace really is your personal machine.**
 >
 > At present, this feature cannot be disabled. If this is something you are interested in, please [let us know in this issue](https://github.com/gitpod-io/gitpod/issues/6328).
+
+## External Collaboration Plugins
+
+With Gitpod you can also use the following third party integrations for collaboration:
+
+- [Code Together](https://www.codetogether.com/) - Works on VS Code Desktop, VS Code Browser and via JetBrains.
+- [Duckly](https://duckly.com/) - Duckly currently only works with VS Code Desktop (due to CORS constraints on gitpod.io).
