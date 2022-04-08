@@ -27,6 +27,10 @@
     @apply bg-sand-dark hover:bg-orange-700 focus:bg-orange-700;
   }
 
+  .white {
+    @apply bg-off-white text-black hover:bg-white focus:bg-white hover:text-black focus:text-black;
+  }
+
   .tertiary {
     @apply bg-black text-white hover:bg-black-hover;
   }
