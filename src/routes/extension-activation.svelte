@@ -39,7 +39,8 @@
 
 <OpenGraph
   data={{
-    description: "The browser extension has been installed.",
+    description:
+      "The Gitpod browser extension has been successfully installed.",
     title: "Extension Activation",
     norobots: true,
   }}

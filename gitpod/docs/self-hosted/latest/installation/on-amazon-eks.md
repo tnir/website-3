@@ -29,6 +29,5 @@ Installation instructions for Gitpod Self-Hosted on Amazon EKS are currently loc
 - Installation of [calico](https://docs.projectcalico.org) as CNI and NetworkPolicy implementation
 - Installation of [cert-manager](https://cert-manager.io/) for self-signed SSL certificates
 - Installation of [cluster-autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler)
-- Installation of a [Jaeger operator](https://github.com/jaegertracing/helm-charts/tree/main/charts/jaeger-operator) and Jaeger deployment for gitpod distributed tracing
 - Installation of [metrics-server](https://github.com/kubernetes-sigs/metrics-server)
 - A [gitpod.io](https://github.com/gitpod-io/gitpod) deployment

@@ -26,4 +26,20 @@ export const formatDate = (date) =>
     day: "numeric",
   });
 
+export const scrollToElement = async (
+  element: HTMLElement,
+  selector: string
+) => {
+  const firstElement: HTMLElement = element.querySelector(selector);
+  if (!firstElement) {
+    return;
+  }
+  firstElement.scrollIntoView({
+    behavior: "smooth",
+  });
+};
 export const isAnExternalLink = (href: string) => href.startsWith("http");
+
+export const removeTrailingSlash = (site: string) => {
+  return site.replace(/\/$/, "");
+};

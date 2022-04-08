@@ -32,9 +32,9 @@ Make sure to make your installation script executable with `chmod 755 <install-s
 
 If there is no install script, your dotfiles will be symlinked into `/home/gitpod`.
 
-The dotfiles repository installation logs are saved to `~/.dotfiles.logs`
+The dotfiles repository installation logs are saved to `~/.dotfiles.log`
 
-### Example
+## Example
 
 The example below has just one dotfile called `.bash_aliases`. If this file is present in a workspace home directory, it will be found by the '.bashrc' startup script in the Gitpod default image, so no additional install script is required.
 

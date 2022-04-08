@@ -37,11 +37,11 @@
       class="mt-x-small"
       variant="primary"
       size="large"
-      href="/#get-started"
+      href="https://gitpod.io/workspaces/"
       on:click={() =>
         window.analytics.track("product_cta_clicked", {
           context: "hero",
-          destination: "#get-started",
+          destination: "https://gitpod.io/workspaces/",
         })}>Try Now</LinkButton
     >
   </div>

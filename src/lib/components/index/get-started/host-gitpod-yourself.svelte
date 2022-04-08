@@ -37,9 +37,9 @@
   {#each selfHostedButtons as { href, text, icon }}
     <div>
       <LinkButton
-        class="inline-flex mx-auto items-center bg-off-white hover:bg-orange-700 focus:bg-orange-700"
+        class="inline-flex mx-auto items-center"
         {href}
-        variant="unstyled"
+        variant="gray"
         size="large"
       >
         <img

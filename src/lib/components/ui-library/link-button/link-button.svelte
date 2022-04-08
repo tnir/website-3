@@ -31,8 +31,8 @@
     @apply bg-black text-white hover:bg-black-hover;
   }
 
-  .white {
-    @apply bg-off-white text-black hover:bg-white focus:bg-white hover:text-black focus:text-black;
+  .gray {
+    @apply bg-sand-dark text-black hover:bg-orange-700 focus:bg-orange-700 hover:text-black focus:text-black;
   }
 
   .disabled {

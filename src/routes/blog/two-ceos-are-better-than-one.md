@@ -17,7 +17,7 @@ title: Two CEOs are Better Than One
   import EMailWidget from "$lib/components/blog/e-mail-widget.svelte";
 </script>
 
-> At Gitpod, we have operated unofficially with two CEOs for the past 1.5 years. Today, we make our dual leadership around Sven and Johannes official 🥂
+> At Gitpod, we have operated unofficially with two CEOs for the past 1.5 years. Today, we make our dual leadership around Sven and Johannes official.
 
 Whether a Co-CEO setup is good or not has been a matter of contention throughout the years. While still a little uncommon, we see more and more very successful companies such as [Atlassian](https://www.saastr.com/how-well-does-atlassians-co-ceo-model-work-out-in-reality/), [Salesforce](https://techcrunch.com/2021/11/30/bret-taylor-has-been-promoted-to-salesforce-co-ceo/), and [Netflix](https://hbr.org/2020/09/is-ceo-a-two-person-job) operating with two CEOs (we are working hard to add Gitpod to that list ツ). We believe this is superior to having a single CEO if done right. Below, we dive into the advantages of a modern dual leadership setup, discuss typical preconceptions, and share what we believe makes the structure successful for Gitpod.
 
@@ -41,7 +41,7 @@ So are there only advantages to this? Almost. One disadvantage is that there are
 
 ## Typical Preconceptions about Two CEOs
 
-If you search the web for opinions on running a company with two CEOs, you'll find a few articles. [Christoph Jantz has recently written down his take](https://medium.com/point-nine-news/can-a-startup-have-two-ceos-22eadd040d5e) where he lists three reasons why a single CEO is better. Sorry, Christoph, your article was just the most recent one 🙃
+If you search the web for opinions on running a company with two CEOs, you'll find a few articles. [Christoph Janz has recently written down his take](https://medium.com/point-nine-news/can-a-startup-have-two-ceos-22eadd040d5e) where he lists three reasons why a single CEO is better. Sorry, Christoph, your article was just the most recent one 🙃
 
 - **Faster Decision Making**. "If you need two people to make a decision, …"
   That would be very inefficient indeed. But you don't need two people. With two CEOs, you need trust so either one can make many of the calls themselves without mutual approval. This works great as long as you align in vision and direction. If there is not complete trust between CEOs, this will not work. Actually, [the same is true for every high-performing team](https://www.amazon.com/Five-Dysfunctions-Team-Leadership-Fable/dp/0787960756).

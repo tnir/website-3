@@ -76,8 +76,10 @@
         and customise it to your individual needs - from themes to extensions,
         you have full control.
       </p>
-      <LinkButton variant="primary" size="large" href="/#get-started"
-        >Try Now</LinkButton
+      <LinkButton
+        variant="primary"
+        size="large"
+        href="https://gitpod.io/workspaces/">Try Now</LinkButton
       >
     </div>
   </div>

@@ -47,9 +47,7 @@
       <a href="https://twitter.com/gitpod">@gitpod</a>
     </p>
     <p class="mb-8">
-      <LinkButton variant="cta" size="medium" href="https://www.gitpod.io"
-        >Go Home</LinkButton
-      >
+      <LinkButton variant="cta" size="medium" href="/">Go Home</LinkButton>
     </p>
   </Section>
 </div>

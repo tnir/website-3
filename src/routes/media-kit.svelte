@@ -13,7 +13,8 @@
 
 <OpenGraph
   data={{
-    description: "We’ve put together some assets to help you use our brand.",
+    description:
+      "Hi! We’ve put together some assets to help you use our brand and assets inclding our logo and trademarks, without having to negotiate legal agreements for each use. Please contact us for any intended use not covered by these guidelines.",
     title: "Media kit",
   }}
 />

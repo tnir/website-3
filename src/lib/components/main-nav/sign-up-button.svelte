@@ -6,7 +6,7 @@
 
 <LinkButton
   class="{clazz} flex items-center justify-center"
-  href="/#get-started"
+  href="https://gitpod.io/workspaces/"
   variant="tertiary"
   size="medium">Sign Up</LinkButton
 >

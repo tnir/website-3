@@ -19,7 +19,7 @@ export const pricingPlans: Pricing[] = [
       "Public & private repos",
       {
         text: "4 parallel workspaces",
-        tooltip: "Open up to 4 workspaces in parallel.",
+        tooltip: "Open up to 4 workspaces per user in parallel.",
       },
       {
         text: "30min inactivity timeout",
@@ -28,7 +28,7 @@ export const pricingPlans: Pricing[] = [
       },
     ],
     btnText: "Try Now",
-    btnHref: "/#get-started",
+    btnHref: "https://gitpod.io/workspaces/",
     trackingName: "free",
   },
   {
@@ -49,7 +49,7 @@ export const pricingPlans: Pricing[] = [
       "Unlimited hours",
       {
         text: "8 parallel workspaces",
-        tooltip: "Open up to 8 workspaces in parallel.",
+        tooltip: "Open up to 8 workspaces per user in parallel.",
       },
       {
         text: "Team Plans",
@@ -70,7 +70,7 @@ export const pricingPlans: Pricing[] = [
       "All in Professional",
       {
         text: "16 parallel workspaces",
-        tooltip: "Open up to 16 workspaces in parallel.",
+        tooltip: "Open up to 16 workspaces per user in parallel.",
       },
       "1hr inactivity timeout",
       {
@@ -113,7 +113,7 @@ export const empowermentFeatures: Card[] = [
 
 export const freePlanTableData: FeatureTableColumn = {
   link: {
-    href: "/#get-started",
+    href: "https://gitpod.io/workspaces",
     label: "Try now",
   },
   header: {
@@ -466,7 +466,7 @@ export const pricingTableToc: FeatureTableToc[] = [
     data: {
       text: "multi-ide support",
       tooltip:
-        "Connect Gitpod with your favourite IDE. View <a href='/docs/editors'>docs/IDE</a> to see all suported IDE’s.",
+        "Connect Gitpod with your favourite IDE. View <a href='/docs/ides-and-editors'>docs/IDE</a> to see all suported IDE’s.",
     },
   },
   {

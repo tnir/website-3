@@ -96,7 +96,7 @@ export const programBenefits: Card[] = [
       transform: "scale(.95)",
     },
     title: "Gitpod for free",
-    text: "Maintainers get unlimited hours for usage on public repos. Contributors to your project are provided with a generous free plan for up to 50h a month, including private repos. For projects that run their own infrastructure complementary <a href='https://www.gitpod.io/self-hosted'>Gitpod Self-Hosted</a> licenses are also available.",
+    text: "Maintainers get unlimited hours for usage on public repos. Contributors to your project are provided with a generous free plan for up to 50h a month, including private repos. For projects that run their own infrastructure complimentary <a href='/self-hosted'>Gitpod Self-Hosted</a> licenses are also available.",
   },
   {
     icon: {
@@ -105,7 +105,7 @@ export const programBenefits: Card[] = [
       transform: "scale(0.8)",
     },
     title: "Special treats",
-    text: "If your open-source software appears in our bill of materials then Gitpod would like to unconditionally <a href='https://github.com/moby/buildkit/issues/2525'>shout you some beers</a> <a href='https://www.gitpod.io/blog/devxconf-wrap'>or more</a> as our way of saying thank-you.",
+    text: "If your open-source software appears in our bill of materials then Gitpod would like to unconditionally <a href='https://github.com/moby/buildkit/issues/2525'>shout you some beers</a> <a href='/blog/devxconf-wrap'>or more</a> as our way of saying thank-you.",
   },
   {
     icon: {
@@ -114,7 +114,7 @@ export const programBenefits: Card[] = [
       transform: "scale(1.6) translateY(3px)",
     },
     title: "Personal onboarding",
-    text: "We are here to help you with getting started and can provide ongoing support for maintaining the <a href='https://www.gitpod.io/docs/references/gitpod-yml'>.gitpod.yml</a> if you want.",
+    text: "We are here to help you with getting started and can provide ongoing support for maintaining the <a href='/docs/references/gitpod-yml'>.gitpod.yml</a> if you want.",
   },
 ];
 
@@ -124,7 +124,7 @@ export const faqs: FAQ = {
     {
       title: "My Gitpod account has been automatically upgraded?",
       content:
-        "Over 18,000 people in the GitHub ecosystem were pre-qualified on the 16th of Feburary 2022 for complementary professional open source accounts with unlimited hours. If you are in the short-list your account will be automatically upgraded either upon account creation or when you next start a workspace with your existing account. No action is required. See the <a href='/blog/gitpod-for-opensource'>announcement blog post</a> and this <a href='https://github.com/gitpod-io/gitpod/issues/8212'>pull-request for specifics</a>.",
+        "Over 18,000 people in the GitHub ecosystem were pre-qualified on the 16th of Feburary 2022 for complimentary professional open source accounts with unlimited hours. If you are in the short-list your account will be automatically upgraded either upon account creation or when you next start a workspace with your existing account. No action is required. See the <a href='/blog/gitpod-for-opensource'>announcement blog post</a> and this <a href='https://github.com/gitpod-io/gitpod/issues/8212'>pull-request for specifics</a>.",
     },
     {
       title: "I'm not eligible but still want to use Gitpod",
@@ -214,7 +214,7 @@ export const exploreContents: ExploreSection = {
   title: "Apply Now",
   description:
     "Spend less time reviewing pull-requests, onboarding contributors and more time on building great things.",
-  note: "Upgrade your account to our complementary professional open source plan.",
+  note: "Upgrade your account to our complimentary professional open source plan.",
   link: {
     text: "Apply Now",
     href: "https://bit.ly/gitpod-for-opensource-application-form",

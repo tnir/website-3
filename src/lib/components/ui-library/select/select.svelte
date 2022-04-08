@@ -8,6 +8,7 @@
   export let hasError: boolean = false;
   export let label: string = "";
   export let element: HTMLElement = null;
+  export let name: string;
 </script>
 
 <style lang="postcss">
@@ -35,7 +36,8 @@
   bind:this={element}
   id={label}
   class="box-border bg-off-white text-black border-divider border-[1px] px-4 py-2 rounded-lg appearance-none  w-full {className}"
-  name="cloudInfrastructure"
+  {name}
+  aria-label={name}
   bind:value
   on:change
   {...$$restProps}

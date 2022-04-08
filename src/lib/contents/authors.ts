@@ -260,6 +260,23 @@ export const authors: { [idx: string]: Author } = {
     },
     description: "",
   },
+  brandonroberts: {
+    name: "Brandon Roberts",
+    socialProfiles: {
+      github: "brandonroberts",
+      twitter: "",
+      linkedin: "",
+    },
+    description: "",
+  },
+  MrSimonEmms: {
+    name: "Simon Emms",
+    socialProfiles: {
+      github: "MrSimonEmms",
+      twitter: "TheShroppieBeek",
+    },
+    description: "",
+  },
 };
 
 export const authorSocialMediaLinks: SocialMediaLinks = Object.entries(

@@ -16,7 +16,8 @@
 
 <OpenGraph
   data={{
-    description: "Does Gitpod encrypt data?",
+    description:
+      "Gitpod is secure and trusted by over 500k developers and companies that are movingtheir dev environments to the cloud.",
     title: "Security",
   }}
 />
@@ -37,7 +38,7 @@
 
 <UsedBy
   title="Trusted by developer led companies"
-  class="bg-off-white rounded-2xl shadow-normal pt-small pb-9"
+  class="py-small"
   style="margin-top: 0"
 />
 <Secure />

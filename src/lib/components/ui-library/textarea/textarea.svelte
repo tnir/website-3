@@ -5,6 +5,7 @@
   export let label: string = "";
   export let element: HTMLElement = null;
   export let hasError: boolean = false;
+  export let id: string;
   //TODO ADD Eventforwarder
   export { className as class };
 </script>
@@ -19,11 +20,11 @@
   <label
     class="text-dark-grey cursor-pointer block mb-2"
     class:error={hasError}
-    for={label}>{@html label}</label
+    for={id}>{@html label}</label
   >
 {/if}
 <textarea
-  id={label}
+  {id}
   on:change
   bind:value
   bind:this={element}

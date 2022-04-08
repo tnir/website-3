@@ -17,6 +17,7 @@ const config = {
   extensions: [".svelte", ".md"],
 
   kit: {
+    trailingSlash: "never",
     adapter: adapterNetlify({
       split: true,
     }),
@@ -78,12 +79,16 @@ const config = {
               if (heading.tagName !== "h2") {
                 toc.properties.className = `${
                   toc.properties.className || ""
-                } ml-4`;
+                } ml-4 my-macro docs-toc-item`;
+              } else {
+                toc.properties.className = `${
+                  toc.properties.className || ""
+                } relative my-micro`;
               }
               return toc;
             },
             cssClasses: {
-              listItem: "toc-level my-micro",
+              listItem: "toc-level",
             },
             headings: ["h2", "h3", "h4", "h5", "h6"],
             position: "beforebegin",

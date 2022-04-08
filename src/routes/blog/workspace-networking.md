@@ -41,7 +41,7 @@ Biggest benefit: works without elevated capabilities. Biggest drawback: forwards
 
 We've been living with the setup described above (netns only for the Docker daemon) for more than eight months. Mainly driven by performance considerations, but also because we saw no use-case which would warrant a change.
 
-One day, we [were approached](https://github.com/gitpod-io/gitpod/issues/3258#issuecomment-949576242) by the awesome folks from [Tailscale](https://tailscale.com/). They were working on how to make [Tailscale available in Gitpod](https://www.gitpod.io/blog/tailscale) workspaces. The underlying issue: creating a TAP/TUN device and setting up routes to make use of it, all within a regular Gitpod workspace.
+One day, we [were approached](https://github.com/gitpod-io/gitpod/issues/3258#issuecomment-949576242) by the awesome folks from [Tailscale](https://tailscale.com/). They were working on how to make [Tailscale available in Gitpod](/blog/tailscale) workspaces. The underlying issue: creating a TAP/TUN device and setting up routes to make use of it, all within a regular Gitpod workspace.
 
 ![workspace-wide network namespace](../../../static/images/blog/workspace-networking/new-setup.png)
 

@@ -10,17 +10,26 @@
   import Input from "$lib/components/ui-library/input";
   import Select from "$lib/components/ui-library/select";
   import Button from "$lib/components/ui-library/button";
+  import Card from "$lib/components/ui-library/card";
 
   import { countryList } from "$lib/contents/license-key";
   import type { Email } from "$lib/api/api";
   import Header from "$lib/components/header.svelte";
   import { noOfEngineers } from "$lib/contents/contact";
+  import Checkbox from "$lib/components/ui-library/checkbox";
+  import { tick } from "svelte";
+  import { scrollToElement } from "../lib/utils/helpers";
 
   const formData: Form = {
     firstName: {
       el: null,
       valid: false,
       value: "",
+    },
+    consent: {
+      el: null,
+      valid: false,
+      checked: false,
     },
     lastName: {
       el: null,
@@ -55,12 +64,15 @@
   };
 
   let isFormDirty: boolean = false;
+  let form: HTMLElement;
 
   $: isFormValid = Object.values(formData).every((field) => field.valid);
 
   const handleSubmit = async () => {
     isFormDirty = true;
     if (!isFormValid) {
+      await tick();
+      scrollToElement(form, ".error");
       return;
     }
 
@@ -106,6 +118,10 @@
   .title:not(:first-child) {
     margin-top: var(--medium);
   }
+
+  .link {
+    @apply underline;
+  }
 </style>
 
 <OpenGraph
@@ -123,10 +139,11 @@
   </div>
 </Header>
 
-<section
-  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl mb-32 sm:mx-8"
+<Card
+  size="small"
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium mb-32 sm:mx-8"
 >
-  <form on:submit|preventDefault={handleSubmit} novalidate>
+  <form bind:this={form} on:submit|preventDefault={handleSubmit} novalidate>
     <h2 class="h4 title">Customer Information</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-small">
@@ -135,6 +152,7 @@
           label="First Name*"
           hasError={isFormDirty && !formData.firstName.valid}
           name="first-name"
+          id="first-name"
           type="text"
           bind:value={formData.firstName.value}
           bind:element={formData.firstName.el}
@@ -150,6 +168,7 @@
           hasError={isFormDirty && !formData.lastName.valid}
           label="Last Name*"
           name="last-name"
+          id="last-name"
           type="text"
           bind:value={formData.lastName.value}
           bind:element={formData.lastName.el}
@@ -166,6 +185,7 @@
           hasError={isFormDirty && !formData.email.valid}
           type="email"
           name="e-mail"
+          id="email"
           bind:value={formData.email.value}
           bind:element={formData.email.el}
           on:change={() => {
@@ -180,6 +200,7 @@
           hasError={isFormDirty && !formData.company.valid}
           label="Company*"
           name="company"
+          id="company"
           bind:value={formData.company.value}
           bind:element={formData.company.el}
           on:change={() => {
@@ -233,8 +254,27 @@
         bind:value={formData.message.value}
         bind:element={formData.message.el}
         name="message"
+        id="message"
       />
+      <div class="my-4">
+        <Checkbox
+          hasError={isFormDirty && !formData.country.valid}
+          label="I consent to having this website store my submitted information so that the sales team can respond to my inquiry."
+          bind:checked={formData.consent.checked}
+          bind:element={formData.consent.el}
+          on:change={() => {
+            formData.consent.valid =
+              formData.consent.checked && formData.consent.el.validity.valid;
+          }}
+        />
+      </div>
       <div class="mt-4">
+        <p class="text-sm my-4">
+          By submitting this form I acknowledge that I have read and understood <a
+            class="link"
+            href="/privacy">Gitpod’s Privacy Policy.</a
+          >
+        </p>
         <Button
           variant="primary"
           size="large"
@@ -260,4 +300,4 @@
       </p>
     </div>
   </div>
-</section>
+</Card>

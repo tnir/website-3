@@ -8,6 +8,9 @@
   import Header from "$lib/components/header.svelte";
   import Textarea from "$lib/components/ui-library/textarea";
   import Button from "$lib/components/ui-library/button";
+  import Card from "$lib/components/ui-library/card";
+  import { tick } from "svelte";
+  import { scrollToElement } from "../lib/utils/helpers";
 
   const extensionUrls = {
     chrome:
@@ -45,12 +48,15 @@
   };
   let isFormDirty = false;
   let isFeedbackSent = false;
+  let form: HTMLElement;
 
   $: isFormValid = Object.values(formData).every((field) => field.valid);
 
   const handleSubmit = async () => {
     isFormDirty = true;
     if (!isFormValid) {
+      await tick();
+      scrollToElement(form, ".error");
       return;
     }
 
@@ -84,6 +90,9 @@
   form li {
     @apply mb-0;
   }
+  .link {
+    @apply underline;
+  }
 
   fieldset {
     display: flex;
@@ -93,7 +102,8 @@
 
 <OpenGraph
   data={{
-    description: "The browser extension has been uninstalled.",
+    description:
+      "The Gitpod browser extension has been successfully uninstalled.",
     title: "Extension Uninstall",
     norobots: true,
   }}
@@ -109,8 +119,9 @@
   </div>
 </Header>
 
-<section
-  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl mb-32 sm:mx-8 lg:flex lg:items-center lg:justify-around"
+<Card
+  size="small"
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium mb-32 sm:mx-8 lg:flex lg:items-center lg:justify-around"
 >
   <div class="letter lg:w-2/5 lgpr-xx-small mb-small">
     <p class="text-large">
@@ -130,6 +141,7 @@
     on:submit|preventDefault={handleSubmit}
     name="Extension Deletion"
     novalidate
+    bind:this={form}
     class="lg:w-2/5"
   >
     <input type="hidden" name="form-name" value="extension-deletion" />
@@ -181,10 +193,15 @@
         />
       </li>
       <li>
+        <p class="text-sm my-4">
+          By submitting this form I acknowledge that I have read and understood <a
+            class="link"
+            href="/privacy">Gitpod’s Privacy Policy.</a
+          >
+        </p>
         <Button
           variant="cta"
           size="large"
-          class="mt-x-small"
           disabled={(isFormDirty && !isFormValid) || isFeedbackSent}
           type="submit">Send</Button
         >
@@ -199,4 +216,4 @@
       <p>Thanks for your Feedback</p>
     {/if}
   </form>
-</section>
+</Card>

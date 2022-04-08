@@ -12,7 +12,7 @@ export const ghStudentPricingPlans: Pricing[] = [
       "30min Timeout",
     ],
     btnText: "Try Now",
-    btnHref: "/#get-started",
+    btnHref: "https://gitpod.io/workspaces/",
   },
   {
     title: "Student",
@@ -53,7 +53,7 @@ export const ghTeacherPricingPlans: Pricing[] = [
       "30min Timeout",
     ],
     btnText: "Try Now",
-    btnHref: "/#get-started",
+    btnHref: "https://gitpod.io/workspaces/",
   },
   {
     title: "Teacher",

@@ -9,6 +9,7 @@
   let className: string = "";
   export { className as class };
   export let type: Type = "text";
+  export let id: string;
 </script>
 
 <style lang="postcss">
@@ -21,12 +22,12 @@
   <label
     class="text-dark-grey cursor-pointer block mb-2"
     class:error={hasError}
-    for={label}>{@html label}</label
+    for={id}>{@html label}</label
   >
 {/if}
 {#if type === "text"}
   <input
-    id={label}
+    {id}
     class:error={hasError}
     on:change
     bind:value
@@ -37,6 +38,7 @@
   />
 {:else if type === "email"}
   <input
+    {id}
     class:error={hasError}
     on:change
     bind:value

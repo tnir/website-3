@@ -12,6 +12,7 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
   import PostPreview from "$lib/components/blog/post-preview.svelte";
   import Section from "$lib/components/section.svelte";
+  import Header from "$lib/components/header.svelte";
 
   export let posts: BlogPost[];
 </script>
@@ -36,7 +37,11 @@
     }}
   />
   <Section>
-    <h1 class="text-center">Blog</h1>
+    <Header
+      title="Blog"
+      text="The latest news, articles, and opinions around developer<br class='hidden sm:block'/>experience and remote development in the cloud."
+      tight={true}
+    />
     <div
       class="grid m-auto max-w-7xl w-full gap-6 grid-cols-none justify-center md:grid-cols-2 lg:grid-cols-3"
     >

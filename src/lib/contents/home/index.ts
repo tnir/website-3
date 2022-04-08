@@ -7,7 +7,6 @@ export const brands: Brand[] = [
   {
     alt: "GitLab",
     logo: "svg/brands/gitlab-logo.svg",
-    className: "grey-logo",
   },
   {
     alt: "freeCodeCamp",
@@ -18,12 +17,10 @@ export const brands: Brand[] = [
     alt: "Google",
     logo: "svg/brands/google.svg",
     transform: "scale(0.9)",
-    className: "grey-logo",
   },
   {
     alt: "Uber",
     logo: "svg/brands/uber.svg",
-    className: "grey-logo",
   },
   {
     alt: "DataStax",
@@ -34,7 +31,6 @@ export const brands: Brand[] = [
     alt: "Amazon",
     logo: "svg/brands/amazon.svg",
     transform: "scale(0.9) translateY(5px)",
-    className: "grey-logo",
   },
   {
     alt: "Shares",
@@ -54,47 +50,7 @@ export const brands: Brand[] = [
   {
     alt: "Code Institute",
     logo: "svg/brands/code-institute.svg",
-    className: "grey-logo",
   },
-  // {
-  //   alt: "Intel",
-  //   logo: "svg/brands/intel.svg",
-  //   transform: "scale(0.65)",
-  //   className: "grey-logo",
-  // },
-  // {
-  //   alt: "D-Wave",
-  //   logo: "svg/brands/dwave.svg",
-  //   transform: "scale(1.3)",
-  //   className: "dwave-logo",
-  // },
-  // {
-  //   alt: "Facebook",
-  //   logo: "svg/brands/facebook.svg",
-  //   className: "grey-logo",
-  // },
-  // {
-  //   alt: "OpenAI",
-  //   logo: "svg/brands/openai.svg",
-  //   transform: "scale(1.1)",
-  //   className: "grey-logo",
-  // },
-  // {
-  //   alt: "Sauce Labs",
-  //   logo: "svg/brands/sauce-labs.svg",
-  //   className: "grey-logo",
-  // },
-  // {
-  //   alt: "Eclipse Theia",
-  //   logo: "svg/brands/theia.svg",
-  //   transform: "scale(1.1)",
-  //   className: "grey-logo",
-  // },
-  // {
-  //   alt: "4Geeks Academy",
-  //   logo: "svg/brands/4-geeks-academy.png",
-  //   className: "four-geeks grey-logo",
-  // },
 ];
 
 export const projects: Project[] = [

@@ -74,7 +74,7 @@
         <li><FooterLink href="/blog">Blog</FooterLink></li>
         <li><FooterLink href="/docs">Documentation</FooterLink></li>
         <li><FooterLink href="/support">Support</FooterLink></li>
-        <!-- <li><FooterLink href="/guides">Guides</FooterLink></li> -->
+        <li><FooterLink href="/guides">Guides</FooterLink></li>
         <li>
           <FooterLink
             href="https://github.com/gitpod-io/gitpod/issues/new?template=bug_report.md"
@@ -126,7 +126,7 @@
           >Copyright &copy; {new Date().getFullYear()} Gitpod</span
         >
       </div>
-      <div class="flex space-x-micro">
+      <div class="flex space-x-macro">
         {#each socialLinks as link}
           <FooterLink
             href={link.href}
@@ -136,7 +136,13 @@
               link.alt.toLowerCase() +
               `_visit"}`}
           >
-            <img src={link.icon} alt={link.alt} height="24" width="24" />
+            <img
+              src={link.icon}
+              alt={link.alt}
+              height="24"
+              width="24"
+              class="m-3"
+            />
           </FooterLink>
         {/each}
       </div>

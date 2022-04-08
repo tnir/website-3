@@ -10,24 +10,37 @@
   }
 
   export const trackEvent = (event_name: string, props: any) => {
-    window.analytics?.track(event_name, props, {
-      context: {
-        ip: "0.0.0.0",
-        page: {
-          referrer: window.prevPages?.length == 2 ? window.prevPages[0] : "",
-          url: window.location.href,
-        },
+    window.analytics?.track(
+      event_name,
+      {
+        ...props,
+        authenticated: !!Cookies.get("gitpod-user"),
       },
-    });
+      {
+        context: {
+          ip: "0.0.0.0",
+          page: {
+            referrer: window.prevPages?.length == 2 ? window.prevPages[0] : "",
+            url: window.location.href,
+          },
+        },
+      }
+    );
   };
 
   export const trackPage = (props: any) => {
-    window.analytics?.page(props, {
-      context: {
-        ip: "0.0.0.0",
-        page: props,
+    window.analytics?.page(
+      {
+        ...props,
+        authenticated: !!Cookies.get("gitpod-user"),
       },
-    });
+      {
+        context: {
+          ip: "0.0.0.0",
+          page: props,
+        },
+      }
+    );
   };
 
   export const trackIdentity = (traits: any) => {
@@ -150,6 +163,15 @@
 
     //props that were passed directly to the event target take precedence over those passed to ancestor elements, which take precedence over those implicitly determined.
     trackingMsg = { ...trackingMsg, ...ancestorProps, ...passedProps };
+
+    //"signup" context always takes preferences over others (relevant for marketing attribution)
+    if (
+      !Cookies.get("gitpod-user") &&
+      target instanceof HTMLAnchorElement &&
+      (target as HTMLAnchorElement).href.startsWith("https://gitpod.io/")
+    ) {
+      trackingMsg.context = "signup";
+    }
 
     //if dnt was passed to event target or any ancestor, no track call is done
     if (trackingMsg.dnt) {

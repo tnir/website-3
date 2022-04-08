@@ -29,6 +29,7 @@ Available Commands:
   stop                Stop current workspace
   sync-await          Awaits an event triggered using gp sync-done
   sync-done           Notifies the corresponding gp sync-await calls that this event has happened
+  tasks               Interact with workspace tasks
   url                 Prints the URL of this workspace
   version             Prints the version of the CLI
 
@@ -114,8 +115,36 @@ See [Start Tasks](/docs/config-start-tasks#wait-for-commands-to-complete) for a 
 
 ## snapshot
 
-For sharing a complete clone of a workspace with others, `gp snapshot` is basically the CLI method for getting a snapshot URL. To learn more about snapshots, see [Collaboration & Sharing of Workspaces](https://www.gitpod.io/docs/sharing-and-collaboration#sharing-snapshots)
+For sharing a complete clone of a workspace with others, `gp snapshot` is basically the CLI method for getting a snapshot URL. To learn more about snapshots, see [Collaboration & Sharing of Workspaces](/docs/sharing-and-collaboration#sharing-snapshots)
 
 ## stop
 
 `gp stop` is the CLI method of stopping a workspace.
+
+## tasks
+
+Programatically view and interact with workspace tasks as defined in the projects [.gitpod.yml](/docs/references/gitpod-yml). Useful when using the command line, such as ssh'ing into a workspace or after accidentally losing view of a terminal and it's output.
+
+### list
+
+Returns a table-formatted list of tasks, their name, state and the ID of the terminal in which the task is executed.
+
+```sh
+gp tasks list
+```
+
+### attach
+
+Creates a connection from a user terminal to a given workspace's task terminal. The session is interactive. Once attached, both stdin and stdout are streamed between the user and the remote terminal. Allowing the user to run commands directly in the task terminal.
+
+Run without arguments to get a selection prompt. When only one task is running, attach will skip the prompt and automatically connect.
+
+```sh
+gp tasks attach
+```
+
+Alternatively, specify the `Terminal ID` that you can see with `gp tasks list`:
+
+```sh
+gp tasks attach <id>
+```

@@ -34,9 +34,9 @@
 <p class="max-w-md mx-auto">
   Select a Git provider to start with an existing project from any Git context.
 </p>
-<div class="buttons space-y-4" data-analytics={`{"context":"signup"}`}>
+<div class="buttons space-y-4">
   <LinkButton
-    href="https://gitpod.io/new"
+    href="https://gitpod.io/workspaces/"
     variant="unstyled"
     size="large"
     class="bg-[#5e48ba] text-white hover:text-white focus:text-white active:text-white hover:opacity-90 focus:bg-black-hover active:bg-black-hover flex items-center"
@@ -73,7 +73,7 @@
     Continue with GitLab
   </LinkButton>
   <LinkButton
-    href="https://gitpod.io/new"
+    href="https://gitpod.io/workspaces/"
     variant="unstyled"
     size="large"
     class="bg-black text-white flex items-center hover:text-white focus:text-white active:text-white hover:bg-black-hover focus:bg-black-hover active:bg-black-hover"
@@ -92,7 +92,7 @@
   <LinkButton
     size="large"
     variant="unstyled"
-    href="https://gitpod.io/new"
+    href="https://gitpod.io/workspaces/"
     class="bg-[#265583] text-white flex items-center hover:text-white focus:text-white active:text-white hover:opacity-90 focus:bg-black-hover active:bg-black-hover"
   >
     <svg viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">

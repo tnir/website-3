@@ -12,7 +12,8 @@
 <OpenGraph
   data={{
     title: "Contact",
-    description: "Get in touch and let us know how we can help.",
+    description:
+      "Get product or account support, talk to a member of our sales team, ask our community or view the documentation.",
   }}
 />
 

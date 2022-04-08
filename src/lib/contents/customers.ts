@@ -22,8 +22,8 @@ export const quotes: Quote[] = [
     author: "François Ruty",
     jobTitle: "CTO at Shares.io",
     companyLogo: {
-      src: "/svg/customers/shares-io.svg",
-      alt: "Prisma",
+      src: "/images/customers/shares-io/shares-io.png",
+      alt: "Shares.io",
     },
     img: {
       src: "/images/customers/shares-io/quote.png",

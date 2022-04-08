@@ -4,7 +4,7 @@
   export let title: string;
   export let text: string;
   export let link: { href: string; text: string } = {
-    href: "/#get-started",
+    href: "https://gitpod.io/workspaces/",
     text: "Try now",
   };
 </script>

@@ -48,8 +48,9 @@
 
 <OpenGraph
   data={{
-    description: "Gitpod's privacy policy.",
-    title: "Privacy",
+    description:
+      "Your data is safe with us we take privacy seriously. Gitpod uses reasonable measures and efforts to keep your data safe and protected from unauthorized acess.",
+    title: "Privacy Policy - your data is safe with us",
   }}
 />
 <article class="max-w-[94vw] mt-20 mx-auto mb-8 leading-7 lg:w-[50rem]">

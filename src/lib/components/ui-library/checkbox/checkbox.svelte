@@ -5,6 +5,7 @@
   export let element: HTMLElement = null;
   export let hasError: boolean = false;
   export let disabled: boolean = false;
+  export let labelClasses: string = "";
   export { className as class };
 </script>
 
@@ -57,7 +58,8 @@
   {...$$restProps}
 />
 {#if label}
-  <label class="flex cursor-pointer text-dark-grey mt-1 mb-2" for={label}
-    >{@html label}</label
+  <label
+    class="flex cursor-pointer text-dark-grey mt-1 mb-2 {labelClasses}"
+    for={label}>{@html label}</label
   >
 {/if}

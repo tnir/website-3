@@ -30,12 +30,12 @@
     alt: "Git Providers",
   }}
   btnPrimary={{
-    href: "/#get-started",
+    href: "https://gitpod.io/workspaces/",
     text: "Try Now",
     onClickHandler: () =>
       window.analytics.track("product_cta_clicked", {
         context: "hero",
-        destination: "#get-started",
+        destination: "https://gitpod.io/workspaces/",
       }),
   }}
 />

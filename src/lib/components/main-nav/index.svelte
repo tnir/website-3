@@ -12,6 +12,7 @@
   import SignUpButtonTablet from "./sign-up-button-tablet.svelte";
   import AnnouncementBanner from "$lib/components/banners/announcement.svelte";
   import ContactLink from "./contact-link.svelte";
+  import SkipToContent from "../skip-to-content.svelte";
 
   let scroll: number;
 
@@ -94,7 +95,11 @@
   }
 
   button {
-    @apply outline-none;
+    @apply outline-none py-2;
+
+    @media (min-width: 1090px) {
+      @apply py-1;
+    }
   }
 
   button::-moz-focus-inner {
@@ -110,6 +115,7 @@
   class:scrolled-out={scroll > 0}
   class:bg-open-state={$menuState}
 >
+  <SkipToContent />
   <AnnouncementBanner />
   <div
     class="wrapper flex items-center justify-between mx-auto h-16 md:h-20 px-micro md:px-x-small"
@@ -143,7 +149,7 @@
       {/if}
     </div>
     <div class="flex items-center">
-      {#if !$menuState}
+      {#if !$menuState && !isLoggedIn}
         <SignUpButtonTablet />
       {/if}
       <MobileMenuToggle />

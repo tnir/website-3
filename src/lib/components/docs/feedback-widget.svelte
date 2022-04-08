@@ -4,6 +4,7 @@
   import { trackEvent } from "../segment.svelte";
   import Textarea from "$lib/components/ui-library/textarea";
   import Button from "$lib/components/ui-library/button";
+  import Card from "$lib/components/ui-library/card";
 
   let selectedEmotion: number;
   let note = "";
@@ -50,11 +51,16 @@
   .selected {
     @apply grayscale-0 scale-150;
   }
+
+  .link {
+    @apply underline;
+  }
 </style>
 
 <div class={clazz}>
-  <div
-    class="bg-white shadow-normal rounded-2xl max-w-md py-small px-xx-small m-auto"
+  <Card
+    size="small"
+    class="max-w-md py-small px-xx-small m-auto"
     data-analytics={`{"dnt":true}`}
   >
     <h2 class="text-xl leading-6 mb-6 text-center justify-center w-full">
@@ -97,6 +103,12 @@
               class="mb-0"
             />
             <div>
+              <p class="text-sm my-4">
+                By submitting this form I acknowledge that I have read and
+                understood <a class="link" href="/privacy"
+                  >Gitpod’s Privacy Policy.</a
+                >
+              </p>
               <span>
                 <Button
                   variant="primary"
@@ -111,5 +123,5 @@
         {/if}
       </form>
     {/if}
-  </div>
+  </Card>
 </div>

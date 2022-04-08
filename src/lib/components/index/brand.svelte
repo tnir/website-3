@@ -20,39 +20,11 @@
     justify-content: center;
     margin: 0.75rem;
 
-    .grey-logo {
-      filter: grayscale(100%) contrast(0%) brightness(116%);
-      -webkit-filter: grayscale(100%) contrast(0%) brightness(116%);
-    }
-
     .fcc {
-      -webkit-filter: grayscale(100%) contrast(0%);
-      filter: grayscale(100%) contrast(0%);
-
       @media (min-width: 841px) {
         width: 8.125rem;
         transform: translateX(-0.625rem);
       }
-    }
-
-    .dwave-logo {
-      transform: scale(1);
-      filter: grayscale(100%) contrast(0%) brightness(112%);
-      -webkit-filter: grayscale(100%) contrast(0%) brightness(112%);
-    }
-
-    .four-geeks {
-      transform: scale(0.9);
-    }
-
-    .gatsby-logo {
-      filter: grayscale(100%) opacity(47%);
-      -webkit-filter: grayscale(100%) opacity(47%);
-    }
-
-    .vue-logo {
-      filter: grayscale(100%) opacity(62%);
-      -webkit-filter: grayscale(100%) opacity(62%);
     }
   }
 </style>

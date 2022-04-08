@@ -9,13 +9,20 @@ title: GoLand
 
 # {title}
 
-> **Please note:** JetBrains {title} Desktop is currently in beta. If you experience any issues, or have feedback, please [get in touch](https://www.gitpod.io/support).
+Gitpod enables code editing using JetBrains {title} currently via [JetBrains Gateway](jetbrains-gateway).
 
-### Getting Start with {title} Desktop in Gitpod
+> **Please note:** JetBrains {title} Desktop is currently in beta. If you experience any issues, or have feedback, please [get in touch](/contact/support).
 
-1. Navigate to [your preferences page](https://gitpod.io/preferences)
-2. Select "Open In Desktop IDE" and select {title}
-3. Restart any running workspaces
-4. On workspace start, you will now be prompted to open your workspace in a JetBrains IDE
+### Getting Started
 
-<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Selecting {title} in the preferences" src="/images/editors/goland.gif">
+1. **Install [JetBrains Gateway](https://www.jetbrains.com/help/idea/remote-development-a.html#gateway)** - With the [JetBrains Gateway and Gitpod](jetbrains-gateway) plugin you can create and manage your latest 20 Gitpod workspaces.
+2. **Install the Gitpod plugin** - Navigate to the JetBrains Gateway preferences page and select the plugins tab to search and install the [Gitpod plugin](https://plugins.jetbrains.com/plugin/18438-gitpod-gateway).
+3. **Update your Gitpod preferences** - Select {title} on the [Gitpod preferences page](https://gitpod.io/preferences) which will set {title} as your default Desktop IDE for future workspace starts.
+4. **Start (or restart) your workspace** - Either start a workspace directly from within the [JetBrains Gateway](jetbrains-gateway) via the Gitpod plugin **OR** open a new workspace direclty in Gitpod where on workspace start you will be prompted to open {title} for that workspace.
+
+<figure>
+    <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Selecting {title} in the preferences" src="/images/editors/goland.gif">
+    <figcaption>Updating Gitpod IDE preferences to GoLand</figcaption>
+</figure>
+
+**Important:** You must restart any started workspaces for your IDE preferences to take effect.

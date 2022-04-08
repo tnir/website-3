@@ -19,5 +19,4 @@ Installation instructions for Gitpod Self-Hosted on Microsoft AKS are currently 
 - Minio will be used until Microsoft [Azure storage gateway](https://github.com/gitpod-io/gitpod-azure-aks-guide/issues/1) is configured.
 - Installation of [calico](https://docs.projectcalico.org) as CNI and NetworkPolicy implementation
 - Installation of [cert-manager](https://cert-manager.io/) for self-signed SSL certificates
-- Installation of a [Jaeger operator](https://github.com/jaegertracing/helm-charts/tree/main/charts/jaeger-operator) and Jaeger deployment for gitpod distributed tracing
 - A [gitpod.io](https://github.com/gitpod-io/gitpod) deployment

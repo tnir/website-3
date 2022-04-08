@@ -26,13 +26,13 @@ When we improved developer tooling for a San Francisco based client five years a
 
 ## The promise of VS Code
 
-To convince developers [to say goodbye to local development](https://www.gitpod.io/blog/i-said-goodbye-to-local-development-and-so-can-you), it is important to not reinvent the wheel but offer an editing experience that:
+To convince developers [to say goodbye to local development](/blog/i-said-goodbye-to-local-development-and-so-can-you), it is important to not reinvent the wheel but offer an editing experience that:
 
 - Is backed by a thriving community
 - Wins hearts and minds of developers
 - Works on modern web technology
 
-This is VS Code. The team around Erich Gamma [struck the right balance between an editor and a full-blown IDE](https://www.gitpod.io/blog/the-evolution-of-devx#vs-code-takes-over---why-is-that) building a lean but powerful product that today is the world's most popular editing experience and will continue to rise in popularity. \*\*I want to take this as an opportunity to thank the whole VS Code team for their hard work - me personally and also everybody at Gitpod is very grateful for what you are doing for the developer community. When we started working on the idea around Gitpod there was however a problem.
+This is VS Code. The team around Erich Gamma [struck the right balance between an editor and a full-blown IDE](/blog/the-evolution-of-devx#vs-code-takes-over---why-is-that) building a lean but powerful product that today is the world's most popular editing experience and will continue to rise in popularity. \*\*I want to take this as an opportunity to thank the whole VS Code team for their hard work - me personally and also everybody at Gitpod is very grateful for what you are doing for the developer community. When we started working on the idea around Gitpod there was however a problem.
 
 &nbsp
 
@@ -68,13 +68,13 @@ Gitpod is an open-source orchestration and provisioning platform for developer e
 
 I admit that it was a hard decision to stop supporting Theia after almost 4 years, but the maintenance and catch-up effort required to support the ever growing and changing API surface became increasingly a burden. And more importantly: Theia did not allow us to provide the best developer experience we could.
 
-We spent the next months polishing the server implementation and added missing pieces such as the setting sync server and port tunneling via the local companion app. In December 2020 we started giving users the [choice between Theia and VS Code](https://www.gitpod.io/blog/root-docker-and-vscode#vs-code-and-other-ides) and officially switched to VS Code as the [default editing experience in Gitpod in early 2021](https://www.gitpod.io/blog/next-chapter-for-gitpod).
+We spent the next months polishing the server implementation and added missing pieces such as the setting sync server and port tunneling via the local companion app. In December 2020 we started giving users the [choice between Theia and VS Code](/blog/root-docker-and-vscode#vs-code-and-other-ides) and officially switched to VS Code as the [default editing experience in Gitpod in early 2021](/blog/next-chapter-for-gitpod).
 
 Since then a lot of individual developers as well as larger companies building internal developer platforms reached out and asked how we run the latest VS Code in a browser. As everything happened in public repositories it was no secret and we happily shared pointers to the GitHub URLs. But our server implementation still was bound to Gitpod services. For example, we had a custom remote terminal implementation while MS open-sourced its `pty` service. After the requests became more and more frequent we decided to separate concerns and provide a clean-cut between the server and parts which we add to integrate with Gitpod. [OpenVSCode Server](https://github.com/gitpod-io/openvscode-server/tree/main) was born.
 
 ## OpenVSCode Server
 
-Honestly, we never expected to receive such a positive response and were impressed with the feedback even before our [launch announcement](https://www.gitpod.io/blog/openvscode-server-launch). Within several days we were joined by large companies such as GitLab, VMware, Uber, SAP, Sourcegraph, RStudio and SUSE. We went from 62 to more than 1.6k stars in a week and are working now with a vibrant community to further improve the project.
+Honestly, we never expected to receive such a positive response and were impressed with the feedback even before our [launch announcement](/blog/openvscode-server-launch). Within several days we were joined by large companies such as GitLab, VMware, Uber, SAP, Sourcegraph, RStudio and SUSE. We went from 62 to more than 1.6k stars in a week and are working now with a vibrant community to further improve the project.
 
 ![OpenVSCodeServer](../../../static/images/blog/cloud-ide-history/openvscodeserver-stars.jpg)
 
