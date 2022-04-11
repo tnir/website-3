@@ -60,6 +60,14 @@ export const authors: { [idx: string]: Author } = {
     description:
       "Christian loves building things, systems and software. Ever keen to solve cross-cutting problems, he has experience in human-computer interaction, embedded software development, and the backend side of things (Kubernetes, Docker).",
   },
+  iqqbot: {
+    name: "Pudong Zheng",
+    socialProfiles: {
+      github: "iqqbot",
+      twitter: "",
+    },
+    description: "",
+  },
   aledbf: {
     name: "Manuel Alejandro de Brito Fontes",
     socialProfiles: {
