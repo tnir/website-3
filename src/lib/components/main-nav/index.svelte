@@ -79,10 +79,6 @@
     backdrop-filter: saturate(0.5) blur(5px);
   }
 
-  .scrolled-out .nav-items {
-    @apply opacity-0 pointer-events-none;
-  }
-
   @media (min-width: 1090px) {
     .wrapper {
       @apply h-20;

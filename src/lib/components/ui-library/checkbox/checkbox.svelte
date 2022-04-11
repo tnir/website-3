@@ -60,6 +60,7 @@
 {#if label}
   <label
     class="flex cursor-pointer text-dark-grey mt-1 mb-2 {labelClasses}"
-    for={label}>{@html label}</label
-  >
+    for={label}
+    >{@html label}
+  </label>
 {/if}
