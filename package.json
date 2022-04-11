@@ -26,7 +26,6 @@
     "start": "svelte-kit preview",
     "validate": "svelte-check",
     "prepare": "husky install",
-    "predeploy": "node scripts/generate-redirects.js",
     "generate:blog-post": "plop --plopfile ./generators/index.cjs blog-post",
     "generate:adr": "adr new"
   },
