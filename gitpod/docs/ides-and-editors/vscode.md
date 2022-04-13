@@ -41,7 +41,7 @@ The process of installing fonts matches how you typically install custom fonts l
 1. Download the desired font to your local machine and install it locally on your operating system.
 1. Open the editor's user settings (e.g. _File_ > _Preferences_ > _Settings_ > _User_)
 1. Configure your font with the `editor.fontFamily` setting:
-   ```
+   ```json
    {
      "editor.fontFamily": "Your custom font name"
    }
