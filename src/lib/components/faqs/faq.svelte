@@ -19,7 +19,9 @@
       $activeFaq = title;
     }
     // closing the faq that was active, no faq will remain open
-    if (isActive && !open) $activeFaq = null;
+    if (isActive && !open) {
+      shrink();
+    }
   };
 
   const onAnimationFinish = (open: boolean) => {
@@ -56,6 +58,7 @@
 
   const open = () => {
     details.style.height = `${details.offsetHeight}px`;
+    content.style.opacity = "1";
     isActive = true;
 
     window.requestAnimationFrame(() => expand());
@@ -65,6 +68,7 @@
     isClosing = true;
     const startHeight = `${details.offsetHeight}px`;
     const endHeight = `${summary.offsetHeight}px`;
+    content.style.opacity = "0";
 
     if (animation) {
       animation.cancel();
@@ -100,6 +104,8 @@
 
   onMount(() => {
     isActive = fragment === window.location.hash.substring(1);
+    content.style.opacity = "0";
+    content.style.transition = "all 500ms cubic-bezier(0.16, 1, 0.3, 1)";
   });
 </script>
 

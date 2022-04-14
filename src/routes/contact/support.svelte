@@ -22,6 +22,8 @@
 
   const otherSubject = "Other";
   const subjects = [
+    "Question",
+    "Issue",
     "Abuse Report",
     "Billing",
     studentUnlimitedSubject,

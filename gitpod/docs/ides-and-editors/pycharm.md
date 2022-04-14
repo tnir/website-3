@@ -11,7 +11,7 @@ title: PyCharm
 
 Gitpod enables code editing using JetBrains {title} currently via [JetBrains Gateway](jetbrains-gateway).
 
-> **Please note:** JetBrains PyCharm Desktop is currently in beta. If you experience any issues, or have feedback, please [get in touch](/support).
+> **Please note:** JetBrains PyCharm Desktop is currently in beta. If you experience any issues, or have feedback, please [get in touch](/contact/support).
 
 ### Getting Started
 

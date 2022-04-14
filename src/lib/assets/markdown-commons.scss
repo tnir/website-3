@@ -74,10 +74,14 @@
       }
     }
 
-    &:focus,
-    &:hover {
-      .icon-link::after {
-        @apply opacity-100;
+    & {
+      &:hover,
+      &:focus,
+      a:hover,
+      a:focus {
+        .icon-link::after {
+          @apply opacity-100;
+        }
       }
     }
   }

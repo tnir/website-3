@@ -23,7 +23,7 @@ export const pricingPlans: Pricing[] = [
     trackingName: "community",
   },
   {
-    title: "Free",
+    title: "Starter",
     price: `${isEurope() ? "€" : "$"}0`,
     duration: "for the first 10 users",
     features: [
@@ -36,7 +36,7 @@ export const pricingPlans: Pricing[] = [
     ],
     btnText: "Install now",
     btnHref: "/docs/self-hosted/latest",
-    trackingName: "free",
+    trackingName: "starter",
   },
   {
     title: "Professional",
@@ -44,7 +44,7 @@ export const pricingPlans: Pricing[] = [
     duration: "per user/month",
     features: [
       "Starts after the 11th user",
-      "Everything from Free",
+      "Everything from Starter",
       "Standard support",
     ],
     btnText: "Register and Install now",
@@ -54,9 +54,9 @@ export const pricingPlans: Pricing[] = [
   },
 ];
 
-export const freePlanTableData: FeatureTableColumn = {
+export const starterPlanTableData: FeatureTableColumn = {
   header: {
-    headline: "Free",
+    headline: "Starter",
     subtitle: `${isEurope() ? "€" : "$"}0 per user/month`,
   },
   link: {
@@ -308,7 +308,7 @@ export const selfHostedToc: FeatureTableToc[] = [
 
 export const selfHostedComparison: FeatureTable = {
   toc: selfHostedToc,
-  columns: [freePlanTableData, professionalPlanTableData],
+  columns: [starterPlanTableData, professionalPlanTableData],
 };
 export const selfhostedFAQ: FAQ = {
   headline: "FAQs",
@@ -316,7 +316,7 @@ export const selfhostedFAQ: FAQ = {
     {
       title: "Can I create a team plan?",
       content:
-        '<p> Of course! You can use Gitpod Self-Hosted Community on your own infrastructure for free for unlimited users. If you\'d like to try additional features like unlimited prebuilds, shared workspaces, snapshots and an admin dashboard, the Free tier is available without a license for the first 10 users. You can upgrade to to the Professional Plan at any time. Simply update your existing instance with a license key. Currently, Self-Hosted Gitpod licenses can currently only be purchased through contacting sales. Please <a href="/enterprise-license" >request a license</a > key or <a href="/contact/sales">Get in touch</a> if you have any questions. </p>',
+        '<p> Of course! You can use Gitpod Self-Hosted Community on your own infrastructure for free for unlimited users. If you\'d like to try additional features like unlimited prebuilds, shared workspaces, snapshots and an admin dashboard, the Starter tier is available without a license for the first 10 users. You can upgrade to to the Professional Plan at any time. Simply update your existing instance with a license key. Currently, Self-Hosted Gitpod licenses can currently only be purchased through contacting sales. Please <a href="/enterprise-license" >request a license</a > key or <a href="/contact/sales">Get in touch</a> if you have any questions. </p>',
     },
     {
       title: "Can I add more users to my plan at any time?",

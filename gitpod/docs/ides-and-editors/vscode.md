@@ -9,7 +9,7 @@ title: VS Code Desktop
 
 # {title}
 
-> **Please note:** VS Code Desktop Support is currently in beta If you experience any issues, or have feedback, please [get in touch](/support).
+> **Please note:** VS Code Desktop Support is currently in beta If you experience any issues, or have feedback, please [get in touch](/contact/support).
 
 `youtube: kI6firDA0Bw`
 

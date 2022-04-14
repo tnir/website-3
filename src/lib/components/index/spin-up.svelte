@@ -38,10 +38,10 @@
         and Bitbucket projects to easily spin up a dev environment with a single
         click.
       </p>
-      <ButtonsWrapper>
+      <ButtonsWrapper class="justify-center">
         {#each buttons as { href, icon, text }}
           <LinkButton
-            variant="white"
+            variant="gray"
             size="medium"
             {href}
             target="_blank"

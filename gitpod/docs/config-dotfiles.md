@@ -32,7 +32,7 @@ Make sure to make your installation script executable with `chmod 755 <install-s
 
 If there is no install script, your dotfiles will be symlinked into `/home/gitpod`.
 
-The dotfiles repository installation logs are saved to `~/.dotfiles.logs`
+The dotfiles repository installation logs are saved to `~/.dotfiles.log`
 
 ## Example
 

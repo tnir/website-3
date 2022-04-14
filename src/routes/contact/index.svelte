@@ -13,7 +13,7 @@
   data={{
     title: "Contact",
     description:
-      "We are here to help. Get in touch and let us know how we can help we will try to respond back as soon as possible.",
+      "Get product or account support, talk to a member of our sales team, ask our community or view the documentation.",
   }}
 />
 

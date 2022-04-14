@@ -12,6 +12,7 @@
   import SignUpButtonTablet from "./sign-up-button-tablet.svelte";
   import AnnouncementBanner from "$lib/components/banners/announcement.svelte";
   import ContactLink from "./contact-link.svelte";
+  import SkipToContent from "../skip-to-content.svelte";
 
   let scroll: number;
 
@@ -77,10 +78,6 @@
     backdrop-filter: saturate(0.5) blur(5px);
   }
 
-  .scrolled-out .nav-items {
-    @apply opacity-0 pointer-events-none;
-  }
-
   @media (min-width: 1090px) {
     .wrapper {
       @apply h-20;
@@ -113,6 +110,7 @@
   class:scrolled-out={scroll > 0}
   class:bg-open-state={$menuState}
 >
+  <SkipToContent />
   <AnnouncementBanner />
   <div
     class="wrapper flex items-center justify-between mx-auto h-16 md:h-20 px-micro md:px-x-small"
