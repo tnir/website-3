@@ -72,9 +72,14 @@ export const MENU: MenuEntry[] = [
     M("Browser Extension", "browser-extension"),
   ]),
   M("Gitpod Self-Hosted", "self-hosted/latest", [
+    M("Getting Started", "self-hosted/latest/getting-started"),
     M("Requirements", "self-hosted/latest/requirements"),
-    M("Installation", "self-hosted/latest/installation"),
-    M("Releases", "self-hosted/latest/releases"),
+    M("Product Compatibility", "self-hosted/latest/compatibility"),
+    M("Kubernetes Setup", "self-hosted/latest/infrastructure"),
+    M("Advanced Installation", "self-hosted/latest/installation"),
+    M("Updating Gitpod", "self-hosted/latest/updating"),
+    M("Troubleshooting", "self-hosted/latest/troubleshooting"),
+    M("Telemetry", "self-hosted/latest/telemetry"),
   ]),
   M("References", "references", [
     M(".gitpod.yml", "references/gitpod-yml"),
