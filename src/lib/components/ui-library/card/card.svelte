@@ -3,7 +3,7 @@
 
   let className: string = "";
   export { className as class };
-  export let background: CardBackground = "off-white";
+  export let background: CardBackground = "card";
   export let brandShadow: boolean = false;
   export let size: CardSize;
   export let styles: string = "";
@@ -18,11 +18,11 @@
   }
 
   .white {
-    @apply bg-white dark:bg-dark-light-grey;
+    @apply bg-white;
   }
 
-  .off-white {
-    @apply bg-off-white dark:bg-dark-light-grey;
+  .card {
+    @apply bg-card;
   }
 
   .brand {

@@ -22,7 +22,7 @@
 
 <a
   {href}
-  class="text-black h3 font-semibold transition-all duration-200 {clazz}"
+  class="text-important h3 font-semibold transition-all duration-200 {clazz}"
 >
   <slot />
 </a>

@@ -54,7 +54,7 @@
 
 {#if dev && error.stack}
   <article
-    class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white"
+    class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-card"
   >
     <pre>{error.stack}</pre>
   </article>

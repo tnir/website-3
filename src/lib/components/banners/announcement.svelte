@@ -17,7 +17,8 @@
 </script>
 
 <div
-  class="border-b border-gray-300 dark:border-transparent border-solid"
+  class="border-b border-divider border-solid"
+  class:hidden={!bannerData.display}
   data-analytics={`{"position":"announcement"}`}
 >
   <Banner

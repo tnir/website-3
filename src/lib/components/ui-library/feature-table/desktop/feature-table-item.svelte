@@ -5,7 +5,7 @@
 
 <style lang="postcss">
   :global(.code) {
-    @apply p-micro bg-white rounded-2xl text-base text-light-grey my-macro;
+    @apply p-micro bg-white rounded-2xl text-base text-sub my-macro;
   }
   :global(.code) :global(span) {
     color: #65a30d;

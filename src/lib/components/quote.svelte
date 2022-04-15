@@ -42,11 +42,11 @@
     />
     <img src="/svg/quotation-mark.svg" alt="Left Quotation Mark" />
     <div class="mt-x-small">
-      <p class="h3 text-black font-bold">
+      <p class="h3 text-important font-bold">
         {@html quote}”
       </p>
       <p class="mt-x-small">
-        <span class="font-semibold text-black">{name},</span>
+        <span class="font-semibold text-important">{name},</span>
         {jobTitle}
       </p>
     </div>

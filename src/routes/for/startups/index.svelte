@@ -46,7 +46,7 @@
 >
   <div slot="content">
     <p
-      class="h5 text-gray-900 font-semibold max-w-2xl mx-auto mt-micro mb-x-small"
+      class="h5 text-black font-semibold max-w-2xl mx-auto mt-micro mb-x-small"
     >
       Use all our services for free, up to 2 years.
     </p>

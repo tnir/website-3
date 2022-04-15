@@ -5,7 +5,7 @@
 <style lang="postcss">
   .year {
     border-bottom: 3px;
-    @apply inline-block border-orange-900 border-solid;
+    @apply inline-block border-primary border-solid;
 
     &:not(:first-of-type) {
       @apply mt-x-large;

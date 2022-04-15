@@ -27,7 +27,7 @@
 
 <style lang="postcss">
   .tooltip {
-    @apply w-auto text-off-white bg-[#565252] text-xs py-macro px-2.5 rounded-xl normal-case font-normal z-50;
+    @apply w-auto text-card bg-[#565252] text-xs py-macro px-2.5 rounded-xl normal-case font-normal z-50;
 
     &::before {
       content: "";
@@ -37,7 +37,7 @@
   }
 
   .tooltip :global(a) {
-    @apply text-off-white;
+    @apply text-card;
   }
   .arrow,
   .arrow::before {

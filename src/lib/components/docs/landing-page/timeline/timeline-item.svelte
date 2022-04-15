@@ -21,7 +21,7 @@
       {formattedDate}
     </div>
     <a
-      class=" hover:underline font-semibold title-font text-lg text-gray-900 mb-1  text-p-medium"
+      class=" hover:underline font-semibold title-font text-lg text-important mb-1  text-p-medium"
       href={`/changelog/${changelogUri}`}
     >
       {timelineItem.title}

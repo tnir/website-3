@@ -74,7 +74,7 @@
 </div>
 
 <div
-  class="flex flex-col space-y-x-large md:space-y-xx-large divide-y divide-gray-300"
+  class="flex flex-col space-y-x-large md:space-y-xx-large divide-y divide-divider"
 >
   {#each changelogEntries as { date, title, content, image, alt }}
     <div class="changelog-entry">

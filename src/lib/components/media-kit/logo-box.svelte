@@ -19,7 +19,7 @@
 
 <div
   class="logo-box px-small py-medium sm:p-large rounded-4xl bg-white shadow-normal md:mx-micro mb-micro md:mb-small"
-  class:bg-gray-900={isDark}
+  class:bg-black={isDark}
   class:text-white={isDark}
 >
   <img src={svgSrc} {alt} class="mx-auto" />

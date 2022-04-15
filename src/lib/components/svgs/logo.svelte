@@ -5,7 +5,7 @@
 
 <style lang="postcss">
   .text {
-    @apply fill-black dark:fill-dark-white;
+    @apply fill-important;
   }
 </style>
 

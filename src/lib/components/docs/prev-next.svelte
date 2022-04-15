@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="flex justify-between pt-xx-small border-t border-solid border-gray-400"
+  class="flex justify-between pt-xx-small border-t border-solid border-divider"
 >
   {#if menuCtx.prev}
     <a

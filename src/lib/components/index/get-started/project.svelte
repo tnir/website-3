@@ -28,7 +28,7 @@
       width="24"
       height="24"
     />
-    <div class="text-black">
+    <div class="text-important">
       {title}
     </div>
   </div>

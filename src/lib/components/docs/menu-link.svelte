@@ -11,7 +11,7 @@
 
 <style lang="postcss">
   .active {
-    @apply text-black;
+    @apply text-important;
   }
 </style>
 

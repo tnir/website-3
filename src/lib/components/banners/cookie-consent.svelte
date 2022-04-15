@@ -11,7 +11,7 @@
     </p>
     <button
       on:click={closeBanner}
-      class="px-3 py-1 bg-off-white rounded-lg md:px-6 hover:bg-white"
+      class="px-3 py-1 bg-card rounded-lg md:px-6 hover:bg-white"
       >Accept Cookies</button
     >
   </Banner>

@@ -11,7 +11,7 @@ module.exports = {
   ],
   // we have to safelist these because there are dynamically added to the dom via JS and for prod tailwind ships the classes via analyzing the markup without doing so these won't make there way to prod unless used somewhere on the markup.
   safelist: ["overflow-y-hidden", "mr-4"],
-  darkMode: "media",
+  darkMode: "class",
   theme: {
     extend: {
       listStyleType: {
@@ -31,42 +31,33 @@ module.exports = {
         "5xl": "2.5rem",
       },
       colors: {
-        black: "var(--black)",
-        "dark-grey": "var(--dark-grey)",
-        "light-grey": "var(--light-grey)",
+        important: "var(--important)",
+        body: "var(--body)",
+        sub: "var(--sub)",
         "link-grey": "var(--link-grey)",
         divider: "var(--divider)",
+        bg: "var(--bg)",
+        card: "var(--card)",
+        nav: "var(--nav)",
+
+        "less-important": "var(--less-important)",
+
         "sand-dark": "var(--sand-dark)",
-        "sand-light": "var(--sand-light)",
-        "off-white": "var(--off-white)",
         white: "var(--white)",
+
+        primary: "var(--brand-almost-ripe)",
+        secondary: "var(--brand-ripe)",
+        tertiary: "var(--brand-light)",
+
         "brand-hover": "var(--brand-hover)",
         "black-hover": "var(--black-hover)",
         error: "var(--error)",
+
+        salmon: "var(--salmon)",
         "salmon-hover": "var(--salmon-hover)",
 
-        "dark-bg": "var(--dark-bg)",
-        "dark-white": "var(--dark-white)",
-        "dark-off-white": "var(--dark-off-white)",
-        "dark-light-grey": "var(--dark-light-grey)",
-
-        gray: {
-          900: "var(--black)",
-          800: "var(--dark-grey)",
-          700: "var(--light-grey)",
-          400: "var(--divider)",
-          300: "var(--sand-dark)",
-          200: "var(--sand-light)",
-          100: "var(--off-white)",
-        },
-        orange: {
-          900: "var(--brand-almost-ripe)",
-          800: "var(--brand-ripe)",
-          700: "var(--brand-light)",
-        },
-        pink: {
-          900: "var(--salmon)",
-        },
+        black: "var(--black)",
+        "dark-grey": "var(--dark-grey)",
       },
       fontSize: {
         h1: "var(--h1)",

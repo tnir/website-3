@@ -22,7 +22,7 @@
 </script>
 
 <div class="md:mt-x-large mb-small">
-  <p class="h5 text-center text-black font-bold mb-xx-small">
+  <p class="h5 text-center text-important font-bold mb-xx-small">
     Suggested topics
   </p>
   <div class="flex flex-wrap justify-center max-w-3xl mx-auto sm:space-x-macro">

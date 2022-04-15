@@ -14,7 +14,7 @@
 
 <style lang="postcss">
   .othercompanies span {
-    @apply px-2 py-[0.3rem] rounded-xl bg-orange-700;
+    @apply px-2 py-[0.3rem] rounded-xl bg-tertiary;
   }
 </style>
 
@@ -37,7 +37,7 @@
 </Header>
 
 <div class="max-w-[50rem] mt-small mx-auto mb-auto my-small lg:my-x-huge">
-  <h2 class="h4 pl-7 border-l-orange-800 border-l-[0.25rem]">
+  <h2 class="h4 pl-7 border-l-secondary border-l-[0.25rem]">
     Remove all friction from the developer experience to be always ready-to-code
     and make software engineering more collaborative, joyful, and secure.
   </h2>

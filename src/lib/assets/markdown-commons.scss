@@ -40,21 +40,21 @@
 
   pre {
     &:not(.language-null) {
-      background: var(--off-white);
+      background: var(--card);
     }
   }
 
   td:first-child {
-    @apply font-bold text-gray-900;
+    @apply font-bold text-black;
   }
 
   th + th,
   td + td {
-    @apply border-l border-solid border-gray-400;
+    @apply border-l border-solid border-divider;
   }
 
   tr + tr {
-    @apply border-t border-solid border-gray-400;
+    @apply border-t border-solid border-divider;
   }
 
   h2,

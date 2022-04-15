@@ -34,11 +34,11 @@
             visibleSectionIds.forEach((id) => {
               document
                 .querySelector(`#toc-wrapper a[href="#${id}"`)
-                ?.classList.remove("text-black");
+                ?.classList.remove("text-important");
             });
             document
               .querySelector(`#toc-wrapper a[href="#${visibleSectionIds[0]}"`)
-              ?.classList.add("text-black");
+              ?.classList.add("text-important");
           } else {
             if (visibleSectionIds.includes(entry.target.id)) {
               visibleSectionIds = visibleSectionIds.filter(
@@ -46,10 +46,10 @@
               );
               document
                 .querySelector(`#toc-wrapper a[href="#${entry.target.id}"`)
-                ?.classList.remove("text-black");
+                ?.classList.remove("text-important");
               document
                 .querySelector(`#toc-wrapper a[href="#${visibleSectionIds[0]}"`)
-                ?.classList.add("text-black");
+                ?.classList.add("text-important");
             }
           }
         });
@@ -78,5 +78,5 @@
   class="hidden self-start flex-none w-1/4 pl-8 sticky top-24 max-h-[calc(100vh-6rem)] text-base pb-10 overflow-x-hidden overflow-y-auto {clazz}"
   data-analytics={`{"position":"main","context":"on_this_page"}`}
 >
-  <p><strong class="text-black">On this page</strong></p>
+  <p><strong class="text-important">On this page</strong></p>
 </div>

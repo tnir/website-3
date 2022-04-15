@@ -55,7 +55,7 @@
 </style>
 
 <button
-  class="back-button flex items-center text-black w-full py-3"
+  class="back-button flex items-center text-important w-full py-3"
   type="button"
   on:click={() => {
     $topicsState = true;

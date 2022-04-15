@@ -98,7 +98,7 @@
       alt={`${title}`}
       class="max-h-[540px] rounded-tl-2xl rounded-tr-[1.3rem]"
     />
-    <p class="mt-[1.875rem] mb-6 text-dark-grey">{dateDisplay}</p>
+    <p class="mt-[1.875rem] mb-6 text-body">{dateDisplay}</p>
     {#if type === "digest"}
       <Pill text="DevX Digest" class="mb-micro" />
     {/if}
@@ -109,7 +109,7 @@
           usernames={author}
           displayNames={authorDisplayNames}
           socialMediaLinks={authorSocialMediaLinks}
-          socialMediaLinkClasses="inline-flex mr-2 px-2 bg-white rounded-xl text-dark-grey focus:bg-off-white focus:text-black hover:bg-off-white hover:text-black"
+          socialMediaLinkClasses="inline-flex mr-2 px-2 bg-white rounded-xl text-body focus:bg-card focus:text-important hover:bg-card hover:text-important"
           socialMediaImgClasses="mr-2 h-6 w-6 place-self-center"
         /></span
       >

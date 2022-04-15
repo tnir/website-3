@@ -108,7 +108,7 @@
         {@html description}
       </p>
       {#if note}
-        <p class="h5 font-semibold text-gray-900 mb-x-small md:-mt-micro">
+        <p class="h5 font-semibold text-important mb-x-small md:-mt-micro">
           {note}
         </p>
       {/if}

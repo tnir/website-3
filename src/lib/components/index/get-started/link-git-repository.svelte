@@ -39,7 +39,7 @@
     href="https://gitpod.io/workspaces/"
     variant="unstyled"
     size="large"
-    class="bg-[#5e48ba] text-white hover:text-white focus:text-white active:text-white hover:opacity-90 focus:bg-black-hover active:bg-black-hover flex items-center"
+    class="bg-[#5e48ba] text-white hover:text-white focus:text-white active:text-white hover:opacity-90 focus:bg-less-important active:bg-less-important flex items-center"
   >
     <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>GitLab</title>
@@ -76,7 +76,7 @@
     href="https://gitpod.io/workspaces/"
     variant="unstyled"
     size="large"
-    class="bg-black text-white flex items-center hover:text-white focus:text-white active:text-white hover:bg-black-hover focus:bg-black-hover active:bg-black-hover"
+    class="bg-important text-white flex items-center hover:text-white focus:text-white active:text-white hover:bg-less-important focus:bg-less-important active:bg-less-important"
   >
     <svg viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>GitHub Octocat</title>
@@ -93,7 +93,7 @@
     size="large"
     variant="unstyled"
     href="https://gitpod.io/workspaces/"
-    class="bg-[#265583] text-white flex items-center hover:text-white focus:text-white active:text-white hover:opacity-90 focus:bg-black-hover active:bg-black-hover"
+    class="bg-[#265583] text-white flex items-center hover:text-white focus:text-white active:text-white hover:opacity-90 focus:bg-less-important active:bg-less-important"
   >
     <svg viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>Bitbucket</title>

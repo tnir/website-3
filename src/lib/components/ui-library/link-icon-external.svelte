@@ -12,7 +12,7 @@
 </style>
 
 <a
-  class="inline-flex text-center py-2 px-4 text-btn-small leading-4 rounded-xl shadow-light font-semibold bg-off-white text-black hover:bg-white focus:bg-white"
+  class="inline-flex text-center py-2 px-4 text-btn-small leading-4 rounded-xl shadow-light font-semibold bg-card text-important hover:bg-white focus:bg-white"
   {href}
   target="_blank"
   rel="noopener"

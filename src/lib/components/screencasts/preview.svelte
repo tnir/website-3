@@ -65,7 +65,7 @@
   data-analytics={`{"variant":"preview"}`}
 >
   <div class="flex flex-col h-full">
-    <data class="text-dark-grey">Screencast {screencastNumberPadded}</data>
+    <data class="text-body">Screencast {screencastNumberPadded}</data>
     {#if headlineOrder === "h3"}
       <h3 class="h2">{screencast.title}</h3>
     {:else}

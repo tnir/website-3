@@ -45,22 +45,22 @@
 
   :global(.price-small),
   :global(.crossed-out) {
-    @apply text-gray-800 text-h4 mr-macro;
+    @apply text-body text-h4 mr-macro;
   }
 </style>
 
 <Card
   size="small"
-  class={`box flex w-full max-w-xs sm:w-[295px] gap-small py-small flex-col justify-between items-center bg-gray-100 px-0 mt-0 mx-macro 2xl:mx-micro mb-x-small  text-center transition-all duration-200 hover:shadow-brand ${
+  class={`box flex w-full max-w-xs sm:w-[295px] gap-small py-small flex-col justify-between items-center bg-card px-0 mt-0 mx-macro 2xl:mx-micro mb-x-small  text-center transition-all duration-200 hover:shadow-brand ${
     spiced ? "spiced shadow-brand" : ""
   }`}
 >
   <div class="flex flex-col">
     <h2 class="h4">{title}</h2>
-    <div class="h1 font-bold text-black flex items-center justify-center">
+    <div class="h1 font-bold text-important flex items-center justify-center">
       {@html price}
     </div>
-    <div class="text-dark-grey font-semibold">
+    <div class="text-body font-semibold">
       {#if duration}
         {duration}
       {:else}
@@ -72,7 +72,7 @@
         class="inline-flex flex-col ml-x-small mt-xx-small space-y-micro text-left"
       >
         {#each features as feature}
-          <li class="relative inline-flex text-black">
+          <li class="relative inline-flex text-important">
             {#if typeof feature !== "string"}
               <QaTooltip text={feature.text} tooltip={feature.tooltip} />
             {:else}
@@ -98,6 +98,6 @@
     >
   {/if}
   {#if footnote}
-    <div class="text-p-xsmall px-small text-gray-800">{footnote}</div>
+    <div class="text-p-xsmall px-small text-body">{footnote}</div>
   {/if}
 </Card>
