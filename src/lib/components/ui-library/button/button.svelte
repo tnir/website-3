@@ -9,11 +9,12 @@
   export let disabled: boolean = false;
 
   const classMap = {
-    primary: "bg-primary dark:text-black hover:bg-brand-hover",
+    primary: "bg-primary text-important dark:text-black hover:bg-quaternary",
     secondary: "bg-salmon hover:bg-salmon-hover focus:bg-salmon-hover",
-    tertiary: "bg-important text-white hover:bg-less-important",
-    cta: "bg-sand-dark dark:bg-gray-800 dark:text-sand-dark hover:bg-tertiary hover:dark:bg-red-400 focus:bg-tertiary",
-    gray: "bg-sand-dark text-important hover:bg-tertiary focus:bg-tertiary hover:text-important focus:text-important",
+    tertiary:
+      "bg-important dark:bg-primary text-white dark:text-black hover:text-white hover:bg-less-important dark:hover:bg-quaternary",
+    cta: "bg-sand-dark dark:bg-light-black dark:text-sand-dark hover:bg-tertiary hover:dark:bg-quaternary hover:dark:text-black focus:bg-tertiary",
+    gray: "bg-sand-dark dark:bg-light-black text-important hover:bg-tertiary focus:bg-tertiary hover:text-important focus:text-important dark:hover:bg-quaternary dark:hover:text-black",
     disabled: "pointer-events-none text-body bg-sand-dark",
     medium: "py-2 px-6 text-btn-small leading-4 rounded-xl",
     large: " py-3 px-8 text-p-medium leading-[1.25] min-w-[10rem] rounded-2xl",

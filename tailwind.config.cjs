@@ -48,8 +48,8 @@ module.exports = {
         primary: "var(--brand-almost-ripe)",
         secondary: "var(--brand-ripe)",
         tertiary: "var(--brand-light)",
+        quaternary: "var(--brand-quaternary)",
 
-        "brand-hover": "var(--brand-hover)",
         "black-hover": "var(--black-hover)",
         error: "var(--error)",
 
@@ -57,6 +57,7 @@ module.exports = {
         "salmon-hover": "var(--salmon-hover)",
 
         black: "var(--black)",
+        "light-black": "var(--light-black)",
         "dark-grey": "var(--dark-grey)",
       },
       fontSize: {
