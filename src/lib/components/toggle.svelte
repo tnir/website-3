@@ -51,6 +51,24 @@
       @apply bg-white;
     }
   }
+
+  :global(body.dark) .switch-container {
+    @apply bg-card;
+
+    label:first-of-type {
+      @apply bg-primary text-black;
+    }
+
+    &.checked label {
+      &:first-of-type {
+        @apply bg-transparent text-body;
+      }
+
+      &:last-of-type {
+        @apply bg-primary text-black;
+      }
+    }
+  }
 </style>
 
 <div class="text-center">
