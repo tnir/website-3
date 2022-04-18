@@ -2,7 +2,7 @@
   --font: "ABCDiatype", sans-serif;
 
   --black: #12100c;
-  --off-black: #1a1712;
+  --off-black: #191712;
   --mid-black: #23211e;
   --light-black: #514f4d;
   --dark-grey: #565451;
@@ -104,8 +104,8 @@ body.dark {
   --body: var(--slight-grey);
   --sub: var(--slight-grey);
 
-  --bg: var(--mid-black);
-  --card: var(--off-black);
+  --bg: var(--off-black);
+  --card: var(--mid-black);
   --nav: var(--bg);
 
   --divider: var(--light-black);
