@@ -1,4 +1,5 @@
 <script>
+  import ThemeSwitcher from "../theme-switcher.svelte";
   import FooterLink from "./link.svelte";
   import Section from "./section.svelte";
 
@@ -108,7 +109,7 @@
         </li>
       </Section>
     </div>
-
+    <ThemeSwitcher />
     <div
       class="flex flex-col-reverse items-center justify-between border-t border-solid border-sand-dark pt-xx-small md:flex-row md:pt-x-small"
     >

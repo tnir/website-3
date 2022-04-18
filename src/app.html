@@ -26,7 +26,16 @@
 	     the current page has one -->
     %svelte.head%
   </head>
-  <body class="dark">
+  <body>
+    <script>
+      const theme = localStorage.getItem("theme");
+      
+      if(theme === 'dark' || window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.add('light');
+      }
+    </script>
     <div id="svelte">%svelte.body%</div>
   </body>
 </html>
