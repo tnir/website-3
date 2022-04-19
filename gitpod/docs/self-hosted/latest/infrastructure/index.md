@@ -15,7 +15,3 @@ To install Gitpod you need to create a Kubernetes cluster that meet our [require
 - [Google Kubernetes Engine (GKE)](./infrastructure/on-gke)
 - [Microsoft Azure Kubernetes Service (AKS)](./infrastructure/on-microsoft-aks)
 - [K3s](./infrastructure/on-k3s)
-
-## Cert-Manager
-
-Each Kubernetes cluster needs to have a properly configured [cert-manager](https://cert-manager.io/) running.

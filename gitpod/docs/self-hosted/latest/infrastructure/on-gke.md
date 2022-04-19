@@ -19,3 +19,5 @@ Installation instructions for Gitpod Self-Hosted on Google Kubernetes Engine are
 - Installation of [calico](https://docs.projectcalico.org) as CNI and NetworkPolicy implementation
 - Installation of [cert-manager](https://cert-manager.io/) for self-signed SSL certificates
 - A [gitpod.io](https://github.com/gitpod-io/gitpod) deployment
+
+> **Note:** GKE Dataplane V2 uses Cilium as container network interface (CNI) which is not supported by Gitpod. Please use GKE Dataplane V1.
