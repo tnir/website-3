@@ -17,6 +17,7 @@
   import topicsState from "./states/topics-state";
   import EditInGitpod from "./edit-in-gitpod.svelte";
   import { page } from "$app/stores";
+  import MagGlass from "../svgs/mag-glass.svelte";
   let clazz = "";
   export { clazz as class };
   export let containerClasses = "";
@@ -107,9 +108,8 @@
       } ${containerClasses}`}
     >
       <label for={docSearchInputSelector} class="sr-only">Search</label>
-      <img
+      <MagGlass
         class="absolute top-1/2 z-10 left-3 -translate-y-1/2 pointer-events-none h-xx-small w-xx-small lef {iconClasses}"
-        src="/svg/mag-glass.svg"
         alt="Search"
         aria-hidden="true"
       />

@@ -26,7 +26,9 @@
   class:pointer-events-none={!availability}
   tabindex={!availability && -1}
   class:bg-sand-dark={!isMostRecent}
-  class="flex flex-col max-w-sm lg:max-w-none group {layout === 'column'
+  class="flex flex-col max-w-sm lg:max-w-none group {!isMostRecent
+    ? 'bg-sand-dark dark:bg-card'
+    : ''} {layout === 'column'
     ? ''
     : 'lg:flex-row lg:max-w-6xl mx-auto'} rounded-xl bg-card transition-all duration-200 {availability &&
     'hover:shadow-normal focus:shadow-normal'}"
