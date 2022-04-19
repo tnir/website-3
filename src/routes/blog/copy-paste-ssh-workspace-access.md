@@ -10,21 +10,33 @@ teaserImage: teaser.jpg
 
 Developer experience is sometimes about making big changes, such as migrating to a new industry-defining tool or technology. But sometimes developer experience is about paying attention to the little things. Taking actions that we do as developers every day, and making them quicker, easier and removing friction.
 
-We’ve shipped a feature on Gitpod that we’re excited to share with you, and we hope that it brings some more joy to your developer experience with Gitpod. **As of today, in Gitpod you can now get access to a Gitpod workspace directly via SSH with a one-liner copy/paste from the Gitpod dashboard.**
+Recently, we shipped a feature on Gitpod that we’re excited to share with you, and we hope that it brings some more joy to your developer experience with Gitpod.
+
+**As of today, in Gitpod you can now get access to a Gitpod workspace directly via SSH with a one-liner copy/paste from the Gitpod dashboard.**
 
 ## How does workspace access via copy/paste SSH work?
 
-For those using Gitpod, you’ll know that you can already get SSH access into a Gitpod workspace via the [Gitpod Local Companion](https://www.gitpod.io/docs/ides-and-editors/local-companion) (currently in beta). But whilst the local companion is intended to be about much more than workspace access, we saw a need for an even easier, quicker way to get direct SSH access to a workspace.
+For those using Gitpod, you’ll know that you can already get SSH access into a Gitpod workspace via the [Gitpod Local Companion](https://www.gitpod.io/docs/ides-and-editors/local-companion) (currently in beta). However, we still saw the need from our users for a super easy, quick way to get direct SSH access to a workspace.
 
 All you have to do is visit the Gitpod dashboard, click the more actions menu at the right-hand side of your workspace list, copy/paste the SSH command into a terminal, and voila!
 
 You’re SSH’ed into your Gitpod workspace—“ready to code”.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e2260c8d-5cae-4c3d-bfe8-b437d129969f/Untitled.png)
+<figure>
+    <img src="/static/images/docs/ssh-copy-paste-dashboard.gif" alt="Copy pasting the SSH command from the dashboard">
+    <figcaption>Copy pasting the SSH command from the dashboard</figcaption>
+</figure>
+
+You can also copy/paste your SSH access from the workspace start page, which is shown to users who have selected a desktop IDE or editor as their [preference](https://gitpod.io/preferences).
+
+<figure>
+    <img src="/static/images/docs/ssh-copy-paste-workspace-start.gif" alt="Copy pasting the SSH command from the workspace start page">
+    <figcaption>Copy pasting the SSH command from the workspace start page</figcaption>
+</figure>
 
 **Note:** SSH authentication is provided using a shared workspace token that is refreshed on each workspace state. So, as always, be careful where you copy/paste the link.
 
-If you live and breathe in the command-line, rather than in an editor or IDE, you can also combine SSH copy/paste access to Gitpod workspaces with features like [dotfiles](https://www.gitpod.io/docs/config-dotfiles), to get your workflow running just the way that you like it.
+If you're one of our many users who lives in the [command-line](/docs/ides-and-editors/command-line), rather than in [an editor or IDE](/docs/ides-and-editors), you can also combine SSH copy/paste access to Gitpod workspaces with Gitpod features like [dotfiles](https://www.gitpod.io/docs/config-dotfiles), to get your workflow running just the way that you like it.
 
 Now, some of you might be wondering why we’re so excited about SSH copy/paste access to Gitpod workspaces? And that’s because it’s one of the many ways we’re making Gitpod seamless for professional teams to use Gitpod for developing using any language, technology or workflow.
 
