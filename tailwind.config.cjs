@@ -111,6 +111,12 @@ module.exports = {
             a: {
               color: "var(--link-grey)",
             },
+            "h1, h2, h3, h4, h5": {
+              color: "var(--important) !important",
+            },
+            "p, ul, ol, div": {
+              color: "var(--body)",
+            },
             blockquote: {
               fontStyle: "normal",
               margin: "2rem 0",
@@ -204,10 +210,9 @@ module.exports = {
               },
             },
             p: {
-              color: "var(--dark-grey)",
               fontSize: "var(--p-medium)",
               strong: {
-                color: "var(--dark-grey)",
+                color: "var(--body)",
               },
             },
             pre: {

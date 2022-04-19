@@ -13,7 +13,8 @@
 
   const classMap = {
     primary: "bg-primary text-important dark:text-black hover:bg-quaternary",
-    secondary: "bg-salmon hover:bg-salmon-hover focus:bg-salmon-hover",
+    secondary:
+      "bg-salmon hover:bg-salmon-hover dark:text-black focus:bg-salmon-hover",
     tertiary:
       "bg-important dark:bg-primary text-white dark:text-black hover:text-white hover:bg-less-important dark:hover:bg-quaternary",
     cta: "bg-sand-dark dark:bg-light-black dark:text-sand-dark hover:bg-tertiary hover:dark:bg-quaternary hover:dark:text-black focus:bg-tertiary",

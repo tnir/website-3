@@ -17,7 +17,7 @@
 </style>
 
 <div
-  class="inline-block px-3 py-0.5 text-xs font-semibold text-important rounded-lg shadow-light {clazz} {variant}"
+  class="inline-block px-3 py-0.5 text-xs font-semibold text-important dark:text-black rounded-lg shadow-light {clazz} {variant}"
 >
   {capitalised}
 </div>
