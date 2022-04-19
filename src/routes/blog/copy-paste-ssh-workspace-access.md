@@ -16,7 +16,7 @@ We’ve shipped a feature on Gitpod that we’re excited to share with you, and 
 
 For those using Gitpod, you’ll know that you can already get SSH access into a Gitpod workspace via the [Gitpod Local Companion](https://www.gitpod.io/docs/ides-and-editors/local-companion) (currently in beta). But whilst the local companion is intended to be about much more than workspace access, we saw a need for an even easier, quicker way to get direct SSH access to a workspace.
 
-All you have to do is visit the Gitpod dashboard, click the menu at the right-hand side of your workspace list, copy/paste the SSH command into a terminal, and voila!
+All you have to do is visit the Gitpod dashboard, click the more actions menu at the right-hand side of your workspace list, copy/paste the SSH command into a terminal, and voila!
 
 You’re SSH’ed into your Gitpod workspace—“ready to code”.
 
