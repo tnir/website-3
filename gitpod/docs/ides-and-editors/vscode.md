@@ -46,16 +46,3 @@ The process of installing fonts matches how you typically install custom fonts l
      "editor.fontFamily": "Your custom font name"
    }
    ```
-
-## Settings Sync
-
-By default, your local VS Code installation is _most likely_ equipped with a pre-configured setup to sync all of your IDE-related settings via a GitHub or a Microsoft account. This means that your preferences are synced to Microsoft's servers and that means Gitpod has no access to them.
-
-You can change this fact and sync all of your preferences to Gitpod instead. You will not lose any data by doing this, but if you still want to sync your settings across machines we recommend you to do the same on all of them as well.
-
-1. Make sure the Gitpod extension is installed and enabled.
-2. Hit <kbd>F1</kbd> to open the Command Pallete and run `Gitpod: Turn on Settings Sync`.
-3. Complete the login process by clicking on the `Accounts` menu and selecting `Sign in to Settings Sync`. This will open Gitpod where you can just follow the steps to allow Settings sync from your local VS Code.
-4. Yay; it's done 🎉! Extensions and other preferences should start syncing right away. For troubleshooting you can take a look at `OUTPUT` > `Log (Settings Sync)`.
-
-If you want to read more about Settings Sync and how it works please refer to [VS Code's Settings Sync documentation](https://code.visualstudio.com/docs/editor/settings-sync).

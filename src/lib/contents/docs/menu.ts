@@ -55,6 +55,7 @@ export const MENU: MenuEntry[] = [
     M("Local Companion", "ides-and-editors/local-companion", [], "beta"),
     M("JetBrains Gateway", "ides-and-editors/jetbrains-gateway", []),
     M("VS Code Extensions", "ides-and-editors/vscode-extensions"),
+    M("VS Code Settings Sync", "ides-and-editors/settings-sync"),
     M("Command Line (e.g. Vim)", "ides-and-editors/command-line", []),
 
     M(
