@@ -1,11 +1,11 @@
 ---
 author: iqqbot, loujaybee
-date: Monday, 11 April 2022 13:00:00 UTC
-excerpt: Easy workspace access with a single command via SSH
+date: Tuesday, 19 April 2022 13:00:00 UTC
+excerpt: Easily access your Gitpod workspace by copy/pasting a single SSH command from the gitpod dashboard.
 slug: copy-paste-ssh-workspace-access
-title: Copy/Paste SSH Workspaces
-image: teaser.jpg
-teaserImage: teaser.jpg
+title: SSH for workspaces as easy as copy/paste
+image: header.jpg
+teaserImage: header.jpg
 ---
 
 Developer experience is sometimes about making big changes, such as migrating to a new industry-defining tool or technology. But sometimes developer experience is about paying attention to the little things. Taking actions that we do as developers every day, and making them quicker, easier and removing friction.

@@ -21,14 +21,14 @@ You can currently copy/paste a simple SSH command to get command line access to 
 4. Copy paste the selected command
 
 <figure>
-    <img src="/static/images/docs/ssh-copy-paste-dashboard.gif" alt="Copy pasting the SSH command from the dashboard">
+    <img src="/images/docs/ssh-copy-paste-dashboard.gif" alt="Copy pasting the SSH command from the dashboard">
     <figcaption>Copy pasting the SSH command from the dashboard</figcaption>
 </figure>
 
 You can also copy/paste your SSH access from the workspace start page, which is shown to users who have selected a desktop IDE or editor as their [preference](https://gitpod.io/preferences).
 
 <figure>
-    <img src="/static/images/docs/ssh-copy-paste-workspace-start.gif" alt="Copy pasting the SSH command from the workspace start page">
+    <img src="/images/docs/ssh-copy-paste-workspace-start.gif" alt="Copy pasting the SSH command from the workspace start page">
     <figcaption>Copy pasting the SSH command from the workspace start page</figcaption>
 </figure>
 
