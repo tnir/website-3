@@ -22,11 +22,19 @@
         rel="noreferrer"
         target="_blank"
         data-analytics={`{"variant":"social_media","context":"` +
-          link.alt.toLowerCase() +
+          (link.name || link.icon.alt).toLowerCase() +
           `_share"}`}
         class="p-1 md:p-0.5"
       >
-        <img src={link.icon} alt={link.alt} class="h-10 w-10 md:h-7 md:w-7" />
+        {#if link.svg}
+          <svelte:component this={link.svg} class="h-10 w-10 md:h-7 md:w-7" />
+        {:else}
+          <img
+            src={link.icon.src}
+            alt={link.icon.alt}
+            class="h-10 w-10 md:h-7 md:w-7"
+          />
+        {/if}
       </a>
     {/each}
   </div>

@@ -5,6 +5,8 @@
   import "$lib/assets/markdown-commons.scss";
   import Share from "$lib/components/share.svelte";
   import Pill from "./pill.svelte";
+  import type { ShareLink } from "$lib/types/share-link.type";
+  import Hackernews from "./svgs/share/hackernews.svelte";
 
   export let baseUrl: string;
   export let imagesDirectoryName: string;
@@ -44,29 +46,33 @@
     return result;
   };
 
-  const shareLinks = [
+  const shareLinks: ShareLink[] = [
     {
       href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
         `${title} by ${renderTwitterHandles()} ${baseUrl}${slug}`
       )}`,
-      alt: "Twitter",
-      icon: "/svg/brands/twitter.svg",
+      icon: {
+        src: "/svg/brands/twitter.svg",
+        alt: "Twitter",
+      },
       trackingName: "twitter",
     },
     {
       href: `http://www.reddit.com/submit?url=${encodeURIComponent(
         `${baseUrl}${slug}&title=${title}`
       )}`,
-      alt: "Reddit",
-      icon: "/svg/brands/reddit.svg",
+      icon: {
+        src: "/svg/brands/reddit.svg",
+        alt: "Reddit",
+      },
       trackingName: "reddit",
     },
     {
+      name: "HackerNews",
       href: `http://news.ycombinator.com/submitlink?u=${encodeURIComponent(
         `${baseUrl}${slug}`
       )}&t=${encodeURIComponent(title)}`,
-      alt: "HackerNews",
-      icon: "/svg/brands/hackernews.svg",
+      svg: Hackernews,
       trackingName: "hackernews",
     },
   ];
