@@ -19,7 +19,7 @@
   }
 
   .active {
-    color: var(--black);
+    @apply text-important;
   }
 
   .highlight {

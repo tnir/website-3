@@ -43,6 +43,7 @@ module.exports = {
         "less-important": "var(--less-important)",
 
         "sand-dark": "var(--sand-dark)",
+        "sand-light": "var(--sand-light)",
         white: "var(--white)",
 
         primary: "var(--brand-almost-ripe)",
@@ -57,6 +58,7 @@ module.exports = {
         "salmon-hover": "var(--salmon-hover)",
 
         black: "var(--black)",
+        "off-black": "var(--off-black)",
         "light-black": "var(--light-black)",
         "dark-grey": "var(--dark-grey)",
       },

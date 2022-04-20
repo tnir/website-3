@@ -373,7 +373,7 @@
   });
 </script>
 
-<style>
+<style lang="postcss">
   .aspect {
     position: relative;
     height: 100%;

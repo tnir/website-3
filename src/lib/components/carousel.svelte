@@ -11,6 +11,10 @@
     scrollbar-color: var(--divider) var(--white);
   }
 
+  :global(body.dark) div {
+    scrollbar-color: var(--divider) var(--card);
+  }
+
   div::-webkit-scrollbar {
     -webkit-appearance: none;
   }

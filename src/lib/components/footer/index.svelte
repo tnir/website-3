@@ -111,7 +111,7 @@
     </div>
     <ThemeSwitcher />
     <div
-      class="flex flex-col-reverse items-center justify-between border-t border-solid border-sand-dark pt-xx-small md:flex-row md:pt-x-small"
+      class="flex flex-col-reverse items-center justify-between border-t border-solid border-divider pt-xx-small md:flex-row md:pt-x-small"
     >
       <div class="mt-micro flex items-center md:mt-0">
         <FooterLink href="/"

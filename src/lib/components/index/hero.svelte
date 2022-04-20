@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import LinkButton from "$lib/components/ui-library/link-button";
+  import GithubMark from "../svgs/github-mark.svelte";
 
   let githubStarsEl: HTMLAnchorElement;
 
@@ -100,7 +101,7 @@
         width: 145px;
       }
 
-      img {
+      & > :global(*) {
         height: 29px;
         width: 29px;
 
@@ -109,6 +110,10 @@
           width: 27px;
         }
       }
+    }
+
+    :global(body.dark) &__stars {
+      filter: invert(90%);
     }
 
     &__stars {
@@ -155,14 +160,9 @@
       </div>
       <div>
         <div class="hero__icons">
-          <img src="/svg/gitlab.svg" alt="GitLab logo" width="30" height="30" />
-          <img src="/svg/github.svg" alt="GitHub logo" width="30" height="30" />
-          <img
-            src="/svg/bitbucket.svg"
-            alt="Bitbucket logo"
-            width="30"
-            height="30"
-          />
+          <img src="/svg/gitlab.svg" alt="GitLab logo" />
+          <GithubMark alt="GitHub logo" />
+          <img src="/svg/bitbucket.svg" alt="Bitbucket logo" />
         </div>
         <div class="hero__stars">
           <a

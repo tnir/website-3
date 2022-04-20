@@ -25,6 +25,13 @@
       @apply mb-1;
     }
 
+    :global(body.dark) &.open {
+      &::before,
+      &::after {
+        @apply bg-important;
+      }
+    }
+
     &.open {
       &::before,
       &::after {
@@ -50,8 +57,8 @@
 <button on:click={handleToggle} aria-label="Show / hide nav items" class="py-3">
   <div
     class="flex flex-col items-center justify-center h-6 w-12 rounded-xl transition-all duration-200 {$menuState
-      ? 'bg-sand-dark'
-      : 'bg-important'}"
+      ? 'bg-sand-dark dark:bg-bg'
+      : 'bg-important dark:bg-card'}"
     class:open={$menuState}
   />
 </button>

@@ -95,7 +95,7 @@
 >
   {#each ides as { name, availibility, label, icon, screenshots }}
     <button
-      class="block relative cursor-pointer"
+      class="block relative cursor-pointer group"
       on:mouseenter={(e) => {
         handleMouseEnter(e, name);
       }}
@@ -105,7 +105,7 @@
       class:hidden={ideType === "browser" && !screenshots.browser}
     >
       <div
-        class="icon-box relative flex items-center justify-center bg-card rounded-lg md:rounded-xl lgx:rounded-2xl shadow-lg transition duration-200 linear"
+        class="icon-box relative flex items-center justify-center border-solid bg-card group-hover:bg-white dark:group-hover:bg-black group-focus:bg-white dark:group-focus:bg-black rounded-lg md:rounded-xl lgx:rounded-2xl shadow-lg transition duration-200 linear"
         class:grayed={!(activeByDefaultName === name) &&
           !(activeIdeName === "vscode")}
         data-name={name}

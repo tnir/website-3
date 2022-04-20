@@ -107,13 +107,24 @@
       class="preview w-full col-start-1 row-start-1 md:col-start-auto md:row-start-auto"
     >
       {#if terminal}
-        <Console
-          source={terminal.source}
-          dark={terminal.dark}
-          narrow={terminal.narrow}
-          shadow={terminal.shadow}
-          skipToEnd={terminal.skipToEnd}
-        />
+        <div class="dark:hidden">
+          <Console
+            source={terminal.source}
+            dark={terminal.dark}
+            narrow={terminal.narrow}
+            shadow={terminal.shadow}
+            skipToEnd={terminal.skipToEnd}
+          />
+        </div>
+        <div class="hidden dark:block">
+          <Console
+            source={terminal.source}
+            dark={true}
+            narrow={terminal.narrow}
+            shadow={terminal.shadow}
+            skipToEnd={terminal.skipToEnd}
+          />
+        </div>
       {/if}
       {#if image}
         <img
