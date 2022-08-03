@@ -21,16 +21,10 @@ This install method runs a [K3s](https://k3s.io/) cluster inside a Docker contai
 
 ## 1. Running the Docker container
 
-First, Create a volume to which the Gitpod container will attach:
-
-```bash
-docker volume create gitpod
-```
-
 Run the following command to get the `local-preview` Docker container up and running:
 
 ```bash
-docker run -p 443:443 --privileged --name gitpod --rm -it -v gitpod:/var/gitpod eu.gcr.io/gitpod-core-dev/build/local-preview
+docker run -p 443:443 --privileged --name gitpod --rm -it  --mount type=volume,source=gitpod,destination=/var/gitpod eu.gcr.io/gitpod-core-dev/build/local-preview
 ```
 
 Unpacking the above command:
@@ -39,9 +33,9 @@ Unpacking the above command:
 - `--privileged` to be able to run docker (and hence `k3s`) inside the container. This is necessary.
 - `--name gitpod` to set the name of the docker container for further access.
 - `--rm` to delete the Docker container after stopping.
-- `gitpod:/var/gitpod` to store the workspace files, etc into the `gitpod` volume.
+- `--mount type=volume,source=gitpod,destination=/var/gitpod` to create a volume called `gitpod`, and mounting it to the container.
 
-> **Note:** By default, `127-0-0-1.nip.io` is the DOMAIN to access Gitpod. To use another host network IP Address, the `DOMAIN` environment can be set accordingly via an `-e` flag in the above command. This is useful to share access to the Gitpod Self-Hosted instance running on your machine within your local network. For Example, `192.168.0.42` Host Network IP would be `192-168-0-42.nip.io`, set by appending `-e DOMAIN=192-168-0-42.nip.io`.
+> **Note:** By default, `preview.gitpod-self-hosted.com` is the DOMAIN to access Gitpod which routes to `127.0.0.1` localhost IP address. To use another host network IP Address, the `DOMAIN` environment can be set accordingly via an `-e` flag in the above command. This is useful to share access to the Gitpod Self-Hosted instance running on your machine within your local network. For Example, `192.168.0.42` Host Network IP would be `192-168-0-42.nip.io`, set by appending `-e DOMAIN=192-168-0-42.nip.io`.
 
 ## 2. Accessing Gitpod
 
@@ -53,7 +47,7 @@ docker cp gitpod:/var/gitpod/gitpod-ca.crt $HOME/gitpod-ca.crt
 
 This certificate is saved at `$HOME/gitpod-ca.crt` and can then be loaded into your browser. Most browsers also require a restart before they can start to use the imported certificate.
 
-Once the certificate is loaded, the URL to access the Gitpod instance would be `https://127-0-0-1.nip.io` unless the `DOMAIN` environment is overridden in which case the same has to be used.
+Once the certificate is loaded, the URL to access the Gitpod instance would be `https://preview.gitpod-self-hosted.com` unless the `DOMAIN` environment is overridden in which case the same has to be used.
 
 You should be greeted by the following screen:
 
