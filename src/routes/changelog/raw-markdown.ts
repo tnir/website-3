@@ -29,7 +29,7 @@ export const get: import("@sveltejs/kit").RequestHandler = async ({
   }
   return {
     headers: {
-      "Cache-Control": "public, max-age=86400",
+      "Cache-Control": "public, max-age=3600",
     },
     body,
   };
