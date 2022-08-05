@@ -14,6 +14,7 @@
   import FeatureTable from "$lib/components/ui-library/feature-table/feature-table.svelte";
   import { codespacesComparison } from "$lib/contents/codespaces";
   import { openSourceFeature } from "$lib/contents/jetbrains-space";
+  import idesSvelte from "$lib/components/svgs/ides.svelte";
 </script>
 
 <style lang="postcss">
@@ -49,16 +50,10 @@
 <div class="feature-boxes">
   <FeatureBox
     feature={{
-      title: "Ready in a flash",
+      title: "Your environment, your tools, your&nbsp;craft",
       paragraph:
-        "Gitpod removes long init and build times by continuously pre-building workspaces for your project. Thereby it allows you to start coding or debugging immediately, from any context, at any time.",
-      moreButton: {
-        href: "/docs/prebuilds",
-        text: "More about Prebuilds.",
-      },
-      previewComponent: Spaces_1,
-      footnote:
-        "Compared start-up time until ready-to-code for<br /> <a href='https://github.com/gitpod-io/openvscode-server' target='_blank'>https://github.com/gitpod-io/openvscode-server</a>. Last verified 14 Feb 2022.",
+        "Gitpod works out of the box with your favourite JetBrains IDEs and VS Code. Give your team the power to choose their own tools and avoid being locked in to a single vendor.",
+      previewComponent: idesSvelte,
     }}
   />
 
