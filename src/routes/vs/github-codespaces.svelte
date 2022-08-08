@@ -9,7 +9,7 @@
   import Header from "$lib/components/header.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import Section from "$lib/components/section.svelte";
-  import Spaces_1 from "$lib/components/svgs/github-codespaces/spaces-1.svelte";
+  //   import Spaces_1 from "$lib/components/svgs/github-codespaces/spaces-1.svelte";
   import Spaces_2 from "$lib/components/svgs/github-codespaces/spaces-2.svelte";
   import FeatureTable from "$lib/components/ui-library/feature-table/feature-table.svelte";
   import { codespacesComparison } from "$lib/contents/codespaces";
