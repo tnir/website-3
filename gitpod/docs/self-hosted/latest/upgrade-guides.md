@@ -16,13 +16,13 @@ This page informs you if there are specific considerations to take into account 
 
 ### Setting the service type of the proxy component
 
-You can now configure the service type of the proxy service in the installation UI (see image below) - you do not need to upload a `.yaml` file as a [support patch](./support-patches) anymore to configure this. However, having it in the support patch will still work until December.
+You can now configure the service type of the proxy service in the installation UI (see image below) - you do not need to upload a `.yaml` file as a [config patch](./config-patches) anymore to configure this. However, having it in the config patch will still work until December.
 
 ![proxy service type UI](../../static/images/docs/self-hosted/proxy-service-type-ui.png)
 
 ### Setting workspace resource limits
 
-If you are setting a resource limit for workspaces via a [config-patch](../latest/support-patches), the way to set these limits has changed slightly:
+If you are setting a resource limit for workspaces via a [config-patch](../latest/config-patches), the way to set these limits has changed slightly:
 
 **Before:**
 
@@ -59,7 +59,7 @@ workspace:
 
 ### Setting the default workspace image and which image registries the default image can be pulled from
 
-We've moved the configuration of the default workspace image and the default base image registry whitelist out of the experimental section of the [config-patch](../latest/support-patches) file. The latter was also renamed. Using them in the experimental section will still work for the time being (until approx. December 2022).
+We've moved the configuration of the default workspace image and the default base image registry whitelist out of the experimental section of the [config-patch](../latest/config-patches) file. The latter was also renamed. Using them in the experimental section will still work for the time being (until approx. December 2022).
 
 **Before:**
 
