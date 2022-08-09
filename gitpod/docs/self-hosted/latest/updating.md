@@ -24,6 +24,8 @@ When an update is available, you will be asked to deploy the new version. You ca
 
 In most cases, updates should work without further effort - and your existing data is carried over. In some cases (with breaking changes) we will provide instructions on how to upgrade to a specific version in our [Update Guides](../latest/upgrade-guides).
 
+> Gitpod allows you to [apply custom labels, annotations and environment variables to your resources](./advanced/customization). When using this feature, you will need to manually delete resources that have immutable labels on them for updates to take effect. See the [documentation](./advanced/customization#limitations) for full details.
+
 ![kots-admin-dashboard](../../static/images/docs/self-hosted/kots-admin-dashboard.png)
 
 ## Update Strategies
