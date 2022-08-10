@@ -42,7 +42,6 @@
     },
   };
 
-  let scroll: number;
   let isFormDirty = false;
   let isEmailSent = false;
   let isSubmissionInProgress: boolean = false;
@@ -99,13 +98,9 @@
   }
 </style>
 
-<svelte:window bind:scrollY={scroll} />
-
 <Card
   size="small"
-  class="sticky left-full {scroll > 0
-    ? 'lgx:top-44'
-    : 'lgx:top-[250px]'} max-w-[642px] z-10 px-xx-small py-x-small sm:p-x-small xl:p-small transition-all duration-500 shadow-normal {clazz}"
+  class="sticky left-full lgx:top-40 max-w-[642px] z-10 px-xx-small py-x-small sm:p-x-small xl:px-small xl:py-x-small shadow-normal {clazz}"
 >
   <div bind:this={sectionStart}>
     {#if isEmailSent}
@@ -117,7 +112,7 @@
       <SubmissionSuccess title="You have already registered" />
     {:else}
       <form
-        class="space-y-xx-small md:space-y-x-small"
+        class="space-y-micro md:space-y-xx-small"
         on:submit|preventDefault={handleSubmit}
         novalidate
       >
