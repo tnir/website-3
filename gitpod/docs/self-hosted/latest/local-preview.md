@@ -45,7 +45,42 @@ As this is a self-signed instance of Gitpod, the Gitpod root CA cert has to be i
 docker cp gitpod:/var/gitpod/gitpod-ca.crt $HOME/gitpod-ca.crt
 ```
 
-This certificate is saved at `$HOME/gitpod-ca.crt` and can then be loaded into your browser. Most browsers also require a restart before they can start to use the imported certificate.
+This certificate is saved at `$HOME/gitpod-ca.crt` and can then be loaded into your browser. Most browsers also require a restart before they can start to use the imported certificate. For instructions on how to load the certificate, choose your setup below:
+
+<details>
+  <summary  class="text-p-medium">Chrome on Windows</summary>
+
+<div class="not-prose" style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/1814061fbd9c4be7b18d8ae8919cabc6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+</details>
+<details>
+  <summary  class="text-p-medium">Edge on Windows</summary>
+
+<div class="not-prose" style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/ee3051ac367140c3a2f60cd4e15a0192" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+</details>
+
+<details>
+  <summary  class="text-p-medium">Firefox on Windows</summary>
+
+<div class="not-prose" style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/513796d28a2647dba2cdd8f9312d4f98" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+</details>
+
+<details>
+  <summary  class="text-p-medium">Google Chrome on MacOS</summary>
+
+<div class="not-prose" style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/39e870e6f91c4f5bad1550f3647fed29" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+</details>
+
+<details >
+  <summary  class="text-p-medium">Mozilla Firefox on MacOS</summary>
+
+<div class="not-prose" style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2ce25cf844744359ae2b14263d9c2fb0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+</details>
+
+<br/>
 
 Once the certificate is loaded, the URL to access the Gitpod instance would be `https://preview.gitpod-self-hosted.com` unless the `DOMAIN` environment is overridden in which case the same has to be used.
 
