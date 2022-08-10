@@ -22,7 +22,7 @@ data={{
 
 # {title}
 
-In line with [our ambition to "remove all friction from the developer experience"](https://www.notion.so/gitpod/Values-Attributes-2ed4c2f93c84499b98e3b5389980992e), Gitpod currently supports many popular IDE/editors e.g. JetBrains and VS Code through both the browser and on desktop. You can even use the command-line directly for editors like Vim (via SSH). There are many ways to [configure your IDE/editor in Gitpod](ides-and-editors/configure-your-editor-ide) to match your preferred workflow or setup.
+In line with [our ambition to "remove all friction from the developer experience"](https://www.notion.so/gitpod/Values-Attributes-2ed4c2f93c84499b98e3b5389980992e), Gitpod currently supports many popular IDE/editors e.g. JetBrains and VS Code through both the browser and on desktop. You can even use the command-line directly for editors like Vim (via SSH). There are many ways to configure your IDE/editor in Gitpod to match your preferred workflow or setup.
 
 ## Connecting an IDE/editor to Gitpod
 

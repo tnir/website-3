@@ -58,11 +58,6 @@ export const MENU: MenuEntry[] = [
     M("VS Code Extensions", "ides-and-editors/vscode-extensions"),
     M("VS Code Settings Sync", "ides-and-editors/settings-sync"),
     M("Command Line (SSH)", "ides-and-editors/command-line", []),
-    M(
-      "Configure your IDE/editor",
-      "ides-and-editors/configure-your-editor-ide",
-      []
-    ),
     M("FAQs", "ides-and-editors/faqs", []),
   ]),
   M("Languages", "languages", [
