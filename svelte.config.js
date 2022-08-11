@@ -13,6 +13,32 @@ import rehypeWrap from "rehype-wrap-all";
 import { highlightCode } from "./src/lib/utils/highlight.js";
 import { mdsvexGlobalComponents } from "./src/lib/utils/mdsvex-global-components.js";
 import { h } from "hastscript";
+import { execSync } from "node:child_process";
+
+/** @type {Partial<import('vite').ServerOptions>} */
+let extendedViteServerOptions;
+
+try {
+  /**
+   * When changing this port number, remember to update it also in these files:
+   * - .gitpod.yml
+   * - cypress.json
+   */
+  const port = 3000;
+
+  const gitpodPortUrl = execSync(`gp url ${port}`).toString().trim();
+
+  extendedViteServerOptions = {
+    port,
+    hmr: {
+      protocol: "wss",
+      host: new URL(gitpodPortUrl).hostname,
+      clientPort: 443,
+    },
+  };
+} catch {
+  extendedViteServerOptions = {};
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -50,12 +76,7 @@ const config = {
         fs: {
           allow: [".."],
         },
-        hmr: {
-          clientPort: process.env.GITPOD_WORKSPACE_URL ? 443 : 3000,
-          host: process.env.GITPOD_WORKSPACE_URL
-            ? process.env.GITPOD_WORKSPACE_URL.replace("https://", "3000-")
-            : "localhost",
-        },
+        ...extendedViteServerOptions,
       },
     },
   },
