@@ -141,7 +141,7 @@ gcloud container node-pools \
     --node-labels="gitpod.io/workload_meta=true,gitpod.io/workload_ide=true,gitpod.io/workload_workspace_services=true" \
     --max-pods-per-node=110 \
     --min-nodes=1 \
-    --max-nodes=50 \
+    --max-nodes=4 \
     --region="${REGION}"
 ```
 
@@ -349,7 +349,7 @@ managedNodeGroups:
     instanceTypes: ["m6i.2xlarge"]
     desiredCapacity: 2
     minSize: 1
-    maxSize: 10
+    maxSize: 50
     maxPodsPerNode: 110
     disableIMDSv1: false
     volumeSize: 300
