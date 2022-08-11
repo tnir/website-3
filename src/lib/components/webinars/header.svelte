@@ -15,7 +15,7 @@
   <Pill text="Webinar" class="mb-3" slot="top" />
   <div slot="content" class="text-large my-x-small">
     <div class="flex items-center mb-micro">
-      <Calendar class="h-7 w-7 mr-micro" /> August 04 - 6pm CEST/ 9am PDT
+      <Calendar class="h-7 w-7 mr-micro" /> Past event
     </div>
     <div class="flex items-center">
       <Clock class="h-7 w-7 mr-micro" /> 60min

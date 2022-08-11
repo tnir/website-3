@@ -2,7 +2,6 @@
   import type { Email, EmailToType } from "$lib/api/api";
 
   import InputsHalf from "$lib/components/contact/inputs-half.svelte";
-  import Card from "$lib/components/ui-library/card/card.svelte";
   import Input from "$lib/components/ui-library/input/input.svelte";
   import type { Form } from "$lib/types/form.type";
   import { scrollToElement } from "$lib/utils/helpers";
@@ -10,6 +9,7 @@
   import Button from "$lib/components/ui-library/button/button.svelte";
   import Checkbox from "$lib/components/ui-library/checkbox/checkbox.svelte";
   import SubmissionSuccess from "../submission-success.svelte";
+  import Wrapper from "./wrapper.svelte";
 
   let clazz = "";
   export { clazz as class };
@@ -92,15 +92,8 @@
   };
 </script>
 
-<style lang="postcss">
-  div {
-    position: -webkit-sticky;
-  }
-</style>
-
-<Card
-  size="small"
-  class="sticky left-full lgx:top-40 max-w-[642px] z-10 px-xx-small py-x-small sm:p-x-small xl:px-small xl:py-x-small shadow-normal {clazz}"
+<Wrapper
+  class="px-xx-small py-x-small sm:p-x-small xl:px-small xl:py-x-small {clazz}"
 >
   <div bind:this={sectionStart}>
     {#if isEmailSent}
@@ -212,4 +205,4 @@
       </form>
     {/if}
   </div>
-</Card>
+</Wrapper>

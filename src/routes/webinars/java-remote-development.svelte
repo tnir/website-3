@@ -8,7 +8,8 @@
   import InThisWebinar from "$lib/components/webinars/in-this-webinar.svelte";
   import Layout from "$lib/components/webinars/layout.svelte";
   import OrganizedBy from "$lib/components/webinars/organized-by.svelte";
-  import Register from "$lib/components/webinars/register.svelte";
+  import Recording from "$lib/components/webinars/recording.svelte";
+  // import Register from "$lib/components/webinars/register.svelte";
   import { hosts } from "$lib/contents/webinars/java-remote-development";
 </script>
 
@@ -29,7 +30,8 @@
 <div class="flex items-start">
   <Layout>
     <Header />
-    <Register class="lgx:hidden" />
+    <!-- <Register class="lgx:hidden" /> -->
+    <Recording class="lgx:hidden" />
     <InThisWebinar>
       <svelte:fragment slot="list-items">
         <li>Why remote development can save you hours of work every week</li>
@@ -45,7 +47,8 @@
       <Jetbrains isDark={true} notDarkWhenDark={true} class="h-10 w-10" />
     </OrganizedBy>
   </Layout>
-  <Register class="hidden lgx:block" />
+  <!-- <Register class="hidden lgx:block" /> -->
+  <Recording class="hidden lgx:block" />
 </div>
 
 <Articles
