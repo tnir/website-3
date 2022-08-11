@@ -77,7 +77,7 @@ To reduce the time it takes you to re-create a cluster, you can move to an infra
 The following explains how you might restore Gitpod after its underlying cluster fails.
 
 1. Recreate your infrastructure. Ideally, you do this using something like a Terraform script.
-2. Re-install gitpod, ideally using the config file that you stored using the instructions [above](./backup-restore#application-config). Then you run the following command to restore Gitpod to the previous state after inserting the necessary variables:
+2. Re-install Gitpod, ideally using the config file that you stored using the instructions [above](./backup-restore#application-config). Then you run the following command to restore Gitpod to the previous state after inserting the necessary variables:
 
    ```bash
    kubectl kots install gitpod \
