@@ -20,7 +20,16 @@ This guide shows how to install both an ALB and an NLB into an EKS cluster. It i
 
 ### 0. Node configuration
 
-Because we need to use an internal CA for communication that has to be distributed to the nodes, we need to ensure all nodes have the right configuration in place. There is an [open issue](https://github.com/gitpod-io/gitpod/issues/11005) to fix it, but in the interim ensure that all of the node groups in your eksctl cluster.yaml  have an overridebootstrap command that includes the following:
+Because we need to use an internal CA for communication that has to be distributed to the nodes, we need to ensure all managed nodes have `/etc/containerd/certs.d` in their `/etc/containerd/config.toml` to load the self-signed certificate used for internal communication.
+
+```toml
+[plugins."io.containerd.grpc.v1.cri".registry]
+  config_path = "/etc/containerd/certs.d"
+```
+
+These are two examples to enforce this:
+
+1. Use python to insert the values into the toml file respecting the formatting:
 
 ```shell
 apt-get update && apt-get install -y python3-pip
@@ -33,6 +42,19 @@ merge(c, {'plugins': {'io.containerd.grpc.v1.cri': {'registry': {'config_path': 
 with open('/etc/containerd/config.toml', 'w') as f:
   toml.dump(c, f)
 EOF
+service containerd restart
+```
+
+2. Bruteforce method that will just append the lines to `/etc/containerd/config.toml` which will work if there are no other registry settings present in your config.toml file
+
+```
+cat << CONFIG >> /etc/containerd/config.toml
+
+[plugins."io.containerd.grpc.v1.cri".registry]
+config_path = "/etc/containerd/certs.d"
+
+CONFIG
+
 service containerd restart
 ```
 
@@ -65,7 +87,7 @@ overrideBootstrapCommand: |
   c = toml.load('/etc/containerd/config.toml')
   merge(c, {'plugins': {'io.containerd.grpc.v1.cri': {'registry': {'config_path': '/etc/containerd/certs.d'}}}})
   with open('/etc/containerd/config.toml', 'w') as f:
-  toml.dump(c, f)
+    toml.dump(c, f)
   EOF
   service containerd restart
 ```
