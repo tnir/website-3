@@ -48,7 +48,7 @@ You can also create a Kubernetes cluster on your bare metal servers for smaller 
 
 <Cluster />
 
-## Ingress
+## Networking
 
 <Networking />
 

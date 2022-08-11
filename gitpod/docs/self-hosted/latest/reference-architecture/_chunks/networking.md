@@ -14,6 +14,8 @@ gitpod.example.com
 *.ws.gitpod.example.com
 ```
 
+### Cluster ports
+
 The entry point for all traffic is the `proxy` component which has a service of type `LoadBalancer` that allows inbound traffic on ports 80 (HTTP) and 443 (HTTPS) as well as port 22 (SSH access to the workspaces).
 
 SSH access is required to work with desktop IDEs, such as [VS Code Desktop](/docs/ides-and-editors/vscode) and JetBrains via [JetBrains Gateway](/docs/ides-and-editors/jetbrains-gateway). To enable SSH, your **load balancer** needs to be capable of working with [L4 protocols](https://en.wikipedia.org/wiki/OSI_model#Layer_4:_Transport_layer).
@@ -45,7 +47,7 @@ If installing Calico, follow their [installation steps](https://projectcalico.do
 </div>
 </CloudPlatformToggle>
 
-<br/>
+### External DNS
 
 You also need to configure your **DNS server**. If you have your own DNS server for your domain, make sure the domain with all wildcards points to your load balancer.
 
@@ -154,7 +156,7 @@ With Route53 created, you can now proceed to install cert-manager. Cert-manager 
 </div>
 </CloudPlatformToggle>
 
-<br/>
+### cert-manager
 
 Gitpod secures its internal communication between components with **TLS certificates**. You need to have a **[cert-manager](https://cert-manager.io/)** instance in your cluster that is responsible for issuing these certificates. There are different ways to install cert-manager. If you don’t have a cert-manager instance in your cluster, please refer to the [cert-manager docs](https://cert-manager.io/docs/) to choose an installation method.
 
@@ -216,7 +218,7 @@ kubectl patch deployment cert-manager -n cert-manager -p \
 </div>
 </CloudPlatformToggle>
 
-<br/>
+### TLS certificate
 
 In this reference architecture, we use cert-manager to also create **TLS certificates for the Gitpod domain**. Since we need wildcard certificates for the subdomains, you must use the [DNS-01 challenge](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge). In case you already have TLS certificates for your domain, you can skip this step and use your own certificates during the installation.
 
