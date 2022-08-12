@@ -32,15 +32,17 @@ How to install a local SSH client depending on your operating system.
 
 ### Create an SSH key
 
-Check to see if you already have an SSH key on your **local** machine. The key is typically located at `~/.ssh/id_rsa.pub` on macOS / Linux, and the `.ssh` directory in your user profile folder on Windows (for example `C:\Users\your-user\.ssh\id_rsa.pub`).
+Check to see if you already have an SSH key on your **local** machine. The key is typically located at `~/.ssh/id_ed25519.pub` on macOS / Linux, and the `.ssh` directory in your user profile folder on Windows (for example `C:\Users\your-user\.ssh\id_ed25519.pub`).
 
 If you do not have a key, run the following command in a **local** terminal / PowerShell to generate an SSH key pair:
 
 ```bash
-ssh-keygen -t rsa -b 4096
+ssh-keygen -t ed25519
 ```
 
-You will then be prompted to enter a secure passphrase, but you can leave that blank. You should now have a `id_rsa.pub` file which contains your new public SSH key.
+You will then be prompted to enter a secure passphrase, but you can leave that blank. You should now have a `id_ed25519.pub` file which contains your new public SSH key.
+
+> **Note**: If you are using a legacy system that doesn't support the Ed25519 algorithm, you can use rsa instead: `ssh-keygen -t rsa -b 4096`
 
 > **Tip:** Don't have `ssh-keygen`? Install [a supported SSH client](#installing-a-supported-ssh-client).
 
@@ -50,12 +52,12 @@ You will then be prompted to enter a secure passphrase, but you can leave that b
 
 On your local machine, make sure the following permissions are set:
 
-| Folder / File                         | Permissions                   |
-| ------------------------------------- | ----------------------------- |
-| `.ssh` in your user folder            | `chmod 700 ~/.ssh`            |
-| `.ssh/config` in your user folder     | `chmod 600 ~/.ssh/config`     |
-| `.ssh/id_rsa.pub` in your user folder | `chmod 600 ~/.ssh/id_rsa.pub` |
-| Any other key file                    | `chmod 600 /path/to/key/file` |
+| Folder / File                             | Permissions                       |
+| ----------------------------------------- | --------------------------------- |
+| `.ssh` in your user folder                | `chmod 700 ~/.ssh`                |
+| `.ssh/config` in your user folder         | `chmod 600 ~/.ssh/config`         |
+| `.ssh/id_ed25519.pub` in your user folder | `chmod 600 ~/.ssh/id_ed25519.pub` |
+| Any other key file                        | `chmod 600 /path/to/key/file`     |
 
 **Windows:**
 
