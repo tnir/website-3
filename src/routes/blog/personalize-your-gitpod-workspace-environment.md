@@ -76,6 +76,9 @@ The following video shows an example of how to setup Dotfiles, by configuring [`
 2. Save the configuration
 
 All your dotfiles will be configured automatically from the next time you create a new Gitpod Workspace.
+
+> You Can Refer this [demo-dotfiles template](https://github.com/gitpod-io/demo-dotfiles) to Bring your dotfiles to Gitpod.
+
 <br>
 
 # 3. VS Code Settings Sync 🔁

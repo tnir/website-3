@@ -34,6 +34,8 @@ The dotfiles repository installation logs are saved to `~/.dotfiles.log`
 
 ## Example
 
+> You Can Refer this [demo-dotfiles template](https://github.com/gitpod-io/demo-dotfiles) to Bring your dotfiles to Gitpod.
+
 The example below has just one dotfile called `.bash_aliases`. If this file is present in a workspace home directory, it will be found by the '.bashrc' startup script in the Gitpod default image, so no additional install script is required.
 
 **.bash_aliases**
