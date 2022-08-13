@@ -15,7 +15,7 @@ With Tailscale you can automatically and securely connect your Gitpod workspace 
 
 ## Integration
 
-If you’re already using Tailscale, the following steps need to be done (see https://github.com/gitpod-io/template-tailscale for a working example):
+If you’re already using Tailscale, the following steps need to be done (see https://github.com/gitpod-io/demo-tailscale-with-gitpod for a working example):
 
 1. Install `tailscale` through a custom `.gitpod.Dockerfile` by adding the following layer to it.
 
