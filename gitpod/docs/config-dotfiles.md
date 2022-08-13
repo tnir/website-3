@@ -30,7 +30,6 @@ Make sure to make your installation script executable with `chmod 755 <install-s
 
 If there is no install script, your dotfiles will be symlinked into `/home/gitpod`.
 
-The dotfiles repository installation logs are saved to `~/.dotfiles.log`
 
 ## Example
 
@@ -45,4 +44,12 @@ echo Hello Gitpod
 echo Here is my .bash_aliases dotfile
 
 alias gitsha='git rev-parse HEAD'
+```
+
+### Troubleshooting
+
+The dotfiles repository installation logs are saved to `/home/gitpod/.dotfiles.log` and can be viewed via
+
+```bash
+cat /home/gitpod/.dotfiles.log
 ```
