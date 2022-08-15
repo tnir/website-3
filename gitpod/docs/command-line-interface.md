@@ -149,6 +149,8 @@ Programmatically view and interact with workspace tasks as defined in the projec
 
 Returns a table-formatted list of tasks, their name, state and the ID of the terminal in which the task is executed.
 
+> **Tip**: You can see the task you are currently attached to highlighted in green.
+
 ```sh
 gp tasks list
 ```
