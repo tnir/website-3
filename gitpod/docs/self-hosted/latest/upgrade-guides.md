@@ -20,43 +20,6 @@ You can now configure the service type of the proxy service in the installation 
 
 ![proxy service type UI](../../static/images/docs/self-hosted/proxy-service-type-ui.png)
 
-### Setting workspace resource limits
-
-If you are setting a resource limit for workspaces via a [config-patch](../latest/config-patches), the way to set these limits has changed slightly:
-
-**Before:**
-
-```yaml
-workspace:
-  resources:
-    requests:
-      cpu: "3"
-      memory: 15Gi
-    limits:
-      cpu: "4"
-      memory: 21Gi
-```
-
-**After:**
-
-You can now have two types of limits you can set:
-
-- A min limit: this is always respected
-- A burst limit: this is allowed for short periods, e.g. to allow for high-intensity workloads during workspace startup
-
-```yaml
-workspace:
-  resources:
-    requests:
-      cpu: "3"
-      memory: 15Gi
-    limits:
-      cpu:
-        min: "2"
-        burst: "6"
-      memory: 21Gi
-```
-
 ### Setting the default workspace image and which image registries the default image can be pulled from
 
 We've moved the configuration of the default workspace image and the default base image registry whitelist out of the experimental section of the [config-patch](../latest/config-patches) file. The latter was also renamed. Using them in the experimental section will still work for the time being (until approx. December 2022).
