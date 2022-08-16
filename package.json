@@ -78,7 +78,7 @@
     "remark-external-links": "^8.0.0",
     "remark-slug": "^6.0.0",
     "sass": "^1.43.4",
-    "svelte": "^3.46.2",
+    "svelte": "^3.49.0",
     "svelte-check": "^2.2.7",
     "svelte-focus-trap": "^1.2.0",
     "svelte-popperjs": "^1.2.8",
